@@ -14,12 +14,12 @@
     if(v === 'm'){ if(screen === 'lobby'){ b = b === 'Main' ? 'Orca-movil' : b + '-movil'; } else b = b + '-movil'; }
     return b + '.html'; }
   function go(screen, v){ var f = file(screen, v || view); if(!f){ toast('Esta pantalla no está en el prototipo'); return; }
-    document.documentElement.classList.add('pv-leave'); setTimeout(function(){ location.href = f; }, 200); }
+    document.documentElement.classList.remove('pv-done'); document.documentElement.classList.add('pv-leave'); setTimeout(function(){ location.href = f; }, 200); }
   // la pantalla de carga se va cuando la página está lista (o a los 2,5 s como máximo)
-  var t0 = Date.now(); function ready(){ var w = Math.max(0, 280 - (Date.now() - t0)); setTimeout(function(){ document.documentElement.classList.remove('pv-loading'); }, w); }
+  var t0 = Date.now(); function ready(){ var w = Math.max(0, 280 - (Date.now() - t0)); setTimeout(function(){ var h = document.documentElement; h.classList.remove('pv-loading'); setTimeout(function(){ if(!h.classList.contains('pv-leave')) h.classList.add('pv-done'); }, 350); }, w); }
   if(document.readyState === 'complete') ready(); else { addEventListener('load', ready); setTimeout(ready, 2500); }
-  addEventListener('pageshow', function(e){ if(e.persisted){ document.documentElement.classList.remove('pv-leave', 'pv-loading'); } });
-  document.addEventListener('click', function(e){ var a = e.target.closest('a[href]'); if(a && /^(\.\.\/|index\.html)/.test(a.getAttribute('href'))){ e.preventDefault(); e.stopPropagation(); var h = a.getAttribute('href'); document.documentElement.classList.add('pv-leave'); setTimeout(function(){ location.href = h; }, 200); } }, true);
+  addEventListener('pageshow', function(e){ if(e.persisted){ document.documentElement.classList.remove('pv-leave', 'pv-loading'); document.documentElement.classList.add('pv-done'); } });
+  document.addEventListener('click', function(e){ var a = e.target.closest('a[href]'); if(a && /^(\.\.\/|index\.html)/.test(a.getAttribute('href'))){ e.preventDefault(); e.stopPropagation(); var h = a.getAttribute('href'); document.documentElement.classList.remove('pv-done'); document.documentElement.classList.add('pv-leave'); setTimeout(function(){ location.href = h; }, 200); } }, true);
   // ---- detección automática: celular -> versión celular, compu -> escritorio (salvo que elijas otra con la barra)
   var phone = window.matchMedia ? matchMedia('(max-width: 760px)').matches : innerWidth < 760;
   var forced = null; try { forced = sessionStorage.getItem('pv-v'); } catch(e){}

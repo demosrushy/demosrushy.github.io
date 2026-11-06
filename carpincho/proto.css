@@ -40,3 +40,4 @@ html.pv-leave::before{transition:opacity .18s ease,visibility 0s}
 html.pv-loading::before{animation:pv-safety .01s linear 4s forwards}
 html.pv-loading::after{animation:pv-load .9s ease-in-out infinite,pv-safety .01s linear 4s forwards}
 @keyframes pv-safety{to{opacity:0;visibility:hidden}}
+html.pv-done::before,html.pv-done::after{content:none}
