@@ -27,7 +27,7 @@
   // en el celular la pantalla ocupa todo el ancho y el centro se puede scrollear
   function scrollers(){ if(view !== 'm' || !ROOT) return;
     ROOT.querySelectorAll('*').forEach(function(el){ var cs = getComputedStyle(el);
-      if(cs.overflowY === 'hidden' && parseFloat(cs.flexGrow) > 0 && el.offsetHeight > 300 && el.parentElement && getComputedStyle(el.parentElement).flexDirection === 'column'){ el.style.overflowY = 'auto'; el.style.overscrollBehavior = 'contain'; el.classList.add('pv-scroll'); } }); }
+      if(cs.overflowY === 'hidden' && parseFloat(cs.flexGrow) > 0 && el.offsetHeight > 300 && el.parentElement && getComputedStyle(el.parentElement).flexDirection === 'column'){ el.style.overflowY = 'auto'; el.style.overscrollBehavior = 'contain'; el.classList.add('pv-scroll'); Array.prototype.forEach.call(el.children, function(c){ c.style.flexShrink = '0'; }); } }); }
   function fit(){ if(!phone || view !== 'm' || !ROOT) return; var strip = document.querySelector('.pv-strip'); var sh = strip ? strip.offsetHeight : 0;
     var z = innerWidth / BASE_W; ROOT.style.zoom = z;
     ROOT.style.height = Math.max(560, (innerHeight - sh) / z) + 'px'; }
