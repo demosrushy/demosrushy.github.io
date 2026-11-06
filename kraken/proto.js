@@ -55,6 +55,63 @@
   var t = document.createElement('div'); t.className = 'pv-toast'; document.body.appendChild(t);
   var tt; function toast(m){ t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(function(){ t.classList.remove('on'); }, 1800); }
 
+
+  // ---- botón CARGAR que late + flujo registro -> carga -> jugar
+  function rgb(c){ var m = (c || '').match(/[\d.]+/g); return m ? m.map(Number) : [0,0,0,0]; }
+  function lum(c){ var m = rgb(c); return (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2]) / 255; }
+  var HS = getComputedStyle(document.documentElement);
+  var BG = HS.getPropertyValue('--pv-bg').trim() || '#111', ACC = HS.getPropertyValue('--pv-acc').trim() || '#fff';
+  function hexLum(h){ h = h.replace('#', ''); if(h.length === 3) h = h.split('').map(function(x){ return x + x; }).join(''); var n = parseInt(h, 16); return (0.299 * (n >> 16 & 255) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255; }
+  var LIGHT = hexLum(BG) > .6;
+  var ALIAS = (document.querySelector('[data-alias]') || {dataset:{}}).dataset.alias || cur.plat + '.pagos';
+  var PLUS = '<svg class="pv-plus" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></svg>';
+  function ctas(){ document.querySelectorAll('a,button').forEach(function(el){
+      if(el.closest('.pv-bar,.pv-strip,.pv-modal')) return;
+      var t = (el.innerText || '').trim().toLowerCase().split('\n')[0].trim();
+      if(!/^(cargar|cargar saldo|depositar)$/.test(t)) return;
+      var sib = el.parentElement ? Array.prototype.filter.call(el.parentElement.children, function(c){ return c.tagName === el.tagName; }) : [];
+      if(sib.length >= 3 && sib.some(function(c){ return /retirar|historial|movimientos/i.test(c.innerText || ''); })) return;
+      var cs = getComputedStyle(el), bg = cs.backgroundColor, a = rgb(bg);
+      var solid = (a.length < 4 || a[3] > .5) && !(a[0] === 0 && a[1] === 0 && a[2] === 0 && a.length > 3);
+      if(!solid && cs.backgroundImage === 'none') return;
+      el.classList.add('pv-cta'); el.style.setProperty('--pv-c', solid ? bg : ACC);
+      if(cs.position === 'static') el.style.position = 'relative';
+      if(!el.querySelector('svg,img')){ el.insertAdjacentHTML('afterbegin', PLUS); if(cs.display.indexOf('flex') < 0){ el.style.display = 'inline-flex'; el.style.alignItems = 'center'; el.style.justifyContent = 'center'; } el.style.gap = el.style.gap || '6px'; }
+      el.insertAdjacentHTML('beforeend', '<i class="pv-badge">+100%</i>');
+    }); }
+  var MD = null;
+  function closeM(){ if(!MD) return; var m = MD; MD = null; m.classList.remove('on'); setTimeout(function(){ m.remove(); }, 250); }
+  function modal(html){ if(MD) MD.remove(); var m = document.createElement('div'); m.className = 'pv-modal' + (LIGHT ? ' pv-light' : '') + (hexLum(ACC) > .55 ? ' pv-acc-l' : '');
+    var ff = ROOT ? getComputedStyle(ROOT).fontFamily : ''; m.style.fontFamily = ff;
+    m.innerHTML = '<div class="pv-sheet" role="dialog" aria-modal="true"><button type="button" class="pv-x" aria-label="Cerrar">&times;</button><div class="pv-body"></div></div>';
+    document.body.appendChild(m); MD = m; set(html);
+    m.addEventListener('click', function(e){ if(e.target === m || e.target.closest('.pv-x')){ closeM(); return; } var b = e.target.closest('[data-act]'); if(b){ e.preventDefault(); ACT[b.dataset.act] && ACT[b.dataset.act](b); } });
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ m.classList.add('on'); }); }); }
+  function set(html){ var b = MD.querySelector('.pv-body'); b.innerHTML = html; b.classList.remove('pv-swap'); void b.offsetWidth; b.classList.add('pv-swap'); var i = b.querySelector('input'); if(i && !phone) setTimeout(function(){ i.focus(); }, 260); }
+  function steps(n, labels){ return '<div class="pv-steps">' + labels.map(function(l, i){ return '<span class="' + (i < n ? 'ok' : i === n ? 'on' : '') + '"><em>' + (i < n ? '&#10003;' : i + 1) + '</em>' + l + '</span>'; }).join('<i></i>') + '</div>'; }
+  var CHECK = '<div class="pv-ok"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
+  var FLOW = ['Cuenta', 'Cargá', 'Jugá'];
+  function fmt(n){ return '$ ' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+  var AMT = 0;
+  var ACT = {
+    login: function(){ openLogin(); }, reg: function(){ openReg(); },
+    crear: function(){ set(steps(1, FLOW) + CHECK + '<h3>¡Cuenta creada!</h3><p class="pv-sub">Ahora cargá saldo: transferís a nuestro alias desde cualquier banco o billetera y se acredita solo, en minutos.</p><div class="pv-bonus"><b>+100%</b><span>Bono de bienvenida en tu primera carga</span></div><button type="button" class="pv-go pv-beat" data-act="acargar">' + PLUS + 'Cargar ahora</button><p class="pv-alt">Cargás desde $ 2.000</p>'); try { sessionStorage.setItem('pv-user', '1'); } catch(_){} },
+    acargar: function(){ closeM(); if(cur.screen === 'billetera') openCarga(''); else go('billetera'); },
+    entrar: function(){ closeM(); try { sessionStorage.setItem('pv-user', '1'); } catch(_){} toast('¡Hola de nuevo! Ya ingresaste'); },
+    copy: function(b){ try { navigator.clipboard && navigator.clipboard.writeText(ALIAS); } catch(_){} b.textContent = 'Copiado'; b.classList.add('done'); toast('Alias ' + ALIAS + ' copiado'); },
+    transferi: function(){ set(steps(1, ['Monto', 'Transferí', 'Listo']) + '<div class="pv-spin"></div><h3>Verificando tu transferencia</h3><p class="pv-sub">Estamos confirmando el pago de ' + fmt(AMT) + '. No hace falta mandar comprobante.</p>');
+      setTimeout(function(){ if(!MD) return; set(steps(3, ['Monto', 'Transferí', 'Listo']) + CHECK + '<h3>¡Saldo acreditado!</h3><p class="pv-sub">Ya podés jugar con tu carga más el bono.</p><div class="pv-total"><small>Tu saldo</small><b>' + fmt(AMT * 2) + '</b><span>' + fmt(AMT) + ' de carga + ' + fmt(AMT) + ' de bono</span></div><button type="button" class="pv-go" data-act="jugar">Ir a jugar</button>'); }, 2300); },
+    jugar: function(){ closeM(); go('slots'); }
+  };
+  function field(l, attrs){ return '<label class="pv-f"><span>' + l + '</span><input ' + attrs + ' autocomplete="off"></label>'; }
+  function openReg(){ modal(steps(0, FLOW) + '<h3>Creá tu cuenta</h3><p class="pv-sub">Tarda menos de un minuto. Después cargás y jugás.</p>' + field('Usuario', 'placeholder="ej: lucas_23"') + field('Celular (WhatsApp)', 'inputmode="tel" placeholder="11 2345 6789"') + field('Contraseña', 'type="password" placeholder="Mínimo 6 caracteres"') + '<button type="button" class="pv-go" data-act="crear">Crear cuenta</button><p class="pv-alt">¿Ya tenés cuenta? <a href="#" data-act="login">Ingresá</a> · +18</p>'); }
+  function openLogin(){ modal('<h3>Ingresá a ' + plat.n + '</h3><p class="pv-sub">Con tu usuario y contraseña.</p>' + field('Usuario', 'placeholder="Tu usuario"') + field('Contraseña', 'type="password" placeholder="Tu contraseña"') + '<button type="button" class="pv-go" data-act="entrar">Entrar</button><p class="pv-alt">¿No tenés cuenta? <a href="#" data-act="reg">Registrate gratis</a></p>'); }
+  function openCarga(txt){ var m = /\$\s?([\d.]+)/.exec(txt || ''); var v = m ? parseInt(m[1].replace(/\./g, ''), 10) : 0;
+    if(!v){ var inp = Array.prototype.find.call(document.querySelectorAll('input'), function(i){ return /^\d[\d.]*$/.test(i.value || ''); }); if(inp) v = parseInt(inp.value.replace(/\./g, ''), 10); }
+    if(!v){ var w = document.createTreeWalker(ROOT || document.body, NodeFilter.SHOW_TEXT), n; while((n = w.nextNode())){ var mm = /^\s*\$\s?([\d.]{5,})\s*$/.exec(n.nodeValue); if(mm && n.parentElement && parseFloat(getComputedStyle(n.parentElement).fontSize) >= 22){ v = parseInt(mm[1].replace(/\./g, ''), 10); break; } } }
+    AMT = v || 10000;
+    modal(steps(1, ['Monto', 'Transferí', 'Listo']) + '<h3>Transferí ' + fmt(AMT) + '</h3><p class="pv-sub">Desde cualquier banco o billetera virtual, a este alias:</p><div class="pv-alias"><div><small>Alias</small><b>' + ALIAS + '</b></div><button type="button" data-act="copy">Copiar</button></div><div class="pv-rows"><div><span>Monto a transferir</span><b>' + fmt(AMT) + '</b></div><div><span>Bono 100%</span><b class="acc">+ ' + fmt(AMT) + '</b></div><div><span>Vas a jugar con</span><b>' + fmt(AMT * 2) + '</b></div></div><button type="button" class="pv-go" data-act="transferi">Ya transferí</button><p class="pv-alt">Se acredita automático en 1 a 3 minutos.</p>'); }
+
   // ---- navegación por clics dentro del diseño
   var K = [
     [/cargar|billetera|deposit|retirar|saldo/, 'billetera'],
@@ -95,7 +152,7 @@
   var DONE = [[/^cargar\s?\$/, function(t){ return 'Carga de ' + t.replace(/^cargar\s?/, '') + ' confirmada (demo)'; }], [/copiar/, 'Link copiado'], [/avisarme|avisame/, 'Listo, te avisamos cuando empiece'], [/reclamar/, '¡Premio reclamado!'], [/confirmar|pagar|generar|solicitar|retirar \$/, 'Listo, solicitud enviada (demo)'], [/favorit/, 'Agregado a favoritos'], [/abrir|girar|tirar/, '¡Suerte! (demo)']];
   function done(txt){ for(var i = 0; i < DONE.length; i++){ if(DONE[i][0].test(txt)){ toast(typeof DONE[i][1] === 'function' ? DONE[i][1](txt) : DONE[i][1]); return true; } } return false; }
   document.addEventListener('click', function(e){
-    if(e.target.closest('.pv-bar,.pv-strip')) return;
+    if(e.target.closest('.pv-bar,.pv-strip,.pv-modal')) return;
     var el = e.target.closest('a,button,label');
     if(!el){ var sp = e.target.closest('span,div'); if(sp && sp.children.length === 0 && (sp.innerText || '').trim().length < 22 && toggleGroup(sp)) return; return; }
     if(el.tagName === 'LABEL' || el.querySelector('input')) return;
@@ -104,6 +161,10 @@
     var txt = (el.innerText || el.getAttribute('aria-label') || '').trim().toLowerCase();
     var img = el.querySelector('img');
     var portrait = img && img.naturalHeight > img.naturalWidth * 1.15 && img.clientWidth > 50;
+    var top = el.getBoundingClientRect().top;
+    if(/^(registr|crear (tu )?cuenta|abr[ií] tu cuenta)/.test(txt)){ openReg(); return; }
+    if(/^(ingresar|iniciar sesi[oó]n)$/.test(txt) || txt === 'entrar' && top < 140){ openLogin(); return; }
+    if(cur.screen === 'billetera' && /^(cargar(?! m[aá]s)|depositar|confirmar carga)/.test(txt)){ openCarga(txt); return; }
     var target = null;
     if(portrait) target = 'juego';
     else if(!txt && (img || el.querySelector('svg')) && el.getBoundingClientRect().top < 90 && el.getBoundingClientRect().left < 320) target = 'lobby';
@@ -123,6 +184,7 @@
   function onReady(){
     // en la pantalla En vivo, marcar "En vivo" como activo en los menús
     if(cur.screen === 'vivo'){ document.querySelectorAll('a,button').forEach(function(el){ if(el.closest('.pv-bar,.pv-strip')) return; var t = (el.innerText || '').trim().toLowerCase().split('\n')[0].trim(); if(/^(en vivo|casino en vivo|vivo)$/.test(t)) toggleGroup(el); }); }
+    ctas();
     if(reduce) return;
     // entrada escalonada de secciones
     var root = document.querySelector('main') || document.body.firstElementChild;
