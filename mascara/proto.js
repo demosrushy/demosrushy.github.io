@@ -89,6 +89,7 @@
     if(!el){ var sp = e.target.closest('span,div'); if(sp && sp.children.length === 0 && (sp.innerText || '').trim().length < 22 && toggleGroup(sp)) return; return; }
     if(el.tagName === 'LABEL' || el.querySelector('input')) return;
     e.preventDefault();
+    if(el.dataset.alias){ try { navigator.clipboard && navigator.clipboard.writeText(el.dataset.alias); } catch(_){} el.classList.remove('pv-press'); void el.offsetWidth; el.classList.add('pv-press'); toast('Alias ' + el.dataset.alias + ' copiado'); return; }
     var txt = (el.innerText || el.getAttribute('aria-label') || '').trim().toLowerCase();
     var img = el.querySelector('img');
     var portrait = img && img.naturalHeight > img.naturalWidth * 1.15 && img.clientWidth > 50;

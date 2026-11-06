@@ -1,7 +1,7 @@
-<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BANDIDO · Plantilla editable</title>
+<!DOCTYPE html>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>BANDIDO · Plantilla editable</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 body{margin:0;background:#15151B}
 a{color:inherit;text-decoration:none}
@@ -30,525 +30,390 @@ a{color:inherit;text-decoration:none}
 @media (max-width:900px){.b-duo,.b-promos{grid-template-columns:1fr}.b-slots{grid-template-columns:repeat(3,minmax(0,1fr))}.b-orig{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.b-side{display:none!important}}
 </style>
-
-<link rel="stylesheet" href="proto.css?v=3">
+<link href="proto.css?v=4" rel="stylesheet"/>
 </head><body>
-
-
 <div style="--acc: #F5C451; --acc-t: #1A1405; --bg: #15151B; --rail: #101015; --panel: #1B1B22; --card: #222229; --raised: #2A2A33; --line: #2C2C36; --txt: #EDEDF2; --mut: #9A9AA8; --dim: #686875; display: flex; min-height: 100vh; background: var(--bg); color: var(--txt); font-family: Poppins, system-ui, sans-serif; font-size: 14px; line-height: 1.45; -webkit-font-smoothing: antialiased">
-
-  <nav class="b-side" style="flex: 0 0 224px; box-sizing: border-box; background: var(--rail); box-shadow: inset -1px 0 0 var(--line); display: flex; flex-direction: column; gap: 24px; padding: 0 12px 18px; position: sticky; top: 0; align-self: flex-start; min-height: 100vh">
-    <a href="#" style="height: 64px; flex: none; display: flex; align-items: center; gap: 10px; padding: 0 6px">
-      <span style="width: 38px; height: 38px; border-radius: 6px; background: var(--acc); overflow: hidden; display: block; flex: none"><img src="a/26e90cbf7ced051d3494767ed732da3f.webp" alt="" style="width: 100%; height: 130%; object-fit: cover; object-position: center top"></span>
-      <b style="font-size: 20px; font-weight: 800; letter-spacing: .02em">BANDIDO</b>
-    </a>
-    
-      <div style="display: flex; flex-direction: column; gap: 2px">
-        <span class="b-up" style="padding: 0 10px 8px; color: var(--dim); font-size: 11px; font-weight: 700">Casino</span>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #EDEDF2; background: var(--card)"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: var(--acc)"></span><img src="a/105c20b704bfc2f43f6d9205f1c7499b.svg" alt="" style="width: 18px; height: 18px">Inicio<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/c192a9c3b776c80cd91866c928321624.svg" alt="" style="width: 18px; height: 18px">Slots<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">4.820</span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/a66eb2407f16407f32ede58de23c9620.svg" alt="" style="width: 18px; height: 18px">Casino en vivo<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">312</span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/0afadda1efe6b48b34f9d2c1ade6ae4f.svg" alt="" style="width: 18px; height: 18px">Originales<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">6</span></a>
-        
-      </div>
-    
-      <div style="display: flex; flex-direction: column; gap: 2px">
-        <span class="b-up" style="padding: 0 10px 8px; color: var(--dim); font-size: 11px; font-weight: 700">Ganá más</span>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/1fb0bdfcc7c195e01ac152a04e9b595e.svg" alt="" style="width: 18px; height: 18px">Cajas<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/e0db06cffe642ba83607ccbfacbe55e5.svg" alt="" style="width: 18px; height: 18px">Torneos<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/bb2a233f0fdc9fd6af513867ee0311da.svg" alt="" style="width: 18px; height: 18px">Recompensas<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
-        
-          <a href="#" class="b-it" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img src="a/cf64d90bdf4ee989e6fd776f6cc53e34.svg" alt="" style="width: 18px; height: 18px">Invitá amigos<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
-        
-      </div>
-    
-    <div style="margin-top: auto; border-radius: 6px; padding: 14px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; gap: 10px">
-      <div style="display: flex; align-items: center; gap: 8px"><img src="a/5b2beb31ae93af2757bddf6c1b11dbae.svg" alt="" style="width: 18px; height: 18px"><b style="font-size: 13px">VIP Plata</b><span style="margin-left: auto; color: var(--mut); font-size: 12px; font-weight: 600">68%</span></div>
-      <span style="height: 4px; border-radius: 2px; background: var(--raised)"><span style="display: block; width: 68%; height: 4px; border-radius: 2px; background: var(--acc)"></span></span>
-      <span style="color: var(--mut); font-size: 12px">Faltan $ 32.000 para Oro</span>
-    </div>
-  </nav>
-
-  <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column">
-    <header style="height: 64px; flex: none; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 10px; background: var(--rail); box-shadow: 0 1px 0 var(--line)">
-      <label style="flex: 0 1 320px; height: 40px; border-radius: 6px; background: var(--card); display: flex; align-items: center; gap: 10px; padding: 0 12px; color: var(--mut)"><img src="a/05d3ea1ce4e97b6083a7e6904db625c5.svg" alt="" style="width: 16px; height: 16px"><input placeholder="Buscar juegos o proveedores" aria-label="Buscar" style="border: 0; outline: 0; background: none; color: var(--txt); font: inherit; font-size: 13px; width: 100%"></label>
-      <div style="margin-left: auto; display: flex; align-items: center; height: 40px; border-radius: 6px; background: var(--card); padding: 0 4px 0 4px; gap: 10px">
-        <span style="height: 32px; padding: 0 8px; border-radius: 4px; background: var(--raised); display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--mut)">ARS<img src="a/25c847e7ca322c5bf2ab9927be4e44ca.svg" alt="" style="width: 12px; height: 12px"></span>
-        <b style="font-weight: 700; font-variant-numeric: tabular-nums; min-width: 78px">$ 24.500</b>
-        <a href="#" class="b-acc" style="height: 32px; padding: 0 16px; display: grid; place-items: center">Cargar</a>
-      </div>
-      <button type="button" aria-label="Recompensas" style="position: relative; width: 40px; height: 40px; border-radius: 6px; border: 0; background: var(--card); display: grid; place-items: center"><img src="a/bb2a233f0fdc9fd6af513867ee0311da.svg" alt="" style="width: 18px; height: 18px"><span style="position: absolute; top: -5px; right: -5px; min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 4px; background: var(--acc); color: var(--acc-t); font-size: 10px; font-weight: 800; display: grid; place-items: center">2</span></button>
-      <button type="button" aria-label="Notificaciones" style="position: relative; width: 40px; height: 40px; border-radius: 6px; border: 0; background: var(--card); display: grid; place-items: center"><img src="a/55769f0c7678786aca434edc3b46ee48.svg" alt="" style="width: 18px; height: 18px"><span style="position: absolute; top: 10px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: #F0525F"></span></button>
-      <a href="#" style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 12px 0 0; border-radius: 6px; background: var(--card)"><img src="a/7760573870e7fe3bf1f1ec6ea2100067.webp" alt="" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover"><span style="display: flex; flex-direction: column; gap: 4px"><b style="font-size: 13px; line-height: 1">fausto</b><span style="width: 60px; height: 3px; border-radius: 2px; background: var(--raised)"><span style="display: block; width: 68%; height: 3px; border-radius: 2px; background: var(--acc)"></span></span></span></a>
-    </header>
-
-    <div style="height: 82px; flex: none; display: flex; align-items: stretch; gap: 6px; padding: 8px 24px; box-sizing: border-box; background: var(--rail); box-shadow: 0 1px 0 var(--line); overflow: hidden">
-      <div style="flex: none; width: 76px; border-radius: 6px; background: var(--panel); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><img src="a/8919edf3d7a9c6a3791582a0d0f7a605.svg" alt="" style="width: 18px; height: 18px"><b style="font-size: 13px; font-variant-numeric: tabular-nums">1.284</b><span class="b-up" style="font-size: 9px; color: var(--mut); font-weight: 700">Online</span></div>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #2B2414; box-shadow: inset 0 -2px 0 #F5C451; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/09bc31593ba5bb359751682c8874d0aa.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #F5C451; font-variant-numeric: tabular-nums">$ 240.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">santi***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #251E36; box-shadow: inset 0 -2px 0 #B48CFF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B48CFF; font-variant-numeric: tabular-nums">$ 50.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">lu***98</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 36.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">fer***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #202027; box-shadow: inset 0 -2px 0 #B4B4C2; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/80aa6a51210374e180f2ecebfe9140d1.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B4B4C2; font-variant-numeric: tabular-nums">$ 7.200</b><span class="b-one" style="font-size: 11px; color: var(--mut)">juli***7</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #2B2414; box-shadow: inset 0 -2px 0 #F5C451; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #F5C451; font-variant-numeric: tabular-nums">$ 124.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">tomi***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/097bb6ffbd3fb7f12286156f385098be.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 20.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">nico***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #251E36; box-shadow: inset 0 -2px 0 #B48CFF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B48CFF; font-variant-numeric: tabular-nums">$ 88.500</b><span class="b-one" style="font-size: 11px; color: var(--mut)">caro***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #202027; box-shadow: inset 0 -2px 0 #B4B4C2; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/5681af502c8ab33bf7accfcd6165127f.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B4B4C2; font-variant-numeric: tabular-nums">$ 4.100</b><span class="b-one" style="font-size: 11px; color: var(--mut)">agus***</span></span>
-        </a>
-      
-        <a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
-          <img src="a/72f9927b77a3ee25903091c53e3bdb98.webp" alt="" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none">
-          <span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 15.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">mati***</span></span>
-        </a>
-      
-    </div>
-
-    <main style="box-sizing: border-box; width: 100%; max-width: 1120px; margin: 0 auto; padding: 24px 24px 64px; display: flex; flex-direction: column; gap: 36px">
-
-      <section style="display: flex; flex-direction: column; gap: 12px">
-        <div style="position: relative; height: 340px; border-radius: 6px; overflow: hidden; background: #0E0D10">
-          <img src="a/4d04eb52330ff32ad4a929e3db6c4153.webp" alt="La mascota y su rival frente a una bóveda abierta" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-          <span style="position: absolute; inset: 0; background: radial-gradient(42% 70% at 50% 50%, rgba(10,10,13,.82) 0%, rgba(10,10,13,.35) 60%, rgba(10,10,13,0) 100%)"></span>
-          <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center">
-            <span class="b-up" style="color: var(--acc); font-size: 12px; font-weight: 700">Evento de noviembre</span>
-            <b style="font-size: 52px; font-weight: 800; line-height: .95; text-transform: uppercase; letter-spacing: .01em; text-shadow: 0 3px 0 rgba(0,0,0,.35)">El gran golpe</b>
-            <span style="color: #CFCFD8; font-size: 15px">Abrí la bóveda y repartite $ 10.000.000 en premios.</span>
-            <a href="#" class="b-acc" style="margin-top: 8px; width: 240px; height: 48px; display: grid; place-items: center">Entrar al evento</a>
-            <span style="height: 32px; padding: 0 14px; border-radius: 4px; background: rgba(16,16,21,.9); font-weight: 700; font-size: 13px; display: grid; place-items: center; font-variant-numeric: tabular-nums">2 días 17:16:37</span>
-          </div>
-        </div>
-        <div class="b-promos">
-          
-            <a href="#" class="b-tile" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #2A2416; display: block">
-              <img src="a/c5bff84f9e62582162cbb096b1997d49.webp" alt="" style="position: absolute; right: 12px; bottom: 14px; height: 120px; width: auto; mix-blend-mode: normal">
-              <span style="position: absolute; inset: 0; background: linear-gradient(90deg, #2A2416 30%, transparent 75%)"></span>
-              <span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
-                <span class="b-up" style="font-size: 11px; font-weight: 700; color: #F5C451">Gratis cada día</span>
-                <b style="font-size: 19px; font-weight: 700; line-height: 1.2">Abrí tu caja diaria</b>
-                <span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Abrir</span>
-              </span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #211C30; display: block">
-              <img src="a/77772a69fd020273a304b4f04bf0ac37.webp" alt="" style="position: absolute; right: -20px; bottom: -30px; height: 190px; width: auto; mix-blend-mode: lighten">
-              <span style="position: absolute; inset: 0; background: linear-gradient(90deg, #211C30 30%, transparent 75%)"></span>
-              <span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
-                <span class="b-up" style="font-size: 11px; font-weight: 700; color: #B48CFF">Torneo semanal</span>
-                <b style="font-size: 19px; font-weight: 700; line-height: 1.2">$ 2.000.000 en premios</b>
-                <span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Ver tabla</span>
-              </span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #172437; display: block">
-              <img src="a/26e90cbf7ced051d3494767ed732da3f.webp" alt="" style="position: absolute; right: 14px; bottom: -34px; height: 180px; width: auto; mix-blend-mode: normal">
-              <span style="position: absolute; inset: 0; background: linear-gradient(90deg, #172437 30%, transparent 75%)"></span>
-              <span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
-                <span class="b-up" style="font-size: 11px; font-weight: 700; color: #5AA9FF">Invitá amigos</span>
-                <b style="font-size: 19px; font-weight: 700; line-height: 1.2">Ganá el 10% de lo que jueguen</b>
-                <span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Invitar</span>
-              </span>
-            </a>
-          
-        </div>
-      </section>
-
-      <section style="display: flex; flex-direction: column; gap: 16px">
-        <div class="b-h"><h2>Originales BANDIDO</h2><span class="b-rule"></span><a href="#">Ver todos</a></div>
-        <div class="b-orig">
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/09bc31593ba5bb359751682c8874d0aa.webp" alt="Plinko" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x1.000</span>
-              <span class="b-chip b-up" style="position: absolute; top: 10px; left: 10px; background: var(--acc); color: var(--acc-t); font-size: 11px">Más jugado</span>
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Plinko</span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/a21bb49859ec9aebe19248ad292b57c7.webp" alt="Ruleta" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x50</span>
-              
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Ruleta</span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/5681af502c8ab33bf7accfcd6165127f.webp" alt="Minas" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x5.000</span>
-              
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Minas</span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/80aa6a51210374e180f2ecebfe9140d1.webp" alt="Crash" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">Sin límite</span>
-              
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Crash</span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/097bb6ffbd3fb7f12286156f385098be.webp" alt="Coinflip" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">x2</span>
-              
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Coinflip</span>
-            </a>
-          
-            <a href="#" class="b-tile" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
-              <img src="a/77772a69fd020273a304b4f04bf0ac37.webp" alt="Jackpot" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-              <span class="b-chip" style="position: absolute; top: 10px; right: 10px">Pozo $ 1,2 M</span>
-              
-              <span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Jackpot</span>
-            </a>
-          
-        </div>
-      </section>
-
-      <section style="display: flex; flex-direction: column; gap: 16px">
-        <div class="b-h"><h2>Slots populares</h2><span class="b-rule"></span><a href="#">Ver todos</a></div>
-        <div class="b-slots">
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" alt="Wanted Dead or a Wild"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Wanted Dead or a Wild</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Hacksaw Gaming</span></span>
-            </a>
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Sweet Bonanza 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Gates of Olympus 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/406666fb45f66b0fc1a6afc72652c713.webp" alt="Sugar Rush 1000"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Sugar Rush 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/42856d6d41b45bc49f248df7e39c657e.webp" alt="Big Bass Rock and Roll"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Big Bass Rock and Roll</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-              <span class="b-cover"><img src="a/afc2e5b98a0967b7293d65040947f61a.webp" alt="Le Outlaw"></span>
-              <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Le Outlaw</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Hacksaw Gaming</span></span>
-            </a>
-          
-        </div>
-      </section>
-
-      <section class="b-duo">
-        <div style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
-          <div class="b-h"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0525F"></span><h2 style="margin-left: -6px">Casino en vivo</h2><span class="b-rule"></span><a href="#">Ver mesas</a></div>
-          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-            
-              <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-                <span class="b-cover"><img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="Crazy Time"></span>
-                <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Crazy Time</span><span class="b-one" style="font-size: 12px; color: #3DD68C">2.980 jugando</span></span>
-              </a>
-            
-              <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-                <span class="b-cover"><img src="a/72f9927b77a3ee25903091c53e3bdb98.webp" alt="Lightning Blackjack"></span>
-                <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Lightning Blackjack</span><span class="b-one" style="font-size: 12px; color: #3DD68C">786 jugando</span></span>
-              </a>
-            
-              <a href="#" class="b-tile" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
-                <span class="b-cover"><img src="a/af62c93bd593e8bc320aea67271efaf2.webp" alt="Immersive Roulette"></span>
-                <span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Immersive Roulette</span><span class="b-one" style="font-size: 12px; color: #3DD68C">883 jugando</span></span>
-              </a>
-            
-          </div>
-        </div>
-        <div style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
-          <div class="b-h"><h2>Torneo semanal</h2><span class="b-rule"></span><span style="height: 26px; padding: 0 8px; border-radius: 4px; background: var(--card); color: var(--mut); font-size: 12px; font-weight: 600; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">2d 14:08</span></div>
-          <div style="display: flex; align-items: baseline; gap: 8px"><b style="font-size: 28px; font-weight: 800; color: var(--acc); font-variant-numeric: tabular-nums">$ 2.000.000</b><span style="color: var(--mut); font-size: 13px">en premios</span></div>
-          <div style="display: flex; flex-direction: column">
-            
-              <div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #E8B33A; color: #2A1C00; display: grid; place-items: center; font-weight: 700; font-size: 12px">1</span><img src="a/5f57fff210b5b4c4070b23756be963c8.webp" alt="" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"><span class="b-one" style="font-weight: 600">santi***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">48.210 pts</span></div>
-            
-              <div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #B9C0CF; color: #15151B; display: grid; place-items: center; font-weight: 700; font-size: 12px">2</span><img src="a/486927a1477c15e5f7da638e53b50d47.webp" alt="" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"><span class="b-one" style="font-weight: 600">lu***98</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">41.905 pts</span></div>
-            
-              <div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #C07A44; color: #1A0E04; display: grid; place-items: center; font-weight: 700; font-size: 12px">3</span><img src="a/06d313126340f06319d6f8c809433537.webp" alt="" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"><span class="b-one" style="font-weight: 600">mati***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">37.640 pts</span></div>
-            
-              <div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: var(--card); color: #8E8E9C; display: grid; place-items: center; font-weight: 700; font-size: 12px">4</span><img src="a/3ccd52b12bd3c5e4870b0814e3e4435a.webp" alt="" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"><span class="b-one" style="font-weight: 600">fer***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">29.118 pts</span></div>
-            
-              <div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: var(--card); color: #8E8E9C; display: grid; place-items: center; font-weight: 700; font-size: 12px">5</span><img src="a/026e887df1467d177f86b93a80142a3e.webp" alt="" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"><span class="b-one" style="font-weight: 600">juli***7</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">27.402 pts</span></div>
-            
-          </div>
-          <div style="margin-top: auto; display: flex; align-items: center; gap: 12px; background: var(--card); border-radius: 6px; padding: 8px 8px 8px 12px"><span style="flex: 1; font-size: 13px; color: var(--mut)">Tu puesto <b style="color: var(--txt)">#128</b> · 1.240 pts</span><a href="#" class="b-sec" style="height: 32px; padding: 0 12px; display: grid; place-items: center">Ver tabla</a></div>
-        </div>
-      </section>
-
-      <section style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
-        <div class="b-h" style="margin-bottom: 12px"><h2>Últimas jugadas</h2><span class="b-rule"></span>
-          <div style="display: flex; gap: 4px"><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; background: var(--raised); font-weight: 700; font-size: 11px; display: grid; place-items: center">Todas</span><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; color: var(--mut); font-weight: 700; font-size: 11px; display: grid; place-items: center">Grandes premios</span><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; color: var(--mut); font-weight: 700; font-size: 11px; display: grid; place-items: center">Mías</span></div>
-        </div>
-        <div class="b-row b-up" style="padding: 0 12px 8px; color: var(--dim); font-size: 11px; font-weight: 700"><span>Juego</span><span>Jugador</span><span>Apuesta</span><span>Multiplicador</span><span style="text-align: right">Ganancia</span></div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/09bc31593ba5bb359751682c8874d0aa.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Plinko</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/5f57fff210b5b4c4070b23756be963c8.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">santi***</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 2.000</span>
-            <span style="font-variant-numeric: tabular-nums; color: var(--acc); font-weight: 600">x120</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 240.000</b>
-          </div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Crazy Time</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/486927a1477c15e5f7da638e53b50d47.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">lu***98</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 5.000</span>
-            <span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x10</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 50.000</b>
-          </div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/5681af502c8ab33bf7accfcd6165127f.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Minas</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">mati***</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 1.000</span>
-            <span style="font-variant-numeric: tabular-nums; color: #686875; font-weight: 600">x0</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #686875">$ 0</b>
-          </div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Sweet Bonanza 1000</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/74dfeb9d64afd3dd1a9a401fde51b9af.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">fer***</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 800</span>
-            <span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x45</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 36.000</b>
-          </div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/80aa6a51210374e180f2ecebfe9140d1.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Crash</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/026e887df1467d177f86b93a80142a3e.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">juli***7</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 3.000</span>
-            <span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x2,4</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 7.200</b>
-          </div>
-        
-          <div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
-            <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img src="a/097bb6ffbd3fb7f12286156f385098be.webp" alt="" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="font-weight: 600">Coinflip</span></span>
-            <span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img src="a/06d313126340f06319d6f8c809433537.webp" alt="" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"><span class="b-one" style="color: var(--mut)">nico***</span></span>
-            <span style="font-variant-numeric: tabular-nums">$ 10.000</span>
-            <span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x2</span>
-            <b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 20.000</b>
-          </div>
-        
-      </section>
-
-      <footer style="padding-top: 24px; box-shadow: 0 -1px 0 var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; color: var(--mut); font-size: 13px">
-        <span style="font-weight: 800; font-size: 17px; color: var(--txt)">BANDIDO</span>
-        <a href="#">Términos</a><a href="#">Juego responsable</a><a href="#">Soporte 24/7</a><span>Mercado Pago · Transferencia · USDT</span>
-        <span style="margin-left: auto; display: flex; align-items: center; gap: 10px"><span style="width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--mut); color: var(--txt); font-size: 12px; font-weight: 600; display: grid; place-items: center">+18</span>© 2026</span>
-      </footer>
-    </main>
-  </div>
-
-  <aside class="b-chat" style="flex: 0 0 320px; box-sizing: border-box; background: var(--rail); box-shadow: inset 1px 0 0 var(--line); display: flex; flex-direction: column; position: sticky; top: 0; align-self: flex-start; height: 100vh; max-height: 1180px">
-    <div style="height: 64px; flex: none; padding: 0 16px; display: flex; align-items: stretch; gap: 18px; box-shadow: 0 1px 0 var(--line)">
-      <span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; box-shadow: inset 0 -2px 0 var(--acc)">General</span>
-      <span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; color: var(--mut)">VIP</span>
-      <span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; color: var(--mut)">Amigos</span>
-      <span style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--mut); font-size: 12px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #3DD68C"></span>1.284</span>
-    </div>
-    <div style="margin: 12px 12px 0; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 var(--acc); padding: 12px 12px 12px 15px; display: flex; align-items: center; gap: 12px">
-      <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
-        <span class="b-up" style="font-size: 11px; font-weight: 700; color: var(--acc)">Lluvia · 342 anotados</span>
-        <span style="display: flex; align-items: baseline; gap: 8px"><b style="font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums">$ 50.000</b><span style="font-size: 12px; color: var(--mut); font-variant-numeric: tabular-nums">en 04:12</span></span>
-      </span>
-      <a href="#" class="b-acc" style="height: 34px; padding: 0 14px; display: grid; place-items: center">Unirme</a>
-    </div>
-    <div style="margin: 8px 12px 0; padding: 9px 12px; border-radius: 6px; background: var(--panel); display: flex; gap: 10px; align-items: center; font-size: 12px; color: #C9C9D2"><img src="a/c3507da7f8936355bdb9ec8e04b843ed.svg" alt="" style="width: 14px; height: 14px; flex: none"><span class="b-one">Código de hoy: <b style="color: var(--acc)">BANDIDO50</b> · 50 giros gratis</span></div>
-    <div style="flex: 1; min-height: 0; overflow: hidden; padding: 6px 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px">
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/06d313126340f06319d6f8c809433537.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">nico</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">12</span><span style="color: var(--dim); font-size: 11px">21:02</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">buenas gente, ¿cómo viene el plinko hoy?</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/5f57fff210b5b4c4070b23756be963c8.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">santi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 48</span><span style="color: var(--dim); font-size: 11px">21:03</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">recién le pegué x120, viene pagando</span>
-            </span>
-          </div>
-        
-      
-        
-          <div style="margin: 4px 0; padding: 8px 10px; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 #3DD68C; display: flex; align-items: center; gap: 10px"><img src="a/09bc31593ba5bb359751682c8874d0aa.webp" alt="" style="width: 34px; height: 34px; border-radius: 4px; object-fit: cover"><span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span class="b-one" style="font-size: 12px; color: var(--mut)"><b style="color: var(--txt)">santi</b> ganó en Plinko</span><b style="font-size: 14px; color: #3DD68C; font-variant-numeric: tabular-nums">$ 240.000</b></span><span class="b-chip" style="background: var(--card); color: var(--acc)">x120</span></div>
-        
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/486927a1477c15e5f7da638e53b50d47.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">lu</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(200,205,220,.12); color: #C8CDDC; font-size: 10px; font-weight: 700; display: grid; place-items: center">Plata 31</span><span style="color: var(--dim); font-size: 11px">21:03</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">grande santi 🔥🔥</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/ae0e95974fa0d1280964db119b2d3ba4.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">mati</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">22</span><span style="color: var(--dim); font-size: 11px">21:04</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">¿a qué hora es la lluvia?</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #3DD68C">Soporte</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(61,214,140,.14); color: #3DD68C; font-size: 10px; font-weight: 700; display: grid; place-items: center">Staff</span><span style="color: var(--dim); font-size: 11px">21:04</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">En 4 minutos. Tocá Unirme arriba.</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/3ccd52b12bd3c5e4870b0814e3e4435a.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">fer</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">9</span><span style="color: var(--dim); font-size: 11px">21:05</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">abrí la caja diaria y me tocó $500 jaja</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/026e887df1467d177f86b93a80142a3e.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">juli</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 40</span><span style="color: var(--dim); font-size: 11px">21:05</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">voy tercera en el torneo, no me bajen 😅</span>
-            </span>
-          </div>
-        
-      
-        
-          <div style="margin: 4px 0; padding: 8px 10px; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 #3DD68C; display: flex; align-items: center; gap: 10px"><img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="" style="width: 34px; height: 34px; border-radius: 4px; object-fit: cover"><span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span class="b-one" style="font-size: 12px; color: var(--mut)"><b style="color: var(--txt)">lu</b> ganó en Crazy Time</span><b style="font-size: 14px; color: #3DD68C; font-variant-numeric: tabular-nums">$ 50.000</b></span><span class="b-chip" style="background: var(--card); color: var(--acc)">x10</span></div>
-        
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/c1ff51feed167e84f061a1bbb636af81.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">caro</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">17</span><span style="color: var(--dim); font-size: 11px">21:06</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">¿alguien probó el crash nuevo?</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/a30753e0f5f6b5757117cbd6216bc2e6.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">tomi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(200,205,220,.12); color: #C8CDDC; font-size: 10px; font-weight: 700; display: grid; place-items: center">Plata 26</span><span style="color: var(--dim); font-size: 11px">21:06</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">sí, me retiré en x3,2 y se fue a x40 🤦</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/7760573870e7fe3bf1f1ec6ea2100067.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">nico</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">12</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">jajaja clásico</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/ffd6659eacef3e529ce2b33e881fb7a2.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">agus</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">5</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">primera vez acá, ¿dónde está el código?</span>
-            </span>
-          </div>
-        
-      
-        
-        
-          <div style="display: flex; gap: 10px; padding: 6px 2px">
-            <img src="a/5f57fff210b5b4c4070b23756be963c8.webp" alt="" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none">
-            <span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
-              <span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">santi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 48</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
-              <span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">arriba en el fijado: BANDIDO50</span>
-            </span>
-          </div>
-        
-      
-    </div>
-    <div style="flex: none; padding: 12px; box-shadow: 0 -1px 0 var(--line); display: flex; flex-direction: column; gap: 8px">
-      <div style="display: flex; gap: 6px">
-        <label style="flex: 1; height: 40px; border-radius: 6px; background: var(--card); display: flex; align-items: center; gap: 8px; padding: 0 12px"><input placeholder="Escribí un mensaje" aria-label="Mensaje" style="border: 0; outline: 0; background: none; color: var(--txt); font: inherit; font-size: 13px; width: 100%"><img src="a/cd91ed829b27bad16cc4fcae5388828c.svg" alt="" style="width: 18px; height: 18px"></label>
-        <button type="button" aria-label="Enviar" class="b-acc" style="width: 40px; height: 40px; border: 0; display: grid; place-items: center"><img src="a/659bbe2d616b97dd8d7c5fc440066001.svg" alt="" style="width: 18px; height: 18px"></button>
-      </div>
-      <div class="b-up" style="display: flex; justify-content: space-between; color: var(--dim); font-size: 10px; font-weight: 700"><span>Reglas del chat</span><span>Español</span></div>
-    </div>
-  </aside>
+<nav class="b-side" style="flex: 0 0 224px; box-sizing: border-box; background: var(--rail); box-shadow: inset -1px 0 0 var(--line); display: flex; flex-direction: column; gap: 24px; padding: 0 12px 18px; position: sticky; top: 0; align-self: flex-start; min-height: 100vh">
+<a href="#" style="height: 64px; flex: none; display: flex; align-items: center; gap: 10px; padding: 0 6px">
+<span style="width: 38px; height: 38px; border-radius: 6px; background: var(--acc); overflow: hidden; display: block; flex: none"><img alt="" src="a/26e90cbf7ced051d3494767ed732da3f.webp" style="width: 100%; height: 130%; object-fit: cover; object-position: center top"/></span>
+<b style="font-size: 20px; font-weight: 800; letter-spacing: .02em">BANDIDO</b>
+</a>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span class="b-up" style="padding: 0 10px 8px; color: var(--dim); font-size: 11px; font-weight: 700">Casino</span>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #EDEDF2; background: var(--card)"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: var(--acc)"></span><img alt="" src="a/105c20b704bfc2f43f6d9205f1c7499b.svg" style="width: 18px; height: 18px"/>Inicio<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/c192a9c3b776c80cd91866c928321624.svg" style="width: 18px; height: 18px"/>Slots<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">4.820</span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/a66eb2407f16407f32ede58de23c9620.svg" style="width: 18px; height: 18px"/>Casino en vivo<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">312</span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/0afadda1efe6b48b34f9d2c1ade6ae4f.svg" style="width: 18px; height: 18px"/>Originales<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500">6</span></a>
 </div>
-
-<script>window.PV={plat:"bandido",screen:"lobby",view:"d"}</script><script src="proto.js?v=3"></script>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span class="b-up" style="padding: 0 10px 8px; color: var(--dim); font-size: 11px; font-weight: 700">Ganá más</span>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/1fb0bdfcc7c195e01ac152a04e9b595e.svg" style="width: 18px; height: 18px"/>Cajas<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/e0db06cffe642ba83607ccbfacbe55e5.svg" style="width: 18px; height: 18px"/>Torneos<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/bb2a233f0fdc9fd6af513867ee0311da.svg" style="width: 18px; height: 18px"/>Recompensas<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
+<a class="b-it" href="#" style="position: relative; height: 40px; padding: 0 10px; border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #A3A3B1; background: transparent"><span style="position: absolute; left: 0; top: 9px; bottom: 9px; width: 3px; border-radius: 0 2px 2px 0; background: transparent"></span><img alt="" src="a/cf64d90bdf4ee989e6fd776f6cc53e34.svg" style="width: 18px; height: 18px"/>Invitá amigos<span style="margin-left: auto; color: var(--dim); font-size: 12px; font-weight: 500"></span></a>
+</div>
+<div style="margin-top: auto; border-radius: 6px; padding: 14px; background: var(--panel); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 8px"><img alt="" src="a/5b2beb31ae93af2757bddf6c1b11dbae.svg" style="width: 18px; height: 18px"/><b style="font-size: 13px">VIP Plata</b><span style="margin-left: auto; color: var(--mut); font-size: 12px; font-weight: 600">68%</span></div>
+<span style="height: 4px; border-radius: 2px; background: var(--raised)"><span style="display: block; width: 68%; height: 4px; border-radius: 2px; background: var(--acc)"></span></span>
+<span style="color: var(--mut); font-size: 12px">Faltan $ 32.000 para Oro</span>
+</div>
+</nav>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column">
+<header style="height: 64px; flex: none; box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; gap: 10px; background: var(--rail); box-shadow: 0 1px 0 var(--line)">
+<label style="flex: 0 1 320px; height: 40px; border-radius: 6px; background: var(--card); display: flex; align-items: center; gap: 10px; padding: 0 12px; color: var(--mut)"><img alt="" src="a/05d3ea1ce4e97b6083a7e6904db625c5.svg" style="width: 16px; height: 16px"/><input aria-label="Buscar" placeholder="Buscar juegos o proveedores" style="border: 0; outline: 0; background: none; color: var(--txt); font: inherit; font-size: 13px; width: 100%"/></label>
+<div style="margin-left: auto; display: flex; align-items: center; height: 40px; border-radius: 6px; background: var(--card); padding: 0 4px 0 4px; gap: 10px">
+<span style="height: 32px; padding: 0 8px; border-radius: 4px; background: var(--raised); display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--mut)">ARS<img alt="" src="a/25c847e7ca322c5bf2ab9927be4e44ca.svg" style="width: 12px; height: 12px"/></span>
+<b style="font-weight: 700; font-variant-numeric: tabular-nums; min-width: 78px">$ 24.500</b>
+<a class="b-acc" href="#" style="height: 32px; padding: 0 16px; display: grid; place-items: center">Cargar</a>
+</div>
+<button aria-label="Recompensas" style="position: relative; width: 40px; height: 40px; border-radius: 6px; border: 0; background: var(--card); display: grid; place-items: center" type="button"><img alt="" src="a/bb2a233f0fdc9fd6af513867ee0311da.svg" style="width: 18px; height: 18px"/><span style="position: absolute; top: -5px; right: -5px; min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 4px; background: var(--acc); color: var(--acc-t); font-size: 10px; font-weight: 800; display: grid; place-items: center">2</span></button>
+<button aria-label="Notificaciones" style="position: relative; width: 40px; height: 40px; border-radius: 6px; border: 0; background: var(--card); display: grid; place-items: center" type="button"><img alt="" src="a/55769f0c7678786aca434edc3b46ee48.svg" style="width: 18px; height: 18px"/><span style="position: absolute; top: 10px; right: 11px; width: 7px; height: 7px; border-radius: 50%; background: #F0525F"></span></button>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 12px 0 0; border-radius: 6px; background: var(--card)"><img alt="" src="a/7760573870e7fe3bf1f1ec6ea2100067.webp" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover"/><span style="display: flex; flex-direction: column; gap: 4px"><b style="font-size: 13px; line-height: 1">fausto</b><span style="width: 60px; height: 3px; border-radius: 2px; background: var(--raised)"><span style="display: block; width: 68%; height: 3px; border-radius: 2px; background: var(--acc)"></span></span></span></a>
+</header>
+<div style="height: 82px; flex: none; display: flex; align-items: stretch; gap: 6px; padding: 8px 24px; box-sizing: border-box; background: var(--rail); box-shadow: 0 1px 0 var(--line); overflow: hidden">
+<div style="flex: none; width: 76px; border-radius: 6px; background: var(--panel); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><img alt="" src="a/8919edf3d7a9c6a3791582a0d0f7a605.svg" style="width: 18px; height: 18px"/><b style="font-size: 13px; font-variant-numeric: tabular-nums">1.284</b><span class="b-up" style="font-size: 9px; color: var(--mut); font-weight: 700">Online</span></div>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #2B2414; box-shadow: inset 0 -2px 0 #F5C451; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/09bc31593ba5bb359751682c8874d0aa.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #F5C451; font-variant-numeric: tabular-nums">$ 240.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">santi***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #251E36; box-shadow: inset 0 -2px 0 #B48CFF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B48CFF; font-variant-numeric: tabular-nums">$ 50.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">lu***98</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/c269002698211d4e5987a13e30351c5c.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 36.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">fer***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #202027; box-shadow: inset 0 -2px 0 #B4B4C2; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/80aa6a51210374e180f2ecebfe9140d1.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B4B4C2; font-variant-numeric: tabular-nums">$ 7.200</b><span class="b-one" style="font-size: 11px; color: var(--mut)">juli***7</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #2B2414; box-shadow: inset 0 -2px 0 #F5C451; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/2c14a3405742d98039a6988eb2f00d11.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #F5C451; font-variant-numeric: tabular-nums">$ 124.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">tomi***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/097bb6ffbd3fb7f12286156f385098be.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 20.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">nico***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #251E36; box-shadow: inset 0 -2px 0 #B48CFF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B48CFF; font-variant-numeric: tabular-nums">$ 88.500</b><span class="b-one" style="font-size: 11px; color: var(--mut)">caro***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #202027; box-shadow: inset 0 -2px 0 #B4B4C2; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/5681af502c8ab33bf7accfcd6165127f.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #B4B4C2; font-variant-numeric: tabular-nums">$ 4.100</b><span class="b-one" style="font-size: 11px; color: var(--mut)">agus***</span></span>
+</a>
+<a href="#" style="flex: none; width: 150px; border-radius: 6px; background: #17253A; box-shadow: inset 0 -2px 0 #5AA9FF; display: flex; align-items: center; gap: 10px; padding: 0 10px; box-sizing: border-box">
+<img alt="" src="a/72f9927b77a3ee25903091c53e3bdb98.webp" style="width: 36px; height: 48px; border-radius: 4px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column"><b style="font-size: 14px; font-weight: 700; color: #5AA9FF; font-variant-numeric: tabular-nums">$ 15.000</b><span class="b-one" style="font-size: 11px; color: var(--mut)">mati***</span></span>
+</a>
+</div>
+<main style="box-sizing: border-box; width: 100%; max-width: 1120px; margin: 0 auto; padding: 24px 24px 64px; display: flex; flex-direction: column; gap: 36px">
+<section style="display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative; height: 340px; border-radius: 6px; overflow: hidden; background: #0E0D10">
+<img alt="La mascota y su rival frente a una bóveda abierta" src="a/4d04eb52330ff32ad4a929e3db6c4153.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span style="position: absolute; inset: 0; background: radial-gradient(42% 70% at 50% 50%, rgba(10,10,13,.82) 0%, rgba(10,10,13,.35) 60%, rgba(10,10,13,0) 100%)"></span>
+<div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center">
+<span class="b-up" style="color: var(--acc); font-size: 12px; font-weight: 700">Evento de noviembre</span>
+<b style="font-size: 52px; font-weight: 800; line-height: .95; text-transform: uppercase; letter-spacing: .01em; text-shadow: 0 3px 0 rgba(0,0,0,.35)">El gran golpe</b>
+<span style="color: #CFCFD8; font-size: 15px">Abrí la bóveda y repartite $ 10.000.000 en premios.</span>
+<a class="b-acc" href="#" style="margin-top: 8px; width: 240px; height: 48px; display: grid; place-items: center">Entrar al evento</a>
+<span style="height: 32px; padding: 0 14px; border-radius: 4px; background: rgba(16,16,21,.9); font-weight: 700; font-size: 13px; display: grid; place-items: center; font-variant-numeric: tabular-nums">2 días 17:16:37</span>
+</div>
+</div>
+<div class="b-promos">
+<a class="b-tile" href="#" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #2A2416; display: block">
+<img alt="" src="a/c5bff84f9e62582162cbb096b1997d49.webp" style="position: absolute; right: 12px; bottom: 14px; height: 120px; width: auto; mix-blend-mode: normal"/>
+<span style="position: absolute; inset: 0; background: linear-gradient(90deg, #2A2416 30%, transparent 75%)"></span>
+<span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
+<span class="b-up" style="font-size: 11px; font-weight: 700; color: #F5C451">Gratis cada día</span>
+<b style="font-size: 19px; font-weight: 700; line-height: 1.2">Abrí tu caja diaria</b>
+<span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Abrir</span>
+</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #211C30; display: block">
+<img alt="" src="a/77772a69fd020273a304b4f04bf0ac37.webp" style="position: absolute; right: -20px; bottom: -30px; height: 190px; width: auto; mix-blend-mode: lighten"/>
+<span style="position: absolute; inset: 0; background: linear-gradient(90deg, #211C30 30%, transparent 75%)"></span>
+<span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
+<span class="b-up" style="font-size: 11px; font-weight: 700; color: #B48CFF">Torneo semanal</span>
+<b style="font-size: 19px; font-weight: 700; line-height: 1.2">$ 2.000.000 en premios</b>
+<span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Ver tabla</span>
+</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; height: 150px; border-radius: 6px; overflow: hidden; background: #172437; display: block">
+<img alt="" src="a/26e90cbf7ced051d3494767ed732da3f.webp" style="position: absolute; right: 14px; bottom: -34px; height: 180px; width: auto; mix-blend-mode: normal"/>
+<span style="position: absolute; inset: 0; background: linear-gradient(90deg, #172437 30%, transparent 75%)"></span>
+<span style="position: relative; height: 100%; box-sizing: border-box; padding: 18px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 62%">
+<span class="b-up" style="font-size: 11px; font-weight: 700; color: #5AA9FF">Invitá amigos</span>
+<b style="font-size: 19px; font-weight: 700; line-height: 1.2">Ganá el 10% de lo que jueguen</b>
+<span class="b-sec" style="margin-top: auto; height: 32px; padding: 0 14px; display: grid; place-items: center; background: rgba(255,255,255,.1)">Invitar</span>
+</span>
+</a>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 16px">
+<div class="b-h"><h2>Originales BANDIDO</h2><span class="b-rule"></span><a href="#">Ver todos</a></div>
+<div class="b-orig">
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Plinko" src="a/09bc31593ba5bb359751682c8874d0aa.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x1.000</span>
+<span class="b-chip b-up" style="position: absolute; top: 10px; left: 10px; background: var(--acc); color: var(--acc-t); font-size: 11px">Más jugado</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Plinko</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Ruleta" src="a/a21bb49859ec9aebe19248ad292b57c7.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x50</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Ruleta</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Minas" src="a/5681af502c8ab33bf7accfcd6165127f.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">Hasta x5.000</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Minas</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Crash" src="a/80aa6a51210374e180f2ecebfe9140d1.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">Sin límite</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Crash</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Coinflip" src="a/097bb6ffbd3fb7f12286156f385098be.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">x2</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Coinflip</span>
+</a>
+<a class="b-tile" href="#" style="position: relative; display: block; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; background: #0E1424">
+<img alt="Jackpot" src="a/77772a69fd020273a304b4f04bf0ac37.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<span class="b-chip" style="position: absolute; top: 10px; right: 10px">Pozo $ 1,2 M</span>
+<span class="b-chip b-up" style="position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); height: 32px; padding: 0 16px; font-size: 13px">Jackpot</span>
+</a>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 16px">
+<div class="b-h"><h2>Slots populares</h2><span class="b-rule"></span><a href="#">Ver todos</a></div>
+<div class="b-slots">
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Wanted Dead or a Wild" src="a/35c2aac1f1c18e129b631d7fad3b173c.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Wanted Dead or a Wild</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Hacksaw Gaming</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Sweet Bonanza 1000" src="a/c269002698211d4e5987a13e30351c5c.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Sweet Bonanza 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Gates of Olympus 1000" src="a/2c14a3405742d98039a6988eb2f00d11.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Gates of Olympus 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Sugar Rush 1000" src="a/406666fb45f66b0fc1a6afc72652c713.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Sugar Rush 1000</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Big Bass Rock and Roll" src="a/42856d6d41b45bc49f248df7e39c657e.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Big Bass Rock and Roll</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Pragmatic Play</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Le Outlaw" src="a/afc2e5b98a0967b7293d65040947f61a.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Le Outlaw</span><span class="b-one" style="font-size: 12px; color: var(--dim)">Hacksaw Gaming</span></span>
+</a>
+</div>
+</section>
+<section class="b-duo">
+<div style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div class="b-h"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F0525F"></span><h2 style="margin-left: -6px">Casino en vivo</h2><span class="b-rule"></span><a href="#">Ver mesas</a></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Crazy Time" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Crazy Time</span><span class="b-one" style="font-size: 12px; color: #3DD68C">2.980 jugando</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Lightning Blackjack" src="a/72f9927b77a3ee25903091c53e3bdb98.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Lightning Blackjack</span><span class="b-one" style="font-size: 12px; color: #3DD68C">786 jugando</span></span>
+</a>
+<a class="b-tile" href="#" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span class="b-cover"><img alt="Immersive Roulette" src="a/af62c93bd593e8bc320aea67271efaf2.webp"/></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><span class="b-one" style="font-size: 13px; font-weight: 600">Immersive Roulette</span><span class="b-one" style="font-size: 12px; color: #3DD68C">883 jugando</span></span>
+</a>
+</div>
+</div>
+<div style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div class="b-h"><h2>Torneo semanal</h2><span class="b-rule"></span><span style="height: 26px; padding: 0 8px; border-radius: 4px; background: var(--card); color: var(--mut); font-size: 12px; font-weight: 600; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">2d 14:08</span></div>
+<div style="display: flex; align-items: baseline; gap: 8px"><b style="font-size: 28px; font-weight: 800; color: var(--acc); font-variant-numeric: tabular-nums">$ 2.000.000</b><span style="color: var(--mut); font-size: 13px">en premios</span></div>
+<div style="display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #E8B33A; color: #2A1C00; display: grid; place-items: center; font-weight: 700; font-size: 12px">1</span><img alt="" src="a/5f57fff210b5b4c4070b23756be963c8.webp" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"/><span class="b-one" style="font-weight: 600">santi***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">48.210 pts</span></div>
+<div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #B9C0CF; color: #15151B; display: grid; place-items: center; font-weight: 700; font-size: 12px">2</span><img alt="" src="a/486927a1477c15e5f7da638e53b50d47.webp" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"/><span class="b-one" style="font-weight: 600">lu***98</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">41.905 pts</span></div>
+<div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: #C07A44; color: #1A0E04; display: grid; place-items: center; font-weight: 700; font-size: 12px">3</span><img alt="" src="a/06d313126340f06319d6f8c809433537.webp" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"/><span class="b-one" style="font-weight: 600">mati***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">37.640 pts</span></div>
+<div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: var(--card); color: #8E8E9C; display: grid; place-items: center; font-weight: 700; font-size: 12px">4</span><img alt="" src="a/3ccd52b12bd3c5e4870b0814e3e4435a.webp" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"/><span class="b-one" style="font-weight: 600">fer***</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">29.118 pts</span></div>
+<div style="display: grid; grid-template-columns: 26px 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 13px"><span style="width: 24px; height: 24px; border-radius: 4px; background: var(--card); color: #8E8E9C; display: grid; place-items: center; font-weight: 700; font-size: 12px">5</span><img alt="" src="a/026e887df1467d177f86b93a80142a3e.webp" style="width: 30px; height: 30px; border-radius: 6px; object-fit: cover"/><span class="b-one" style="font-weight: 600">juli***7</span><span style="color: var(--mut); font-weight: 600; font-variant-numeric: tabular-nums">27.402 pts</span></div>
+</div>
+<div style="margin-top: auto; display: flex; align-items: center; gap: 12px; background: var(--card); border-radius: 6px; padding: 8px 8px 8px 12px"><span style="flex: 1; font-size: 13px; color: var(--mut)">Tu puesto <b style="color: var(--txt)">#128</b> · 1.240 pts</span><a class="b-sec" href="#" style="height: 32px; padding: 0 12px; display: grid; place-items: center">Ver tabla</a></div>
+</div>
+</section>
+<section style="background: var(--panel); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<div class="b-h" style="margin-bottom: 12px"><h2>Últimas jugadas</h2><span class="b-rule"></span>
+<div style="display: flex; gap: 4px"><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; background: var(--raised); font-weight: 700; font-size: 11px; display: grid; place-items: center">Todas</span><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; color: var(--mut); font-weight: 700; font-size: 11px; display: grid; place-items: center">Grandes premios</span><span class="b-up" style="height: 30px; padding: 0 12px; border-radius: 4px; color: var(--mut); font-weight: 700; font-size: 11px; display: grid; place-items: center">Mías</span></div>
+</div>
+<div class="b-row b-up" style="padding: 0 12px 8px; color: var(--dim); font-size: 11px; font-weight: 700"><span>Juego</span><span>Jugador</span><span>Apuesta</span><span>Multiplicador</span><span style="text-align: right">Ganancia</span></div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/09bc31593ba5bb359751682c8874d0aa.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Plinko</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/5f57fff210b5b4c4070b23756be963c8.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">santi***</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 2.000</span>
+<span style="font-variant-numeric: tabular-nums; color: var(--acc); font-weight: 600">x120</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 240.000</b>
+</div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Crazy Time</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/486927a1477c15e5f7da638e53b50d47.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">lu***98</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 5.000</span>
+<span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x10</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 50.000</b>
+</div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/5681af502c8ab33bf7accfcd6165127f.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Minas</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">mati***</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 1.000</span>
+<span style="font-variant-numeric: tabular-nums; color: #686875; font-weight: 600">x0</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #686875">$ 0</b>
+</div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/c269002698211d4e5987a13e30351c5c.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Sweet Bonanza 1000</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/74dfeb9d64afd3dd1a9a401fde51b9af.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">fer***</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 800</span>
+<span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x45</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 36.000</b>
+</div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: var(--card); font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/80aa6a51210374e180f2ecebfe9140d1.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Crash</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/026e887df1467d177f86b93a80142a3e.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">juli***7</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 3.000</span>
+<span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x2,4</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 7.200</b>
+</div>
+<div class="b-row" style="height: 46px; padding: 0 12px; border-radius: 4px; background: transparent; font-size: 13px">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><img alt="" src="a/097bb6ffbd3fb7f12286156f385098be.webp" style="width: 28px; height: 28px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="font-weight: 600">Coinflip</span></span>
+<span style="display: flex; align-items: center; gap: 8px; min-width: 0"><img alt="" src="a/06d313126340f06319d6f8c809433537.webp" style="width: 22px; height: 22px; border-radius: 4px; object-fit: cover; flex: none"/><span class="b-one" style="color: var(--mut)">nico***</span></span>
+<span style="font-variant-numeric: tabular-nums">$ 10.000</span>
+<span style="font-variant-numeric: tabular-nums; color: #EDEDF2; font-weight: 600">x2</span>
+<b style="text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: #3DD68C">$ 20.000</b>
+</div>
+</section>
+<footer style="padding-top: 24px; box-shadow: 0 -1px 0 var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; color: var(--mut); font-size: 13px">
+<span style="font-weight: 800; font-size: 17px; color: var(--txt)">BANDIDO</span>
+<a href="#">Términos</a><a href="#">Juego responsable</a><a href="#">Soporte 24/7</a><span>Cargás y retirás por alias</span>
+<span style="margin-left: auto; display: flex; align-items: center; gap: 10px"><span style="width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--mut); color: var(--txt); font-size: 12px; font-weight: 600; display: grid; place-items: center">+18</span>© 2026</span>
+</footer>
+</main>
+</div>
+<aside class="b-chat" style="flex: 0 0 320px; box-sizing: border-box; background: var(--rail); box-shadow: inset 1px 0 0 var(--line); display: flex; flex-direction: column; position: sticky; top: 0; align-self: flex-start; height: 100vh; max-height: 1180px">
+<div style="height: 64px; flex: none; padding: 0 16px; display: flex; align-items: stretch; gap: 18px; box-shadow: 0 1px 0 var(--line)">
+<span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; box-shadow: inset 0 -2px 0 var(--acc)">General</span>
+<span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; color: var(--mut)">VIP</span>
+<span class="b-up" style="display: flex; align-items: center; font-size: 12px; font-weight: 700; color: var(--mut)">Amigos</span>
+<span style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--mut); font-size: 12px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #3DD68C"></span>1.284</span>
+</div>
+<div style="margin: 12px 12px 0; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 var(--acc); padding: 12px 12px 12px 15px; display: flex; align-items: center; gap: 12px">
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span class="b-up" style="font-size: 11px; font-weight: 700; color: var(--acc)">Lluvia · 342 anotados</span>
+<span style="display: flex; align-items: baseline; gap: 8px"><b style="font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums">$ 50.000</b><span style="font-size: 12px; color: var(--mut); font-variant-numeric: tabular-nums">en 04:12</span></span>
+</span>
+<a class="b-acc" href="#" style="height: 34px; padding: 0 14px; display: grid; place-items: center">Unirme</a>
+</div>
+<div style="margin: 8px 12px 0; padding: 9px 12px; border-radius: 6px; background: var(--panel); display: flex; gap: 10px; align-items: center; font-size: 12px; color: #C9C9D2"><img alt="" src="a/c3507da7f8936355bdb9ec8e04b843ed.svg" style="width: 14px; height: 14px; flex: none"/><span class="b-one">Código de hoy: <b style="color: var(--acc)">BANDIDO50</b> · 50 giros gratis</span></div>
+<div style="flex: 1; min-height: 0; overflow: hidden; padding: 6px 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px">
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/06d313126340f06319d6f8c809433537.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">nico</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">12</span><span style="color: var(--dim); font-size: 11px">21:02</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">buenas gente, ¿cómo viene el plinko hoy?</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/5f57fff210b5b4c4070b23756be963c8.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">santi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 48</span><span style="color: var(--dim); font-size: 11px">21:03</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">recién le pegué x120, viene pagando</span>
+</span>
+</div>
+<div style="margin: 4px 0; padding: 8px 10px; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 #3DD68C; display: flex; align-items: center; gap: 10px"><img alt="" src="a/09bc31593ba5bb359751682c8874d0aa.webp" style="width: 34px; height: 34px; border-radius: 4px; object-fit: cover"/><span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span class="b-one" style="font-size: 12px; color: var(--mut)"><b style="color: var(--txt)">santi</b> ganó en Plinko</span><b style="font-size: 14px; color: #3DD68C; font-variant-numeric: tabular-nums">$ 240.000</b></span><span class="b-chip" style="background: var(--card); color: var(--acc)">x120</span></div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/486927a1477c15e5f7da638e53b50d47.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">lu</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(200,205,220,.12); color: #C8CDDC; font-size: 10px; font-weight: 700; display: grid; place-items: center">Plata 31</span><span style="color: var(--dim); font-size: 11px">21:03</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">grande santi 🔥🔥</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/ae0e95974fa0d1280964db119b2d3ba4.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">mati</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">22</span><span style="color: var(--dim); font-size: 11px">21:04</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">¿a qué hora es la lluvia?</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #3DD68C">Soporte</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(61,214,140,.14); color: #3DD68C; font-size: 10px; font-weight: 700; display: grid; place-items: center">Staff</span><span style="color: var(--dim); font-size: 11px">21:04</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">En 4 minutos. Tocá Unirme arriba.</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/3ccd52b12bd3c5e4870b0814e3e4435a.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">fer</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">9</span><span style="color: var(--dim); font-size: 11px">21:05</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">abrí la caja diaria y me tocó $500 jaja</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/026e887df1467d177f86b93a80142a3e.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">juli</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 40</span><span style="color: var(--dim); font-size: 11px">21:05</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">voy tercera en el torneo, no me bajen 😅</span>
+</span>
+</div>
+<div style="margin: 4px 0; padding: 8px 10px; border-radius: 6px; background: var(--panel); box-shadow: inset 3px 0 0 #3DD68C; display: flex; align-items: center; gap: 10px"><img alt="" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" style="width: 34px; height: 34px; border-radius: 4px; object-fit: cover"/><span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span class="b-one" style="font-size: 12px; color: var(--mut)"><b style="color: var(--txt)">lu</b> ganó en Crazy Time</span><b style="font-size: 14px; color: #3DD68C; font-variant-numeric: tabular-nums">$ 50.000</b></span><span class="b-chip" style="background: var(--card); color: var(--acc)">x10</span></div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/c1ff51feed167e84f061a1bbb636af81.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">caro</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">17</span><span style="color: var(--dim); font-size: 11px">21:06</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">¿alguien probó el crash nuevo?</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/a30753e0f5f6b5757117cbd6216bc2e6.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">tomi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(200,205,220,.12); color: #C8CDDC; font-size: 10px; font-weight: 700; display: grid; place-items: center">Plata 26</span><span style="color: var(--dim); font-size: 11px">21:06</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">sí, me retiré en x3,2 y se fue a x40 🤦</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/7760573870e7fe3bf1f1ec6ea2100067.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">nico</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">12</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">jajaja clásico</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/ffd6659eacef3e529ce2b33e881fb7a2.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #EDEDF2">agus</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: var(--card); color: #8E8E9C; font-size: 10px; font-weight: 700; display: grid; place-items: center">5</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">primera vez acá, ¿dónde está el código?</span>
+</span>
+</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px">
+<img alt="" src="a/5f57fff210b5b4c4070b23756be963c8.webp" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover; flex: none"/>
+<span style="min-width: 0; display: flex; flex-direction: column; gap: 1px">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px"><b style="font-weight: 600; color: #F5C451">santi</b><span style="height: 16px; padding: 0 5px; border-radius: 3px; background: rgba(245,196,81,.14); color: #F5C451; font-size: 10px; font-weight: 700; display: grid; place-items: center">Oro 48</span><span style="color: var(--dim); font-size: 11px">21:07</span></span>
+<span style="font-size: 13px; color: #C9C9D2; line-height: 1.4">arriba en el fijado: BANDIDO50</span>
+</span>
+</div>
+</div>
+<div style="flex: none; padding: 12px; box-shadow: 0 -1px 0 var(--line); display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; gap: 6px">
+<label style="flex: 1; height: 40px; border-radius: 6px; background: var(--card); display: flex; align-items: center; gap: 8px; padding: 0 12px"><input aria-label="Mensaje" placeholder="Escribí un mensaje" style="border: 0; outline: 0; background: none; color: var(--txt); font: inherit; font-size: 13px; width: 100%"/><img alt="" src="a/cd91ed829b27bad16cc4fcae5388828c.svg" style="width: 18px; height: 18px"/></label>
+<button aria-label="Enviar" class="b-acc" style="width: 40px; height: 40px; border: 0; display: grid; place-items: center" type="button"><img alt="" src="a/659bbe2d616b97dd8d7c5fc440066001.svg" style="width: 18px; height: 18px"/></button>
+</div>
+<div class="b-up" style="display: flex; justify-content: space-between; color: var(--dim); font-size: 10px; font-weight: 700"><span>Reglas del chat</span><span>Español</span></div>
+</div>
+</aside>
+</div>
+<script>window.PV={plat:"bandido",screen:"lobby",view:"d"}</script><script src="proto.js?v=4"></script>
 </body></html>

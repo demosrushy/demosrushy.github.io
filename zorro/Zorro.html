@@ -1,7 +1,7 @@
-<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZORRO · Lobby</title>
+<!DOCTYPE html>
 
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ZORRO · Lobby</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
 body{margin:0;background:#F4F5F8}
 a{color:inherit;text-decoration:none}
@@ -18,252 +18,202 @@ a{color:inherit;text-decoration:none}
 @media (max-width:1180px){.z-nav{display:none!important}.z-fila{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media (max-width:820px){.z-tres,.z-promos,.z-gan{grid-template-columns:1fr}.z-ex{grid-template-columns:repeat(2,minmax(0,1fr))}.z-fila{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
-
-<link rel="stylesheet" href="proto.css?v=3">
+<link href="proto.css?v=4" rel="stylesheet"/>
 </head><body>
-
-
 <div style="min-height: 100vh; background: #F4F5F8; color: #15172A; font-family: 'Proxima Nova', Figtree, system-ui, sans-serif; font-size: 15px; line-height: 1.45">
-  <header style="background: #FFFFFF; box-shadow: 0 1px 0 #E6E8EE, 0 4px 16px rgba(21,23,42,.04); position: relative; z-index: 2">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; height: 76px; box-sizing: border-box; display: flex; align-items: center; gap: 28px">
-      <a href="#" style="display: flex; align-items: center; gap: 10px">
-        <svg width="38" height="38" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#FF5B2E"/><path d="M9 11l6 4h6l6-4-1 9c-1 5-4 8-8 8s-7-3-8-8z" fill="#FFFFFF"/><path d="M14 22c2 2 6 2 8 0l-4 4z" fill="#15172A"/></svg>
-        <span style="font-weight: 900; font-size: 25px; letter-spacing: -.01em">zorro</span>
-      </a>
-      <nav class="z-nav" style="display: flex; gap: 4px">
-        <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; background: #15172A; color: #FFFFFF; font-weight: 700; display: flex; align-items: center; gap: 8px">Inicio</a>
-        <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img src="a/e4cfd83876cf8bd318b45670d13f9662.svg" alt="" style="width: 18px; height: 18px">Slots</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img src="a/65987cdcf2c34c98048e4eb3f111b435.svg" alt="" style="width: 18px; height: 18px">Casino en vivo</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img src="a/c91424bb2e63a699b00a32d8626cf31a.svg" alt="" style="width: 18px; height: 18px">Exclusivos</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img src="a/97978e072f25505db2e202c54c98a739.svg" alt="" style="width: 18px; height: 18px">Misiones</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img src="a/478635f04367a33621c5d846d27e5b01.svg" alt="" style="width: 18px; height: 18px">Promociones</a>
-      </nav>
-      <div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
-        <button type="button" aria-label="Buscar" style="width: 46px; height: 46px; border-radius: 23px; border: 0; background: #F4F5F8; display: grid; place-items: center"><img src="a/d604923be0e886a64da3b730b1df4977.svg" alt="" style="width: 19px; height: 19px"></button>
-        <a href="#" class="z-ghost" style="height: 46px; padding: 0 20px; border-radius: 23px; font-weight: 700; display: grid; place-items: center">Ingresar</a>
-        <a href="#" class="z-pri" style="height: 46px; padding: 0 22px; border-radius: 23px; background: #FF5B2E; color: #FFFFFF; font-weight: 800; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(255,91,46,.32)">Crear cuenta</a>
-      </div>
-    </div>
-  </header>
-
-  <main style="max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 32px 32px 72px; display: flex; flex-direction: column; gap: 40px">
-    <section style="position: relative; height: 360px; border-radius: 24px; overflow: hidden; background: #FF6A3A">
-      <img src="a/8a5a1325590dd5298f3094eda5f7023e.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-      <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; color: #FFFFFF; padding: 0 24px">
-        <span style="height: 30px; padding: 0 14px; border-radius: 15px; background: rgba(21,23,42,.18); font-weight: 700; font-size: 14px; display: grid; place-items: center">Nuevo en Zorro</span>
-        <h1 style="margin: 0; font-size: 44px; font-weight: 900; line-height: 1.08; max-width: 560px; text-shadow: 0 2px 16px rgba(120,30,0,.25)">Jugá más astuto: tu primera carga vale el doble</h1>
-        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center">
-          <a href="#" style="height: 52px; padding: 0 30px; border-radius: 26px; background: #FFFFFF; color: #E2401B; font-weight: 800; font-size: 16px; display: grid; place-items: center; box-shadow: 0 8px 20px rgba(120,30,0,.22)">Crear cuenta gratis</a>
-          <a href="#" style="height: 52px; padding: 0 24px; border-radius: 26px; background: rgba(21,23,42,.18); color: #FFFFFF; font-weight: 700; font-size: 16px; display: grid; place-items: center">Ver promociones</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="z-tres">
-      
-        <a href="#" class="z-tile" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
-          <span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img src="a/cc5dbd2817941de63a5f70828cd571c4.svg" alt="" style="width: 22px; height: 22px"></span>
-          <span style="display: flex; flex-direction: column"><b style="font-size: 17px">Slots</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">35.110</b> jugando</span></span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B91A5" stroke-width="2.4" stroke-linecap="round" style="margin-left: auto" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-        </a>
-      
-        <a href="#" class="z-tile" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
-          <span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img src="a/66c21bd8387cbdbe238dd383a622081b.svg" alt="" style="width: 22px; height: 22px"></span>
-          <span style="display: flex; flex-direction: column"><b style="font-size: 17px">Casino en vivo</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">8.240</b> jugando</span></span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B91A5" stroke-width="2.4" stroke-linecap="round" style="margin-left: auto" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-        </a>
-      
-        <a href="#" class="z-tile" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
-          <span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img src="a/8f4604f5ba0454762e1492977193ef80.svg" alt="" style="width: 22px; height: 22px"></span>
-          <span style="display: flex; flex-direction: column"><b style="font-size: 17px">Misiones del día</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">3</b> para completar hoy</span></span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B91A5" stroke-width="2.4" stroke-linecap="round" style="margin-left: auto" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-        </a>
-      
-    </section>
-
-    <section style="display: flex; flex-direction: column; gap: 18px">
-      <div style="display: flex; align-items: baseline; gap: 12px"><h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Exclusivos de Zorro</h2><span style="color: #5D6378; font-weight: 600">Solo los jugás acá</span><a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800">Ver todos</a></div>
-      <div class="z-ex">
-        
-          <a href="#" class="z-tile" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
-            <img src="a/f11b97c0be71a7487244914cd06229f5.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
-            <span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">Ruleta Express</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
-          </a>
-        
-          <a href="#" class="z-tile" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
-            <img src="a/20e13cf89d3150c6ec250e5782e753d3.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
-            <span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">777 Astuto</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
-          </a>
-        
-          <a href="#" class="z-tile" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
-            <img src="a/6186fcb801e21473efef38459a5b36bc.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
-            <span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">Blackjack Zorro</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
-          </a>
-        
-          <a href="#" class="z-tile" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
-            <img src="a/db58277579daa95b8f196285a75d75d2.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
-            <span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">El Cofre</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
-          </a>
-        
-      </div>
-    </section>
-
-    <section class="z-promos">
-      
-        <a href="#" class="z-tile" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
-          <img src="a/18b903c512935a5c8c932d28e9f53956.webp" alt="" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block">
-          <span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
-            <span style="color: #E2401B; font-size: 13px; font-weight: 800">Bienvenida</span>
-            <span style="font-size: 19px; font-weight: 800; line-height: 1.2">Tu primera carga vale el doble</span>
-            <span style="color: #5D6378; font-size: 14px">Hasta $ 100.000 en fichas y 50 giros.</span>
-          </span>
-        </a>
-      
-        <a href="#" class="z-tile" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
-          <img src="a/fb3421b2c3109d8015233fa86287d6f6.webp" alt="" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block">
-          <span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
-            <span style="color: #E2401B; font-size: 13px; font-weight: 800">Misiones</span>
-            <span style="font-size: 19px; font-weight: 800; line-height: 1.2">Completá misiones y abrí el cofre</span>
-            <span style="color: #5D6378; font-size: 14px">Premios nuevos todos los días.</span>
-          </span>
-        </a>
-      
-        <a href="#" class="z-tile" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
-          <img src="a/97556aad15c1e8a150daddb2290c99ef.webp" alt="" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block">
-          <span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
-            <span style="color: #E2401B; font-size: 13px; font-weight: 800">Game shows</span>
-            <span style="font-size: 19px; font-weight: 800; line-height: 1.2">Giros extra en Crazy Time</span>
-            <span style="color: #5D6378; font-size: 14px">Los viernes de 20 a 24 h.</span>
-          </span>
-        </a>
-      
-    </section>
-
-    
-      <section style="display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 10px">
-          <h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Los más jugados</h2>
-          <a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800; margin-right: 8px">Ver todos</a>
-          <button type="button" aria-label="Anterior" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)">‹</button>
-          <button type="button" aria-label="Siguiente" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)">›</button>
-        </div>
-        <div class="z-fila">
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sweet Bonanza 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gates of Olympus 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/406666fb45f66b0fc1a6afc72652c713.webp" alt="Sugar Rush 1000" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sugar Rush 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" alt="Wanted Dead or a Wild" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Wanted Dead or a Wild</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Hacksaw Gaming</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/42856d6d41b45bc49f248df7e39c657e.webp" alt="Big Bass Rock and Roll" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Big Bass Rock and Roll</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/afc2e5b98a0967b7293d65040947f61a.webp" alt="Le Outlaw" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Le Outlaw</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Hacksaw Gaming</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/f30ad12c49d0f7828c50467b424af7a3.webp" alt="Candy Swipe" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Candy Swipe</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Coreffect</span></span>
-            </a>
-          
-        </div>
-      </section>
-    
-      <section style="display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; align-items: center; gap: 10px">
-          <h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Casino en vivo</h2>
-          <a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800; margin-right: 8px">Ver todos</a>
-          <button type="button" aria-label="Anterior" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)">‹</button>
-          <button type="button" aria-label="Siguiente" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)">›</button>
-        </div>
-        <div class="z-fila">
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="Crazy Time" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Crazy Time</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/af62c93bd593e8bc320aea67271efaf2.webp" alt="Immersive Roulette" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Immersive Roulette</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/72f9927b77a3ee25903091c53e3bdb98.webp" alt="Lightning Blackjack" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Lightning Blackjack</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/819105e91303d7f1d1ed9fdbfa72e6dc.webp" alt="Monopoly Live" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Monopoly Live</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/8714c594cbb0a7d12d09919cd8182f3c.webp" alt="Ruleta en Español" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ruleta en Español</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/179c2476746669ef17d0de561884dd69.webp" alt="XXXtreme Lightning" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">XXXtreme Lightning</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-            <a href="#" class="z-tile" style="display: flex; flex-direction: column; gap: 10px">
-              <img src="a/dc1a7be2a58d6015b45f54167d7996ad.webp" alt="Blackjack" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)">
-              <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Blackjack</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
-            </a>
-          
-        </div>
-      </section>
-    
-
-    <section style="display: flex; flex-direction: column; gap: 18px">
-      <div style="display: flex; align-items: center; gap: 10px"><h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Ganando ahora</h2><span style="display: inline-flex; align-items: center; gap: 6px; color: #5D6378; font-weight: 600"><span style="width: 8px; height: 8px; border-radius: 50%; background: #22B566"></span>en vivo</span></div>
-      <div class="z-gan">
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">mati***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Sweet Bonanza 1000</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 184.500</b></div>
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">lu***98</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Crazy Time</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 92.300</b></div>
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/20e13cf89d3150c6ec250e5782e753d3.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">fer***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">777 Astuto</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 61.750</b></div>
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">juli***7</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Gates of Olympus 1000</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 48.200</b></div>
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/72f9927b77a3ee25903091c53e3bdb98.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">nico***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Lightning Blackjack</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 37.900</b></div>
-        
-          <div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img src="a/f11b97c0be71a7487244914cd06229f5.webp" alt="" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">cami***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Ruleta Express</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 25.400</b></div>
-        
-      </div>
-    </section>
-
-    <footer style="margin-top: 16px; padding-top: 40px; box-shadow: 0 -1px 0 #E6E8EE; display: flex; flex-direction: column; gap: 28px">
-      <div style="display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 15px">
-        <div style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 900; font-size: 22px">zorro</span><span style="color: #5D6378; max-width: 280px">El casino online más astuto, con soporte humano las 24 horas.</span></div>
-        <div style="display: flex; flex-direction: column; gap: 12px"><b>Juegos</b><a href="#" style="color: #5D6378">Slots</a><a href="#" style="color: #5D6378">Casino en vivo</a><a href="#" style="color: #5D6378">Exclusivos</a></div>
-        <div style="display: flex; flex-direction: column; gap: 12px"><b>Zorro</b><a href="#" style="color: #5D6378">Misiones</a><a href="#" style="color: #5D6378">Promociones</a><a href="#" style="color: #5D6378">Club VIP</a></div>
-        <div style="display: flex; flex-direction: column; gap: 12px"><b>Ayuda</b><a href="#" style="color: #5D6378">Soporte 24/7</a><a href="#" style="color: #5D6378">Cómo cargar</a><a href="#" style="color: #5D6378">Juego responsable</a></div>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 24px; box-shadow: 0 -1px 0 #E6E8EE">
-        <span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Mercado Pago</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Transferencia</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Cuenta DNI</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">USDT</span>
-        <span style="margin-left: auto; display: flex; align-items: center; gap: 12px; color: #8B91A5; font-size: 13px"><span style="width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #8B91A5; color: #3F4354; font-weight: 700; display: grid; place-items: center">+18</span>© 2026 Zorro · Jugá con responsabilidad</span>
-      </div>
-    </footer>
-  </main>
+<header style="background: #FFFFFF; box-shadow: 0 1px 0 #E6E8EE, 0 4px 16px rgba(21,23,42,.04); position: relative; z-index: 2">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; height: 76px; box-sizing: border-box; display: flex; align-items: center; gap: 28px">
+<a href="#" style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" height="38" viewbox="0 0 36 36" width="38"><rect fill="#FF5B2E" height="36" rx="11" width="36"></rect><path d="M9 11l6 4h6l6-4-1 9c-1 5-4 8-8 8s-7-3-8-8z" fill="#FFFFFF"></path><path d="M14 22c2 2 6 2 8 0l-4 4z" fill="#15172A"></path></svg>
+<span style="font-weight: 900; font-size: 25px; letter-spacing: -.01em">zorro</span>
+</a>
+<nav class="z-nav" style="display: flex; gap: 4px">
+<a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; background: #15172A; color: #FFFFFF; font-weight: 700; display: flex; align-items: center; gap: 8px">Inicio</a>
+<a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img alt="" src="a/e4cfd83876cf8bd318b45670d13f9662.svg" style="width: 18px; height: 18px"/>Slots</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img alt="" src="a/65987cdcf2c34c98048e4eb3f111b435.svg" style="width: 18px; height: 18px"/>Casino en vivo</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img alt="" src="a/c91424bb2e63a699b00a32d8626cf31a.svg" style="width: 18px; height: 18px"/>Exclusivos</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img alt="" src="a/97978e072f25505db2e202c54c98a739.svg" style="width: 18px; height: 18px"/>Misiones</a><a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px"><img alt="" src="a/478635f04367a33621c5d846d27e5b01.svg" style="width: 18px; height: 18px"/>Promociones</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<button aria-label="Buscar" style="width: 46px; height: 46px; border-radius: 23px; border: 0; background: #F4F5F8; display: grid; place-items: center" type="button"><img alt="" src="a/d604923be0e886a64da3b730b1df4977.svg" style="width: 19px; height: 19px"/></button>
+<a class="z-ghost" href="#" style="height: 46px; padding: 0 20px; border-radius: 23px; font-weight: 700; display: grid; place-items: center">Ingresar</a>
+<a class="z-pri" href="#" style="height: 46px; padding: 0 22px; border-radius: 23px; background: #FF5B2E; color: #FFFFFF; font-weight: 800; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(255,91,46,.32)">Crear cuenta</a>
 </div>
-
-<script>window.PV={plat:"zorro",screen:"lobby",view:"d"}</script><script src="proto.js?v=3"></script>
+</div>
+</header>
+<main style="max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 32px 32px 72px; display: flex; flex-direction: column; gap: 40px">
+<section style="position: relative; height: 360px; border-radius: 24px; overflow: hidden; background: #FF6A3A">
+<img alt="" src="a/8a5a1325590dd5298f3094eda5f7023e.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"/>
+<div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; color: #FFFFFF; padding: 0 24px">
+<span style="height: 30px; padding: 0 14px; border-radius: 15px; background: rgba(21,23,42,.18); font-weight: 700; font-size: 14px; display: grid; place-items: center">Nuevo en Zorro</span>
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; line-height: 1.08; max-width: 560px; text-shadow: 0 2px 16px rgba(120,30,0,.25)">Jugá más astuto: tu primera carga vale el doble</h1>
+<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center">
+<a href="#" style="height: 52px; padding: 0 30px; border-radius: 26px; background: #FFFFFF; color: #E2401B; font-weight: 800; font-size: 16px; display: grid; place-items: center; box-shadow: 0 8px 20px rgba(120,30,0,.22)">Crear cuenta gratis</a>
+<a href="#" style="height: 52px; padding: 0 24px; border-radius: 26px; background: rgba(21,23,42,.18); color: #FFFFFF; font-weight: 700; font-size: 16px; display: grid; place-items: center">Ver promociones</a>
+</div>
+</div>
+</section>
+<section class="z-tres">
+<a class="z-tile" href="#" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img alt="" src="a/cc5dbd2817941de63a5f70828cd571c4.svg" style="width: 22px; height: 22px"/></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 17px">Slots</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">35.110</b> jugando</span></span>
+<svg aria-hidden="true" fill="none" height="18" stroke="#8B91A5" stroke-linecap="round" stroke-width="2.4" style="margin-left: auto" viewbox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg>
+</a>
+<a class="z-tile" href="#" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img alt="" src="a/66c21bd8387cbdbe238dd383a622081b.svg" style="width: 22px; height: 22px"/></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 17px">Casino en vivo</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">8.240</b> jugando</span></span>
+<svg aria-hidden="true" fill="none" height="18" stroke="#8B91A5" stroke-linecap="round" stroke-width="2.4" style="margin-left: auto" viewbox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg>
+</a>
+<a class="z-tile" href="#" style="height: 84px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 14px; padding: 0 20px">
+<span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF0EA; display: grid; place-items: center"><img alt="" src="a/8f4604f5ba0454762e1492977193ef80.svg" style="width: 22px; height: 22px"/></span>
+<span style="display: flex; flex-direction: column"><b style="font-size: 17px">Misiones del día</b><span style="display: flex; align-items: center; gap: 6px; color: #5D6378; font-size: 14px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 50%; background: #22B566"></span><b style="color: #15172A; font-variant-numeric: tabular-nums">3</b> para completar hoy</span></span>
+<svg aria-hidden="true" fill="none" height="18" stroke="#8B91A5" stroke-linecap="round" stroke-width="2.4" style="margin-left: auto" viewbox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg>
+</a>
+</section>
+<section style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: baseline; gap: 12px"><h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Exclusivos de Zorro</h2><span style="color: #5D6378; font-weight: 600">Solo los jugás acá</span><a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800">Ver todos</a></div>
+<div class="z-ex">
+<a class="z-tile" href="#" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
+<img alt="" src="a/f11b97c0be71a7487244914cd06229f5.webp" style="width: 100%; height: 100%; object-fit: cover; display: block"/>
+<span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">Ruleta Express</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
+</a>
+<a class="z-tile" href="#" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
+<img alt="" src="a/20e13cf89d3150c6ec250e5782e753d3.webp" style="width: 100%; height: 100%; object-fit: cover; display: block"/>
+<span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">777 Astuto</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
+</a>
+<a class="z-tile" href="#" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
+<img alt="" src="a/6186fcb801e21473efef38459a5b36bc.webp" style="width: 100%; height: 100%; object-fit: cover; display: block"/>
+<span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">Blackjack Zorro</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
+</a>
+<a class="z-tile" href="#" style="position: relative; display: block; border-radius: 20px; overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 10px 24px rgba(21,23,42,.12)">
+<img alt="" src="a/db58277579daa95b8f196285a75d75d2.webp" style="width: 100%; height: 100%; object-fit: cover; display: block"/>
+<span style="position: absolute; left: 0; right: 0; bottom: 20px; display: flex; flex-direction: column; align-items: center; color: #FFFFFF"><span style="font-size: 24px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.35)">El Cofre</span><span style="font-size: 13px; font-weight: 700; opacity: .9">Exclusivo Zorro</span></span>
+</a>
+</div>
+</section>
+<section class="z-promos">
+<a class="z-tile" href="#" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
+<img alt="" src="a/18b903c512935a5c8c932d28e9f53956.webp" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block"/>
+<span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
+<span style="color: #E2401B; font-size: 13px; font-weight: 800">Bienvenida</span>
+<span style="font-size: 19px; font-weight: 800; line-height: 1.2">Tu primera carga vale el doble</span>
+<span style="color: #5D6378; font-size: 14px">Hasta $ 100.000 en fichas y 50 giros.</span>
+</span>
+</a>
+<a class="z-tile" href="#" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
+<img alt="" src="a/fb3421b2c3109d8015233fa86287d6f6.webp" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block"/>
+<span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
+<span style="color: #E2401B; font-size: 13px; font-weight: 800">Misiones</span>
+<span style="font-size: 19px; font-weight: 800; line-height: 1.2">Completá misiones y abrí el cofre</span>
+<span style="color: #5D6378; font-size: 14px">Premios nuevos todos los días.</span>
+</span>
+</a>
+<a class="z-tile" href="#" style="border-radius: 20px; overflow: hidden; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; flex-direction: column">
+<img alt="" src="a/97556aad15c1e8a150daddb2290c99ef.webp" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block"/>
+<span style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px">
+<span style="color: #E2401B; font-size: 13px; font-weight: 800">Game shows</span>
+<span style="font-size: 19px; font-weight: 800; line-height: 1.2">Giros extra en Crazy Time</span>
+<span style="color: #5D6378; font-size: 14px">Los viernes de 20 a 24 h.</span>
+</span>
+</a>
+</section>
+<section style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; gap: 10px">
+<h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Los más jugados</h2>
+<a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800; margin-right: 8px">Ver todos</a>
+<button aria-label="Anterior" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)" type="button">‹</button>
+<button aria-label="Siguiente" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)" type="button">›</button>
+</div>
+<div class="z-fila">
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Sweet Bonanza 1000" src="a/c269002698211d4e5987a13e30351c5c.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sweet Bonanza 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Gates of Olympus 1000" src="a/2c14a3405742d98039a6988eb2f00d11.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Gates of Olympus 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Sugar Rush 1000" src="a/406666fb45f66b0fc1a6afc72652c713.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sugar Rush 1000</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Wanted Dead or a Wild" src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Wanted Dead or a Wild</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Hacksaw Gaming</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Big Bass Rock and Roll" src="a/42856d6d41b45bc49f248df7e39c657e.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Big Bass Rock and Roll</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Pragmatic Play</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Le Outlaw" src="a/afc2e5b98a0967b7293d65040947f61a.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Le Outlaw</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Hacksaw Gaming</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Candy Swipe" src="a/f30ad12c49d0f7828c50467b424af7a3.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Candy Swipe</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Coreffect</span></span>
+</a>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; gap: 10px">
+<h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Casino en vivo</h2>
+<a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800; margin-right: 8px">Ver todos</a>
+<button aria-label="Anterior" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)" type="button">‹</button>
+<button aria-label="Siguiente" style="width: 42px; height: 42px; border-radius: 21px; border: 0; background: #FFFFFF; color: #15172A; font-size: 18px; box-shadow: 0 1px 2px rgba(21,23,42,.1)" type="button">›</button>
+</div>
+<div class="z-fila">
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Crazy Time" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Crazy Time</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Immersive Roulette" src="a/af62c93bd593e8bc320aea67271efaf2.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Immersive Roulette</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Lightning Blackjack" src="a/72f9927b77a3ee25903091c53e3bdb98.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Lightning Blackjack</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Monopoly Live" src="a/819105e91303d7f1d1ed9fdbfa72e6dc.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Monopoly Live</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Ruleta en Español" src="a/8714c594cbb0a7d12d09919cd8182f3c.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ruleta en Español</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="XXXtreme Lightning" src="a/179c2476746669ef17d0de561884dd69.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">XXXtreme Lightning</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+<a class="z-tile" href="#" style="display: flex; flex-direction: column; gap: 10px">
+<img alt="Blackjack" src="a/dc1a7be2a58d6015b45f54167d7996ad.webp" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; display: block; background: #E6E8EE; box-shadow: 0 6px 14px rgba(21,23,42,.1)"/>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Blackjack</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600">Evolution</span></span>
+</a>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; gap: 10px"><h2 style="margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -.01em">Ganando ahora</h2><span style="display: inline-flex; align-items: center; gap: 6px; color: #5D6378; font-weight: 600"><span style="width: 8px; height: 8px; border-radius: 50%; background: #22B566"></span>en vivo</span></div>
+<div class="z-gan">
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/c269002698211d4e5987a13e30351c5c.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">mati***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Sweet Bonanza 1000</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 184.500</b></div>
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/09c9f40b5d41aa9b76cf881abe02018f.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">lu***98</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Crazy Time</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 92.300</b></div>
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/20e13cf89d3150c6ec250e5782e753d3.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">fer***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">777 Astuto</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 61.750</b></div>
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/2c14a3405742d98039a6988eb2f00d11.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">juli***7</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Gates of Olympus 1000</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 48.200</b></div>
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/72f9927b77a3ee25903091c53e3bdb98.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">nico***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Lightning Blackjack</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 37.900</b></div>
+<div style="height: 76px; border-radius: 16px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); display: flex; align-items: center; gap: 12px; padding: 0 14px"><img alt="" src="a/f11b97c0be71a7487244914cd06229f5.webp" style="width: 40px; height: 52px; border-radius: 9px; object-fit: cover"/><span style="flex: 1; min-width: 0; line-height: 1.3"><b style="display: block">cami***</b><span style="color: #8B91A5; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block">Ruleta Express</span></span><b style="color: #179A55; font-size: 16px; font-variant-numeric: tabular-nums">$ 25.400</b></div>
+</div>
+</section>
+<footer style="margin-top: 16px; padding-top: 40px; box-shadow: 0 -1px 0 #E6E8EE; display: flex; flex-direction: column; gap: 28px">
+<div style="display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 15px">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 900; font-size: 22px">zorro</span><span style="color: #5D6378; max-width: 280px">El casino online más astuto, con soporte humano las 24 horas.</span></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><b>Juegos</b><a href="#" style="color: #5D6378">Slots</a><a href="#" style="color: #5D6378">Casino en vivo</a><a href="#" style="color: #5D6378">Exclusivos</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><b>Zorro</b><a href="#" style="color: #5D6378">Misiones</a><a href="#" style="color: #5D6378">Promociones</a><a href="#" style="color: #5D6378">Club VIP</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><b>Ayuda</b><a href="#" style="color: #5D6378">Soporte 24/7</a><a href="#" style="color: #5D6378">Cómo cargar</a><a href="#" style="color: #5D6378">Juego responsable</a></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 24px; box-shadow: 0 -1px 0 #E6E8EE">
+<span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Carga y retiro por alias</span>
+<span style="margin-left: auto; display: flex; align-items: center; gap: 12px; color: #8B91A5; font-size: 13px"><span style="width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #8B91A5; color: #3F4354; font-weight: 700; display: grid; place-items: center">+18</span>© 2026 Zorro · Jugá con responsabilidad</span>
+</div>
+</footer>
+</main>
+</div>
+<script>window.PV={plat:"zorro",screen:"lobby",view:"d"}</script><script src="proto.js?v=4"></script>
 </body></html>
