@@ -10,8 +10,8 @@ a:active,button:active{transform:scale(.97)}
 @keyframes pv-press{40%{transform:scale(.96)}100%{transform:none}}
 a img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 a:hover img[style*="object-fit: cover"]{transform:scale(1.04)}
-html[data-pv-view="m"] body{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#0c0c0f;padding:32px 0 110px;box-sizing:border-box}
-html[data-pv-view="m"] body>div:first-of-type{border-radius:46px;box-shadow:0 0 0 11px #1c1c21,0 0 0 12px #2c2c33,0 40px 90px rgba(0,0,0,.6);flex:none}
+html[data-pv-view="m"]:not(.pv-phone) body{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#0c0c0f;padding:32px 0 110px;box-sizing:border-box}
+html[data-pv-view="m"]:not(.pv-phone) body>div:first-of-type{border-radius:46px;box-shadow:0 0 0 11px #1c1c21,0 0 0 12px #2c2c33,0 40px 90px rgba(0,0,0,.6);flex:none}
 .pv-bar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:4px;padding:6px;border-radius:14px;background:rgba(18,18,22,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 14px 40px rgba(0,0,0,.45);font:600 13px/1 system-ui,-apple-system,'Segoe UI',sans-serif;color:#EDEDF2;max-width:calc(100vw - 24px);overflow-x:auto;white-space:nowrap;animation:pv-bar .5s .3s cubic-bezier(.2,.7,.2,1) both}
 @keyframes pv-bar{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translate(-50%,0)}}
 .pv-bar button,.pv-bar a{all:unset;cursor:pointer;height:34px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;color:#A9A9B6;transition:background .15s,color .15s}
@@ -25,3 +25,10 @@ html[data-pv-view="m"] body>div:first-of-type{border-radius:46px;box-shadow:0 0 
 .pv-toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);opacity:0;z-index:9999;background:#fff;color:#111;font:600 13px system-ui,sans-serif;padding:10px 14px;border-radius:10px;transition:.25s;pointer-events:none}
 .pv-toast.on{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pv-rv:not(.pv-in){opacity:1;transform:none}}
+html.pv-phone,html.pv-phone body{margin:0;padding:0;overflow-x:hidden;background:#0c0c0f}
+.pv-strip{position:sticky;top:0;z-index:9999;height:36px;display:flex;align-items:center;gap:10px;padding:0 12px;background:#0c0c0f;color:#EDEDF2;font:600 13px/1 system-ui,-apple-system,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.pv-strip a{all:unset;cursor:pointer;font-size:17px;padding:4px 6px}
+.pv-strip b{letter-spacing:.06em;font-weight:800}
+.pv-strip select{margin-left:auto;appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.08);color:#fff;border:0;border-radius:8px;height:26px;padding:0 26px 0 10px;font:600 13px system-ui,-apple-system,sans-serif;background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 13px) 11px,calc(100% - 9px) 11px;background-size:4px 4px;background-repeat:no-repeat}
+.pv-scroll{scrollbar-width:none;-webkit-overflow-scrolling:touch}.pv-scroll::-webkit-scrollbar{display:none}
+html.pv-phone .pv-toast{bottom:96px}
