@@ -78,7 +78,12 @@
     var oldAmt = (act.innerText || '').trim(), newAmt = (el.innerText || '').trim();
     if(/^\$\s?[\d.]+$/.test(oldAmt) && /^\$\s?[\d.]+$/.test(newAmt)){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), n2, list = [];
       while((n2 = w.nextNode())) list.push(n2);
-      list.forEach(function(t){ if(t.parentElement && t.parentElement.parentElement === p) return; if(t.nodeValue.indexOf(oldAmt) >= 0) t.nodeValue = t.nodeValue.split(oldAmt).join(newAmt); });
+      var oN = parseInt(oldAmt.replace(/\D/g, ''), 10), nN = parseInt(newAmt.replace(/\D/g, ''), 10), pre = oldAmt.match(/^\$\s?/)[0];
+      var F = function(v){ return pre + Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); };
+      var pairs = [[F(oN * 2), F(nN * 2)], [F(oN * 1.5), F(nN * 1.5)], [F(oN * .5), F(nN * .5)], [oldAmt, newAmt]];
+      list.forEach(function(t){ if(t.parentElement && t.parentElement.closest && p.contains(t.parentElement)) return; var v = t.nodeValue, out = v;
+        pairs.forEach(function(pr, i){ if(out === v || i === 3){ var re = new RegExp(pr[0].replace(/[$.]/g, '\\$&') + '(?![\\d.])'); if(re.test(v) && out === v) out = v.replace(re, pr[1]); } });
+        if(out !== v) t.nodeValue = out; });
       document.querySelectorAll('input').forEach(function(i){ if(i.value && i.value.replace(/\D/g, '') === oldAmt.replace(/\D/g, '')) i.value = newAmt.replace(/[^\d.]/g, ''); }); }
     return true; }
   var DONE = [[/^cargar\s?\$/, function(t){ return 'Carga de ' + t.replace(/^cargar\s?/, '') + ' confirmada (demo)'; }], [/copiar/, 'Link copiado'], [/avisarme|avisame/, 'Listo, te avisamos cuando empiece'], [/reclamar/, '¡Premio reclamado!'], [/confirmar|pagar|generar|solicitar|retirar \$/, 'Listo, solicitud enviada (demo)'], [/favorit/, 'Agregado a favoritos'], [/abrir|girar|tirar/, '¡Suerte! (demo)']];
