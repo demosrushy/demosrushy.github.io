@@ -1,12 +1,12 @@
 (function(){
   var P = {
-    orca:{n:'ORCA', d:{lobby:'Main', slots:'Orca-slots', juego:'Orca-juego', billetera:'Orca-billetera', extra:'Orca-vip'}, x:'Club VIP'},
-    falco:{n:'FALCO', d:{lobby:'Falco', slots:'Falco-slots', juego:'Falco-juego', billetera:'Falco-billetera', extra:'Falco-jackpots'}, x:'Jackpots'},
-    zorro:{n:'ZORRO', d:{lobby:'Zorro', slots:'Zorro-slots', juego:'Zorro-juego', billetera:'Zorro-billetera', extra:'Zorro-misiones'}, x:'Misiones'},
-    kraken:{n:'KRAKEN', d:{lobby:'Kraken', slots:'Kraken-slots', juego:'Kraken-juego', billetera:'Kraken-billetera', extra:'Kraken-tripulacion'}, x:'Tripulación'},
-    bandido:{n:'BANDIDO', d:{lobby:'Bandido', slots:'Bandido-slots', juego:null, billetera:'Bandido-billetera', extra:'Bandido-cajas'}, x:'Cajas'},
-    carpincho:{n:'CARPINCHO', d:{lobby:'Carpincho', slots:'Carpincho-slots', juego:'Carpincho-juego', billetera:'Carpincho-billetera', extra:'Carpincho-promos'}, x:'Promos'},
-    mascara:{n:'MÁSCARA', d:{lobby:'Mascara', slots:'Mascara-slots', juego:'Mascara-juego', billetera:'Mascara-billetera', extra:'Mascara-promos'}, x:'Promos'}
+    orca:{n:'ORCA', d:{lobby:'Main', slots:'Orca-slots', vivo:'Orca-vivo', juego:'Orca-juego', billetera:'Orca-billetera', extra:'Orca-vip'}, x:'Club VIP'},
+    falco:{n:'FALCO', d:{lobby:'Falco', slots:'Falco-slots', vivo:'Falco-vivo', juego:'Falco-juego', billetera:'Falco-billetera', extra:'Falco-jackpots'}, x:'Jackpots'},
+    zorro:{n:'ZORRO', d:{lobby:'Zorro', slots:'Zorro-slots', vivo:'Zorro-vivo', juego:'Zorro-juego', billetera:'Zorro-billetera', extra:'Zorro-misiones'}, x:'Misiones'},
+    kraken:{n:'KRAKEN', d:{lobby:'Kraken', slots:'Kraken-slots', vivo:'Kraken-vivo', juego:'Kraken-juego', billetera:'Kraken-billetera', extra:'Kraken-tripulacion'}, x:'Tripulación'},
+    bandido:{n:'BANDIDO', d:{lobby:'Bandido', slots:'Bandido-slots', vivo:'Bandido-vivo', juego:null, billetera:'Bandido-billetera', extra:'Bandido-cajas'}, x:'Cajas'},
+    carpincho:{n:'CARPINCHO', d:{lobby:'Carpincho', slots:'Carpincho-slots', vivo:'Carpincho-vivo', juego:'Carpincho-juego', billetera:'Carpincho-billetera', extra:'Carpincho-promos'}, x:'Promos'},
+    mascara:{n:'MÁSCARA', d:{lobby:'Mascara', slots:'Mascara-slots', vivo:'Mascara-vivo', juego:'Mascara-juego', billetera:'Mascara-billetera', extra:'Mascara-promos'}, x:'Promos'}
   };
   var cur = window.PV || {}; var plat = P[cur.plat]; if(!plat) return;
   var view = cur.view || 'd';
@@ -34,7 +34,7 @@
 
   // ---- barra del prototipo
   var bar = document.createElement('div'); bar.className = 'pv-bar';
-  var screens = [['lobby','Inicio'],['slots','Slots'],['juego','Juego'],['billetera','Billetera'],['extra', plat.x]];
+  var screens = [['lobby','Inicio'],['slots','Slots'],['vivo','En vivo'],['juego','Juego'],['billetera','Billetera'],['extra', plat.x]];
   var h = '<a class="pv-home" href="../" aria-label="Volver a las plataformas">&#8592;</a><b class="pv-name">' + plat.n + '</b><span class="pv-sep"></span>';
   screens.forEach(function(s){ if(!plat.d[s[0]]) return; h += '<button type="button" data-s="' + s[0] + '" class="' + (s[0] === cur.screen ? 'on' : '') + '">' + s[1] + '</button>'; });
   h += '<span class="pv-sep"></span><span class="pv-seg"><button type="button" data-v="d" class="' + (view === 'd' ? 'on' : '') + '">Escritorio</button><button type="button" data-v="m" class="' + (view === 'm' ? 'on' : '') + '">Celular</button></span>';
@@ -54,9 +54,10 @@
   var K = [
     [/cargar|billetera|deposit|retirar|saldo/, 'billetera'],
     [/^(inicio|lobby|para vos|casino)$/, 'lobby'],
+    [/en vivo|^vivo|ruleta|roulette|blackjack|mesas|live|p[oó]ker|baccarat|game show|crazy time|monopoly/, 'vivo'],
     [/vip|jackpot|misi[oó]n|tripulaci|caja|promo|recompensa|bono|bienvenida|cashback|club|premio|reclamar|invit/, 'extra'],
     [/jugar|probar|entrar|quiero|sumar|unirme|mirar|demo/, 'juego'],
-    [/slot|explorar|ver todo|juegos|crash|en vivo|originales|mesas|cargar m[aá]s|ver tabla/, 'slots']
+    [/slot|explorar|ver todo|juegos|crash|originales|cargar m[aá]s|ver tabla/, 'slots']
   ];
   function sig(el){ var c = getComputedStyle(el); return c.backgroundColor + '|' + c.color + '|' + c.boxShadow + '|' + c.fontWeight; }
   var VIS = /^(background|background-color|color|box-shadow|border|border-color|outline|font-weight|opacity)$/;
@@ -115,6 +116,8 @@
   // ---- animaciones
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   function onReady(){
+    // en la pantalla En vivo, marcar "En vivo" como activo en los menús
+    if(cur.screen === 'vivo'){ document.querySelectorAll('a,button').forEach(function(el){ if(el.closest('.pv-bar,.pv-strip')) return; var t = (el.innerText || '').trim().toLowerCase().split('\n')[0].trim(); if(/^(en vivo|casino en vivo|vivo)$/.test(t)) toggleGroup(el); }); }
     if(reduce) return;
     // entrada escalonada de secciones
     var root = document.querySelector('main') || document.body.firstElementChild;
