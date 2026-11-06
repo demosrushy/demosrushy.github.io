@@ -35,12 +35,12 @@
   // ---- barra del prototipo
   var bar = document.createElement('div'); bar.className = 'pv-bar';
   var screens = [['lobby','Inicio'],['slots','Slots'],['juego','Juego'],['billetera','Billetera'],['extra', plat.x]];
-  var h = '<a class="pv-home" href="index.html" aria-label="Volver a las plataformas">&#8592;</a><b class="pv-name">' + plat.n + '</b><span class="pv-sep"></span>';
+  var h = '<a class="pv-home" href="../" aria-label="Volver a las plataformas">&#8592;</a><b class="pv-name">' + plat.n + '</b><span class="pv-sep"></span>';
   screens.forEach(function(s){ if(!plat.d[s[0]]) return; h += '<button type="button" data-s="' + s[0] + '" class="' + (s[0] === cur.screen ? 'on' : '') + '">' + s[1] + '</button>'; });
   h += '<span class="pv-sep"></span><span class="pv-seg"><button type="button" data-v="d" class="' + (view === 'd' ? 'on' : '') + '">Escritorio</button><button type="button" data-v="m" class="' + (view === 'm' ? 'on' : '') + '">Celular</button></span>';
   if(phone){ bar = document.createElement('nav'); bar.className = 'pv-strip';
     var sel = '<select aria-label="Ir a otra pantalla">'; screens.forEach(function(s){ if(!plat.d[s[0]]) return; sel += '<option value="' + s[0] + '"' + (s[0] === cur.screen ? ' selected' : '') + '>' + s[1] + '</option>'; }); sel += '</select>';
-    h = '<a href="index.html" aria-label="Volver">&#8592;</a><b>' + plat.n + '</b>' + sel; }
+    h = '<a href="../" aria-label="Volver">&#8592;</a><b>' + plat.n + '</b>' + sel; }
   bar.innerHTML = h;
   if(phone){ bar.querySelector('select').addEventListener('change', function(e){ go(e.target.value); }); }
   bar.addEventListener('click', function(e){ var b = e.target.closest('button'); if(!b) return; e.stopPropagation();

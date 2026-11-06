@@ -23,7 +23,7 @@ header p{margin:0;color:var(--mut);font-size:17px;max-width:62ch}
 .row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);background:var(--panel);border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);transition:transform .25s ease,box-shadow .25s ease;animation:rise .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 70ms)}
 .row:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--a) 55%,transparent)}
 @keyframes rise{from{transform:translateY(14px)}to{transform:none}}
-.art{position:relative;aspect-ratio:16/8;overflow:hidden;background:#000}
+.art{display:block;position:relative;aspect-ratio:16/8;overflow:hidden;background:#000}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .row:hover .art img{transform:scale(1.04)}
 .info{padding:26px 28px;display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -51,8 +51,8 @@ footer{color:var(--dim);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 20px;
   <header>
     <span class="eyebrow">Prototipo navegable · noviembre 2026</span>
     <h1>Siete plataformas de casino, listas para recorrer</h1>
-    <p>Slots y casino en vivo. Cada plataforma tiene su identidad, su mascota y su arte propio, con versión de escritorio y de celular. Tocá cualquier botón del diseño y te lleva a la pantalla que corresponde.</p>
-    <div class="how"><span><b>Abajo</b> tenés una barra para saltar entre pantallas</span><span><b>Escritorio / Celular</b> cambia la vista</span><span><b>←</b> vuelve acá</span></div>
+    <p>Slots y casino en vivo. Cada plataforma tiene su identidad, su mascota y su arte propio. Se abre sola en versión celular o escritorio según tu pantalla, y todos los botones te llevan a la pantalla que corresponde.</p>
+    
   </header>
 
   <div class="list" id="list"></div>
@@ -72,10 +72,10 @@ var R=[
 ];
 var h='';
 R.forEach(function(r,i){
-  h+='<article class="row" style="--a:'+r.a+';--i:'+i+'"><div class="art"><img src="'+r.p+'/'+r.img.replace('@/','a/')+'" alt="Banner de '+r.k+'"></div><div class="info">'+
+  h+='<article class="row" style="--a:'+r.a+';--i:'+i+'"><a class="art" href="'+r.p+'/" aria-label="Abrir '+r.k+'"><img src="'+r.p+'/'+r.img.replace('@/','a/')+'" alt="Banner de '+r.k+'"></a><div class="info">'+
      '<div class="top"><span class="num">'+String(i+1).padStart(2,'0')+'</span><span class="name">'+r.k+'</span><span class="dot"></span></div>'+
-     '<p class="tag">'+r.tag+'</p><p class="firma"><span>Lo propio:</span> '+r.f+'</p><span class="meta">5 pantallas en escritorio y celular · <a href="'+r.p+'/" style="color:inherit">link propio</a></span>'+
-     '<div class="btns"><a class="btn pri" href="'+r.p+'/'+r.d+'.html">Ver escritorio</a><a class="btn" href="'+r.p+'/'+r.m+'.html">Ver celular</a></div></div></article>';
+     '<p class="tag">'+r.tag+'</p><p class="firma"><span>Lo propio:</span> '+r.f+'</p><span class="meta">Escritorio y celular · se adapta solo a tu pantalla</span>'+
+     '<div class="btns"><a class="btn pri" href="'+r.p+'/">Abrir '+r.k+'</a></div></div></article>';
 });
 document.getElementById('list').innerHTML=h;
 </script>
