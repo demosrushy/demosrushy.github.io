@@ -30,7 +30,7 @@
       if(cs.overflowY === 'hidden' && parseFloat(cs.flexGrow) > 0 && el.offsetHeight > 300 && el.parentElement && getComputedStyle(el.parentElement).flexDirection === 'column'){ el.style.overflowY = 'auto'; el.style.overscrollBehavior = 'contain'; el.classList.add('pv-scroll'); } }); }
   function fit(){ if(!phone || view !== 'm' || !ROOT) return; var strip = document.querySelector('.pv-strip'); var sh = strip ? strip.offsetHeight : 0;
     var z = innerWidth / BASE_W; ROOT.style.zoom = z;
-    var cs = getComputedStyle(ROOT); if(cs.display === 'flex' && cs.flexDirection === 'column'){ ROOT.style.height = Math.max(520, (innerHeight - sh) / z) + 'px'; } }
+    ROOT.style.height = Math.max(560, (innerHeight - sh) / z) + 'px'; }
 
   // ---- barra del prototipo
   var bar = document.createElement('div'); bar.className = 'pv-bar';
