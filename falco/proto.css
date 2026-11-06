@@ -1,0 +1,27 @@
+html{scroll-behavior:smooth}
+html{animation:pv-page .45s ease both}
+html.pv-leave body{opacity:0;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease}
+@keyframes pv-page{from{opacity:0}to{opacity:1}}
+.pv-rv{transition:opacity .6s ease var(--pv-d,0ms),transform .6s cubic-bezier(.2,.7,.2,1) var(--pv-d,0ms)}
+.pv-rv:not(.pv-in){opacity:0;transform:translateY(18px)}
+a,button{transition:transform .15s ease,filter .15s ease}
+a:active,button:active{transform:scale(.97)}
+.pv-press{animation:pv-press .32s ease}
+@keyframes pv-press{40%{transform:scale(.96)}100%{transform:none}}
+a img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+a:hover img[style*="object-fit: cover"]{transform:scale(1.04)}
+html[data-pv-view="m"] body{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#0c0c0f;padding:32px 0 110px;box-sizing:border-box}
+html[data-pv-view="m"] body>div:first-of-type{border-radius:46px;box-shadow:0 0 0 11px #1c1c21,0 0 0 12px #2c2c33,0 40px 90px rgba(0,0,0,.6);flex:none}
+.pv-bar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:4px;padding:6px;border-radius:14px;background:rgba(18,18,22,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 14px 40px rgba(0,0,0,.45);font:600 13px/1 system-ui,-apple-system,'Segoe UI',sans-serif;color:#EDEDF2;max-width:calc(100vw - 24px);overflow-x:auto;white-space:nowrap;animation:pv-bar .5s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pv-bar{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translate(-50%,0)}}
+.pv-bar button,.pv-bar a{all:unset;cursor:pointer;height:34px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;color:#A9A9B6;transition:background .15s,color .15s}
+.pv-bar button:hover,.pv-bar a:hover{background:rgba(255,255,255,.07);color:#fff}
+.pv-bar button.on{background:#fff;color:#111}
+.pv-bar .pv-home{font-size:16px;padding:0 11px}
+.pv-bar .pv-name{padding:0 8px 0 4px;letter-spacing:.06em;font-weight:800}
+.pv-bar .pv-sep{width:1px;height:20px;background:rgba(255,255,255,.12);margin:0 4px;flex:none}
+.pv-bar .pv-seg{display:inline-flex;background:rgba(255,255,255,.06);border-radius:10px;padding:2px}
+.pv-bar button:focus-visible,.pv-bar a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.pv-toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);opacity:0;z-index:9999;background:#fff;color:#111;font:600 13px system-ui,sans-serif;padding:10px 14px;border-radius:10px;transition:.25s;pointer-events:none}
+.pv-toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pv-rv:not(.pv-in){opacity:1;transform:none}}

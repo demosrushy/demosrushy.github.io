@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CARPINCHO · Juego celular</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:inherit;text-decoration:none}.c-one{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.c-num{font-variant-numeric:tabular-nums}.c-acc{background:var(--acc);color:var(--acc-t);font-weight:800;font-size:14px;white-space:nowrap;border-radius:8px}.c-sec{background:var(--raised);color:var(--txt);font-weight:700;font-size:13px;white-space:nowrap;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line)}.c-h{display:flex;align-items:center;gap:8px}.c-h b{font-size:17px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}.c-h a{margin-left:auto;color:var(--mut);font-size:13px;font-weight:700;white-space:nowrap}.c-cover{position:relative;display:block;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:var(--card)}.c-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.c-chip{flex:none;height:32px;padding:0 12px;border-radius:8px;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;white-space:nowrap;color:var(--mut);box-shadow:inset 0 0 0 1px var(--line)}.c-chip span{color:var(--dim);font-weight:600}.c-seg{display:flex;gap:4px;padding:4px;border-radius:8px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}.c-seg span{flex:1;height:32px;padding:0 12px;border-radius:6px;color:var(--mut);font-size:13px;font-weight:700;display:grid;place-items:center;white-space:nowrap}.c-seg span.on{background:var(--raised);color:var(--txt);font-weight:800}</style>
+
+<link rel="stylesheet" href="proto.css">
+</head><body>
+
+
+<div style="--acc: #E9B949; --acc-t: #1E1606; --hot: #E2704B; --cel: #8CC8F0; --up: #7CC98F; --nav: #0A140F; --bg: #0F1C15; --card: #16271D; --raised: #1F3528; --line: #27402F; --txt: #F3EAD7; --mut: #9FB3A4; --dim: #6E8576; width: 390px; height: 844px; box-sizing: border-box; background: var(--bg); color: var(--txt); font-family: Manrope, system-ui, sans-serif; font-size: 15px; line-height: 1.4; overflow: hidden; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased">
+  <header style="height: 60px; flex: none; padding: 0 16px; display: flex; align-items: center; gap: 8px; background: var(--nav); box-shadow: 0 1px 0 var(--line)">
+    <span style="width: 34px; height: 34px; border-radius: 50%; background: var(--acc); overflow: hidden; display: block; flex: none"><img src="a/9c561b3cd627d923422e671ca724f4e4.webp" alt="" style="width: 100%; height: 125%; object-fit: cover; object-position: center top"></span>
+    <b style="font-size: 19px; font-weight: 800; letter-spacing: -.03em; text-transform: lowercase">carpincho</b>
+    <div style="margin-left: auto; height: 40px; box-sizing: border-box; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; align-items: center; gap: 10px; padding: 0 4px 0 12px"><b class="c-num" style="font-size: 14px; font-weight: 800; white-space: nowrap">$ 24.500</b><a href="#" class="c-acc" style="height: 32px; padding: 0 14px; font-size: 13px; display: grid; place-items: center">Cargar</a></div>
+  </header>
+
+  <div style="flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column">
+    <div style="flex: none; height: 52px; padding: 0 16px; display: flex; align-items: center; gap: 10px">
+      <a href="#" aria-label="Volver a slots" style="flex: none; width: 32px; height: 32px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); color: var(--mut); display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.5 2.5 4 6l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 15px; font-weight: 800">Gates of Olympus Super Scatter</b><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 700">Pragmatic Play</span></span>
+      <span style="flex: none; height: 26px; padding: 0 8px; border-radius: 6px; background: var(--raised); color: var(--acc); font-size: 11px; font-weight: 800; display: grid; place-items: center; white-space: nowrap">Drops &amp; Wins</span>
+    </div>
+    <div style="flex: none; position: relative; aspect-ratio: 16/9; background: #050B08; box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line); display: flex; align-items: center; justify-content: center; gap: 16px">
+      <span style="display: block; width: 78px; aspect-ratio: 3/4; border-radius: 8px; overflow: hidden; position: relative; box-shadow: 0 0 0 1px var(--line)"><img src="a/3985b730855405b10de1cdf4a5761735.webp" alt="Gates of Olympus Super Scatter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></span>
+      <span style="display: flex; flex-direction: column; gap: 8px"><span style="color: var(--mut); font-size: 13px; font-weight: 700; white-space: nowrap">Cargando el juego</span><span style="width: 140px; height: 4px; border-radius: 2px; background: var(--raised); overflow: hidden"><span style="display: block; width: 64%; height: 4px; border-radius: 2px; background: var(--acc)"></span></span><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">64%</span></span>
+    </div>
+    <div style="flex: 1; min-height: 0; padding: 12px 16px 0; display: flex; flex-direction: column; gap: 12px">
+      <div style="flex: none; display: flex; gap: 8px">
+        <div class="c-seg" style="flex: 1"><span class="on" style="background: var(--acc); color: var(--acc-t)">Dinero real</span><span>Demo</span></div>
+        <a href="#" class="c-sec" style="flex: none; height: 42px; padding: 0 14px; display: grid; place-items: center">Pantalla completa</a>
+      </div>
+      <div style="flex: none; margin-right: -16px; display: flex; gap: 6px; overflow: hidden">
+        
+          <span style="flex: none; height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; justify-content: center"><span style="color: var(--dim); font-size: 11px; font-weight: 700; white-space: nowrap">RTP</span><b class="c-num" style="font-size: 13px; font-weight: 800; white-space: nowrap">96,50%</b></span>
+        
+          <span style="flex: none; height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; justify-content: center"><span style="color: var(--dim); font-size: 11px; font-weight: 700; white-space: nowrap">Volatilidad</span><b class="c-num" style="font-size: 13px; font-weight: 800; white-space: nowrap">Muy alta</b></span>
+        
+          <span style="flex: none; height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; justify-content: center"><span style="color: var(--dim); font-size: 11px; font-weight: 700; white-space: nowrap">Apuesta</span><b class="c-num" style="font-size: 13px; font-weight: 800; white-space: nowrap">$ 40 a $ 100.000</b></span>
+        
+          <span style="flex: none; height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; justify-content: center"><span style="color: var(--dim); font-size: 11px; font-weight: 700; white-space: nowrap">Premio máx.</span><b class="c-num" style="font-size: 13px; font-weight: 800; white-space: nowrap">x50.000</b></span>
+        
+      </div>
+      <section style="flex: none; display: flex; flex-direction: column">
+        <div class="c-h" style="margin-bottom: 4px"><b>Últimos premios</b><a href="#">Ver todos</a></div>
+        
+          <div style="height: 44px; display: flex; align-items: center; gap: 10px; box-shadow: inset 0 -1px 0 var(--line)">
+            <img src="a/a30753e0f5f6b5757117cbd6216bc2e6.webp" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none">
+            <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 13px">tomi***</b><span class="c-one" style="color: var(--dim); font-size: 11px; font-weight: 600">hace 3 min</span></span>
+            <span style="flex: none; display: flex; align-items: baseline; gap: 6px"><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x233</span><b class="c-num" style="color: var(--acc); font-size: 14px; font-weight: 800; white-space: nowrap">$ 186.400</b></span>
+          </div>
+        
+          <div style="height: 44px; display: flex; align-items: center; gap: 10px; box-shadow: inset 0 -1px 0 var(--line)">
+            <img src="a/ffd6659eacef3e529ce2b33e881fb7a2.webp" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none">
+            <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 13px">flor***</b><span class="c-one" style="color: var(--dim); font-size: 11px; font-weight: 600">hace 9 min</span></span>
+            <span style="flex: none; display: flex; align-items: baseline; gap: 6px"><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x132</span><b class="c-num" style="color: var(--acc); font-size: 14px; font-weight: 800; white-space: nowrap">$ 52.800</b></span>
+          </div>
+        
+          <div style="height: 44px; display: flex; align-items: center; gap: 10px; box-shadow: inset 0 -1px 0 var(--line)">
+            <img src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none">
+            <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 13px">gonza***</b><span class="c-one" style="color: var(--dim); font-size: 11px; font-weight: 600">hace 14 min</span></span>
+            <span style="flex: none; display: flex; align-items: baseline; gap: 6px"><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x78</span><b class="c-num" style="color: var(--acc); font-size: 14px; font-weight: 800; white-space: nowrap">$ 31.200</b></span>
+          </div>
+        
+      </section>
+      <section style="flex: none; display: flex; flex-direction: column; gap: 10px">
+        <div class="c-h"><b>Más de Pragmatic Play</b><a href="#">Ver todos</a></div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+          
+            <a href="#" class="c-cover"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000"></a>
+          
+            <a href="#" class="c-cover"><img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000"></a>
+          
+            <a href="#" class="c-cover"><img src="a/406666fb45f66b0fc1a6afc72652c713.webp" alt="Sugar Rush 1000"></a>
+          
+            <a href="#" class="c-cover"><img src="a/3ebb9c4d240204b7939ffac44fe16e48.webp" alt="5 Lions Megaways"></a>
+          
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <nav style="height: 72px; flex: none; padding-bottom: 6px; box-sizing: border-box; background: var(--nav); box-shadow: 0 -1px 0 var(--line); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); font-size: 11px; font-weight: 700; color: var(--mut)">
+    
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; color: #9FB3A4; box-shadow: none; white-space: nowrap"><img src="a/9ec4f708010dd6fdc05a2047c44faa05.svg" alt="" style="width: 22px; height: 22px">Inicio</a>
+    
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; color: #E9B949; box-shadow: inset 0 2px 0 #E9B949; white-space: nowrap"><img src="a/1297961eaf92cec1c56d09f5705f31e8.svg" alt="" style="width: 22px; height: 22px">Slots</a>
+    
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; color: #9FB3A4; box-shadow: none; white-space: nowrap"><img src="a/e8797e4ac49827ab8bdc2024ada87c32.svg" alt="" style="width: 22px; height: 22px">En vivo</a>
+    
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; color: #9FB3A4; box-shadow: none; white-space: nowrap"><img src="a/fabb2d9be1cc44316d6e1d08512543d5.svg" alt="" style="width: 22px; height: 22px">Crash</a>
+    
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; color: #9FB3A4; box-shadow: none; white-space: nowrap"><img src="a/43168e404af29490f62b118143516f5a.svg" alt="" style="width: 22px; height: 22px">Promos</a>
+    
+  </nav>
+</div>
+
+<script>window.PV={plat:"carpincho",screen:"juego",view:"m"}</script><script src="proto.js"></script>
+</body></html>

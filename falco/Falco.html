@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FALCO · Lobby</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1A1814}
+a{color:inherit;text-decoration:none}
+.f-app{display:flex;flex-wrap:wrap;min-height:100vh}
+.f-it:hover{background:#2F2B24}
+.f-hero{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:0}
+.f-jack{display:grid;grid-template-columns:230px minmax(0,1fr) 230px;gap:24px;align-items:center}
+.f-gan{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.f-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.f-orig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.f-fila{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:16px}
+.f-promos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.f-tile{transition:transform .2s ease}
+.f-tile:hover{transform:translateY(-6px)}
+.f-pri{box-shadow:inset 0 -4px 0 #B36F06}
+.f-pri:hover{background:#FFB540}
+.f-sec:hover{background:#463F34}
+@media (max-width:1240px){.f-jack{grid-template-columns:1fr}.f-gan{grid-template-columns:repeat(3,minmax(0,1fr))}.f-fila{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (max-width:820px){.f-side{display:none!important}.f-hero,.f-cats,.f-promos{grid-template-columns:1fr}.f-orig{grid-template-columns:repeat(2,minmax(0,1fr))}.f-fila{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<link rel="stylesheet" href="proto.css">
+</head><body>
+
+
+<div class="f-app" style="background: #1A1814; color: #FFFFFF; font-family: 'Proxima Nova', Figtree, system-ui, sans-serif; font-size: 15px; line-height: 1.45">
+
+  <aside class="f-side" style="flex: 0 0 272px; box-sizing: border-box; background: #12110F; padding: 0 16px 32px; display: flex; flex-direction: column; gap: 12px">
+    <div style="height: 80px; display: flex; align-items: center">
+      <button type="button" aria-label="Contraer menú" style="width: 44px; height: 44px; border-radius: 10px; border: 0; background: #24211C; display: grid; place-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9C2B6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5v14M20 12H9M13 8l-4 4 4 4"></path></svg></button>
+    </div>
+    <nav style="background: #1E1C18; border-radius: 12px; overflow: hidden">
+      <a href="#" style="height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: #2F2B24; font-weight: 800; font-size: 16px"><img src="a/a003ec01c58d737b1258fa7e8a6c4a48.svg" alt="" style="width: 20px; height: 20px">Casino<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9C2B6" stroke-width="2.4" stroke-linecap="round" style="margin-left: auto" aria-hidden="true"><path d="m6 15 6-6 6 6"></path></svg></a>
+      <div style="padding: 8px; display: flex; flex-direction: column">
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/9b9feec01b1627d0607106faad81554b.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Originales Falco</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/1aa829098229b65afbc30058563c39c1.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Populares</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/251c70b0eab8c8e4ad159c6e6d5e57ab.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Exclusivos</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/9b9feec01b1627d0607106faad81554b.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Nuevos</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/a003ec01c58d737b1258fa7e8a6c4a48.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Slots</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/23c99ad45c8e5f1f37889ba8d5c60e48.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Compra de bonos</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/d9c75bdf9654eb073584a0e624874de5.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Casino en vivo</span><span style="height: 22px; padding: 0 8px; border-radius: 6px; background: #3A1D17; color: #FF7A59; font-size: 11px; font-weight: 800; display: grid; place-items: center">En vivo</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/0508ee50a6cfb66ebe487d004a8f957f.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Game shows</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/d04334abbca79a61313fde471beb6725.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Ruleta</span></a>
+        
+          <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/bf6d4f0e5a7a3a889c7929a5cb2e723b.svg" alt="" style="width: 19px; height: 19px"><span style="flex: 1">Blackjack</span></a>
+        
+      </div>
+    </nav>
+    <a href="#" class="f-it" style="height: 52px; border-radius: 12px; background: #1E1C18; display: flex; align-items: center; gap: 12px; padding: 0 16px; font-weight: 800; font-size: 16px"><img src="a/2f355d0f0d5ce433d5c6f3dfc07ce9cc.svg" alt="" style="width: 20px; height: 20px">Jackpots Falco</a>
+    <a href="#" class="f-it" style="height: 52px; border-radius: 12px; background: #1E1C18; display: flex; align-items: center; gap: 12px; padding: 0 16px; font-weight: 800; font-size: 16px"><img src="a/62d3846ee67c5cd2fc16f9cc7425f0f2.svg" alt="" style="width: 20px; height: 20px">Torneos</a>
+    <nav style="background: #1E1C18; border-radius: 12px; padding: 8px; display: flex; flex-direction: column">
+      <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/23c99ad45c8e5f1f37889ba8d5c60e48.svg" alt="" style="width: 19px; height: 19px">Promociones</a>
+      <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/2ed51299381751c4089d5c2409751872.svg" alt="" style="width: 19px; height: 19px">Club VIP</a>
+      <a href="#" class="f-it" style="height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; font-weight: 600; color: #E6E0D5"><img src="a/1aa829098229b65afbc30058563c39c1.svg" alt="" style="width: 19px; height: 19px">RTP en vivo</a>
+    </nav>
+  </aside>
+
+  <div style="flex: 999 1 560px; min-width: 0">
+    <header style="height: 80px">
+      <div style="max-width: 1200px; height: 100%; margin: 0 auto; padding: 0 32px; box-sizing: border-box; display: flex; align-items: center; gap: 10px">
+        <a href="#" style="display: flex; align-items: center; gap: 12px">
+          <span style="width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 3px #F5A524; display: grid; place-items: center"><svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18c4-1 7-4 9-9 1 4 0 7-2 9 4-1 8 0 12 3-3 0-6 1-8 3 3 0 6 1 8 4-5-2-11-2-16-1 2-2 3-4 3-6-2 0-4-1-6-3z" fill="#F5A524"></path></svg></span>
+          <span style="font-weight: 900; font-size: 24px; letter-spacing: .18em; color: #F5A524">FALCO</span>
+        </a>
+        <button type="button" aria-label="Buscar" style="margin-left: auto; width: 48px; height: 48px; border-radius: 12px; border: 0; background: #24211C; display: grid; place-items: center"><img src="a/eb9821ba7ae8150baf762cd69d7b9492.svg" alt="" style="width: 20px; height: 20px"></button>
+        <div style="display: flex; background: #24211C; border-radius: 12px; padding: 4px; gap: 4px">
+          <a href="#" class="f-sec" style="height: 40px; padding: 0 20px; border-radius: 9px; font-weight: 700; display: grid; place-items: center">Ingresar</a>
+          <a href="#" class="f-pri" style="height: 40px; padding: 0 20px; border-radius: 9px; background: #F5A524; color: #1A1203; font-weight: 800; display: grid; place-items: center">Registrarme</a>
+        </div>
+      </div>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; padding: 8px 32px 64px; display: flex; flex-direction: column; gap: 32px">
+
+      <section class="f-hero" style="background: #24211C; border-radius: 16px; overflow: hidden">
+        <div style="position: relative; min-height: 380px">
+          <img src="a/7a583174e3f9280821058cb4d21492fe.webp" alt="Falco sobre una montaña de monedas" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center">
+          <span style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,12,9,.92) 0%, rgba(14,12,9,.55) 40%, rgba(14,12,9,0) 70%)"></span>
+          <div style="position: relative; height: 100%; box-sizing: border-box; padding: 44px; display: flex; flex-direction: column; justify-content: center; gap: 12px; max-width: 440px">
+            <span style="color: #F5A524; font-weight: 800; font-size: 14px">Jackpot de la semana</span>
+            <h1 style="margin: 0; font-size: 40px; line-height: 1.08; font-weight: 900">Cada giro puede ser el que se lleva el pozo</h1>
+            <span style="color: #B5AC9C; font-size: 16px">Más de 400 slots conectados al Jackpot Falco.</span>
+          </div>
+        </div>
+        <div style="padding: 40px 32px; display: flex; flex-direction: column; justify-content: center; gap: 16px; text-align: center">
+          <h2 style="margin: 0; font-size: 28px; font-weight: 900">Bienvenido a Falco</h2>
+          <span style="color: #B5AC9C; font-size: 16px; font-weight: 600">100% en tu primera carga + 50 giros</span>
+          <a href="#" class="f-pri" style="height: 54px; border-radius: 12px; background: #F5A524; color: #1A1203; font-weight: 800; font-size: 17px; display: grid; place-items: center; margin-top: 8px">Registrarme ahora</a>
+          <div style="display: flex; align-items: center; gap: 12px; color: #8A8274; font-size: 13px; font-weight: 700"><span style="flex: 1; height: 1px; background: #3A352C"></span>Cargá con<span style="flex: 1; height: 1px; background: #3A352C"></span></div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+            <span style="height: 44px; border-radius: 10px; background: #2F2B24; font-size: 13px; font-weight: 700; display: grid; place-items: center">Mercado Pago</span>
+            <span style="height: 44px; border-radius: 10px; background: #2F2B24; font-size: 13px; font-weight: 700; display: grid; place-items: center">Transferencia</span>
+            <span style="height: 44px; border-radius: 10px; background: #2F2B24; font-size: 13px; font-weight: 700; display: grid; place-items: center">USDT</span>
+          </div>
+        </div>
+      </section>
+
+      <section style="background: #24211C; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+        <div class="f-jack">
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <h2 style="margin: 0; font-size: 30px; font-weight: 900; line-height: 1.1">Jackpots <span style="color: #F5A524">Falco</span></h2>
+            <span style="color: #B5AC9C; font-size: 16px">Cuatro pozos que crecen con cada giro.</span>
+            <a href="#" class="f-pri" style="align-self: flex-start; height: 46px; padding: 0 28px; border-radius: 12px; background: #F5A524; color: #1A1203; font-weight: 800; display: grid; place-items: center">Jugar ahora</a>
+          </div>
+          <div style="position: relative; height: 176px; border-radius: 14px; background: linear-gradient(100deg, #3A2A0C, #24211C 65%); box-shadow: inset 0 0 0 3px #F5A524; display: flex; align-items: center; gap: 12px; padding: 0 24px 0 8px; min-width: 0">
+            <img src="a/b11affb4c632ddeac6db36173bd0cc36.webp" alt="Emblema del Mega Jackpot" style="height: 150px; width: auto; flex: none">
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="color: #E6C27A; font-size: 18px; font-weight: 700">Mega Jackpot</span><span style="font-size: 42px; font-weight: 900; line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums">$ 48.215.930</span></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            
+              <div style="height: 54px; border-radius: 12px; background: #2F2B24; display: flex; align-items: center; gap: 12px; padding: 0 14px"><span style="width: 60px; height: 28px; border-radius: 8px; background: #D8D3CA; color: #2A241A; font-size: 12px; font-weight: 900; display: grid; place-items: center; box-shadow: inset 0 -3px 0 rgba(0,0,0,.25)">Mayor</span><span style="display: flex; flex-direction: column; line-height: 1.2"><span style="color: #B5AC9C; font-size: 13px; font-weight: 600">Jackpot Mayor</span><b style="font-size: 17px; font-variant-numeric: tabular-nums">$ 3.402.118</b></span></div>
+            
+              <div style="height: 54px; border-radius: 12px; background: #2F2B24; display: flex; align-items: center; gap: 12px; padding: 0 14px"><span style="width: 60px; height: 28px; border-radius: 8px; background: #E07B39; color: #2A1405; font-size: 12px; font-weight: 900; display: grid; place-items: center; box-shadow: inset 0 -3px 0 rgba(0,0,0,.25)">Menor</span><span style="display: flex; flex-direction: column; line-height: 1.2"><span style="color: #B5AC9C; font-size: 13px; font-weight: 600">Jackpot Menor</span><b style="font-size: 17px; font-variant-numeric: tabular-nums">$ 412.760</b></span></div>
+            
+              <div style="height: 54px; border-radius: 12px; background: #2F2B24; display: flex; align-items: center; gap: 12px; padding: 0 14px"><span style="width: 60px; height: 28px; border-radius: 8px; background: #8E6CE0; color: #FFFFFF; font-size: 12px; font-weight: 900; display: grid; place-items: center; box-shadow: inset 0 -3px 0 rgba(0,0,0,.25)">Mini</span><span style="display: flex; flex-direction: column; line-height: 1.2"><span style="color: #B5AC9C; font-size: 13px; font-weight: 600">Jackpot Mini</span><b style="font-size: 17px; font-variant-numeric: tabular-nums">$ 21.380</b></span></div>
+            
+          </div>
+        </div>
+        <div class="f-gan">
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Mini</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 32.300</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>ja***</span><span>hace 1 min</span></div></div>
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Mini</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 26.400</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>ze***</span><span>hace 7 min</span></div></div>
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Menor</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 398.100</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>do***</span><span>hace 11 min</span></div></div>
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Mini</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 46.100</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>ji***</span><span>hace 18 min</span></div></div>
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Mini</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 35.800</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>pi***</span><span>hace 25 min</span></div></div>
+          
+            <div style="border-radius: 10px; background: #1E1C18; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><div style="display: flex; justify-content: space-between"><b style="font-size: 14px">Mini</b><span style="color: #F5A524; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums">$ 84.900</span></div><div style="display: flex; justify-content: space-between; color: #8A8274; font-size: 13px"><span>sn***</span><span>hace 30 min</span></div></div>
+          
+        </div>
+      </section>
+
+      <section class="f-cats">
+        
+          <a href="#" class="f-tile" style="position: relative; height: 180px; border-radius: 16px; overflow: hidden; background: #24211C; display: block">
+            <img src="a/96435e04ceb880c5fd695e39c28a3b41.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center">
+            <span style="position: relative; height: 100%; box-sizing: border-box; padding: 0 32px; display: flex; flex-direction: column; justify-content: center; gap: 4px">
+              <span style="font-size: 32px; font-weight: 900">Slots</span>
+              <span style="font-size: 16px; color: #E6E0D5; font-weight: 600">Más de 3.200 juegos</span>
+            </span>
+          </a>
+        
+          <a href="#" class="f-tile" style="position: relative; height: 180px; border-radius: 16px; overflow: hidden; background: #24211C; display: block">
+            <img src="a/8c9744d6e7b27bc4b8b291b73604312e.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center">
+            <span style="position: relative; height: 100%; box-sizing: border-box; padding: 0 32px; display: flex; flex-direction: column; justify-content: center; gap: 4px">
+              <span style="font-size: 32px; font-weight: 900">Casino en vivo</span>
+              <span style="font-size: 16px; color: #E6E0D5; font-weight: 600">Mesas reales las 24 horas</span>
+            </span>
+          </a>
+        
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <h2 style="margin: 0; font-size: 28px; font-weight: 900">Originales Falco</h2>
+          <a href="#" class="f-sec" style="margin-left: auto; height: 44px; padding: 0 18px; border-radius: 12px; background: #2F2B24; font-weight: 700; display: grid; place-items: center">Ver todo</a>
+        </div>
+        <div class="f-orig">
+          
+            <a href="#" class="f-tile" style="position: relative; display: block; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #24211C">
+              <img src="a/e85af227a578f624522f45c569240ab4.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+              <span style="position: absolute; left: 0; right: 0; bottom: 22px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 26px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.5)">Crash</span><span style="font-size: 12px; font-weight: 800; color: #F5A524">Falco</span>
+            </span></a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #24211C">
+              <img src="a/dae2bd3c6c7cdeb346ed19b7256dae7c.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+              <span style="position: absolute; left: 0; right: 0; bottom: 22px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 26px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.5)">Mines</span><span style="font-size: 12px; font-weight: 800; color: #F5A524">Falco</span>
+            </span></a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #24211C">
+              <img src="a/c697adca7f660bf6ed2ed56cf977ba7a.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+              <span style="position: absolute; left: 0; right: 0; bottom: 22px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 26px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.5)">Blackjack</span><span style="font-size: 12px; font-weight: 800; color: #F5A524">Falco</span>
+            </span></a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #24211C">
+              <img src="a/e10936096c41fd07c26b2769e9fdc737.webp" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+              <span style="position: absolute; left: 0; right: 0; bottom: 22px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 26px; font-weight: 900; text-shadow: 0 3px 10px rgba(0,0,0,.5)">Dados</span><span style="font-size: 12px; font-weight: 800; color: #F5A524">Falco</span>
+            </span></a>
+          
+        </div>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <h2 style="margin: 0; font-size: 28px; font-weight: 900">Populares</h2>
+          <a href="#" class="f-sec" style="margin-left: auto; height: 44px; padding: 0 18px; border-radius: 12px; background: #2F2B24; font-weight: 700; display: grid; place-items: center">Ver todo</a>
+          <div style="display: flex; background: #2F2B24; border-radius: 12px; overflow: hidden">
+            <button type="button" aria-label="Anterior" style="width: 46px; height: 44px; border: 0; background: transparent; color: #FFFFFF; font-size: 18px">‹</button>
+            <button type="button" aria-label="Siguiente" style="width: 46px; height: 44px; border: 0; background: transparent; color: #FFFFFF; font-size: 18px; box-shadow: inset 1px 0 0 #1A1814">›</button>
+          </div>
+        </div>
+        <div class="f-fila">
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/0894efb86e0db0c80c3db3d03d279756.webp" alt="Bank Basher 2" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              <span style="position: absolute; top: 10px; left: 10px; height: 24px; padding: 0 9px; border-radius: 7px; background: #3BE37E; color: #06210F; font-size: 12px; font-weight: 800; display: grid; place-items: center">Nuevo</span>
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/82256c821ab90af12b4387431bda2083.webp" alt="Ghost Rush" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              <span style="position: absolute; top: 10px; left: 10px; height: 24px; padding: 0 9px; border-radius: 7px; background: #3BE37E; color: #06210F; font-size: 12px; font-weight: 800; display: grid; place-items: center">Nuevo</span>
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/d3239d419818b9dfdccf679954f3b8f7.webp" alt="Gemstone Golem" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              <span style="position: absolute; top: 10px; left: 10px; height: 24px; padding: 0 9px; border-radius: 7px; background: #3BE37E; color: #06210F; font-size: 12px; font-weight: 800; display: grid; place-items: center">Nuevo</span>
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" alt="Wanted Dead or a Wild" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              <span style="position: absolute; top: 10px; left: 10px; height: 24px; padding: 0 9px; border-radius: 7px; background: #F5A524; color: #1A1203; font-size: 12px; font-weight: 800; display: grid; place-items: center">Exclusivo</span>
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              
+            </a>
+          
+            <a href="#" class="f-tile" style="position: relative; display: block">
+              <img src="a/42856d6d41b45bc49f248df7e39c657e.webp" alt="Big Bass Rock and Roll" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; background: #24211C">
+              
+            </a>
+          
+        </div>
+      </section>
+
+      <section class="f-promos">
+        
+          <a href="#" class="f-tile" style="position: relative; height: 240px; border-radius: 16px; overflow: hidden; background: #24211C; display: block">
+            <img src="a/1baa279f5e47fb8368d3be9a7252ad13.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center">
+            <span style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,12,9,.9) 0%, rgba(14,12,9,.4) 45%, rgba(14,12,9,0) 70%)"></span>
+            <span style="position: relative; height: 100%; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 8px; max-width: 300px">
+              <span style="color: #F5A524; font-size: 14px; font-weight: 800">Casino en vivo</span>
+              <span style="font-size: 24px; font-weight: 900; line-height: 1.15">10% de reintegro en todas las mesas</span>
+              <span style="color: #E6E0D5; font-size: 15px">Cada domingo, sin códigos.</span>
+            </span>
+          </a>
+        
+          <a href="#" class="f-tile" style="position: relative; height: 240px; border-radius: 16px; overflow: hidden; background: #24211C; display: block">
+            <img src="a/7423c63b3b73b84d88a7301c60492b65.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center">
+            <span style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,12,9,.9) 0%, rgba(14,12,9,.4) 45%, rgba(14,12,9,0) 70%)"></span>
+            <span style="position: relative; height: 100%; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 8px; max-width: 300px">
+              <span style="color: #F5A524; font-size: 14px; font-weight: 800">Torneo semanal</span>
+              <span style="font-size: 24px; font-weight: 900; line-height: 1.15">$ 3.000.000 en premios</span>
+              <span style="color: #E6E0D5; font-size: 15px">Sumá puntos en cualquier slot.</span>
+            </span>
+          </a>
+        
+      </section>
+
+      <footer style="margin-top: 16px; padding-top: 40px; box-shadow: 0 -1px 0 #2F2B24; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; color: #8A8274; font-size: 14px">
+        <span style="font-weight: 900; font-size: 20px; letter-spacing: .18em; color: #F5A524">FALCO</span>
+        <a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Juego responsable</a><a href="#">Soporte 24/7</a>
+        <span style="margin-left: auto; display: flex; align-items: center; gap: 12px"><span style="width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #8A8274; color: #E6E0D5; font-weight: 700; display: grid; place-items: center">+18</span>© 2026 Falco</span>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>window.PV={plat:"falco",screen:"lobby",view:"d"}</script><script src="proto.js"></script>
+</body></html>

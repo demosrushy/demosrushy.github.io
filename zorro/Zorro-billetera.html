@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZORRO · Billetera</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F5F8}
+a{color:inherit;text-decoration:none}
+.z-nav a:hover{background:#ECEEF3}
+.z-tile{transition:transform .2s ease, box-shadow .2s ease}
+.z-tile:hover{transform:translateY(-6px)}
+.z-pri:hover{background:#FF7148}
+.z-ghost:hover{background:#ECEEF3}
+.z-soft{background:#F4F5F8}
+.z-soft:hover{background:#ECEEF3}
+.z-sec{background:#FFFFFF}
+.z-sec:hover{background:#F8F9FB}
+.z-fila{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:16px}
+@media (max-width:1180px){.z-nav{display:none!important}.z-fila{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (max-width:820px){.z-fila{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.z-tres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.z-wall{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:24px;align-items:start}
+.z-met{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.z-montos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.z-mov{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:16px;align-items:center}
+.z-met a:hover{transform:translateY(-2px)}
+.z-met a{transition:transform .2s ease}
+@media (max-width:1180px){.z-wall{grid-template-columns:1fr}}
+@media (max-width:820px){.z-tres{grid-template-columns:1fr}.z-met{grid-template-columns:repeat(2,minmax(0,1fr))}.z-montos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<link rel="stylesheet" href="proto.css">
+</head><body>
+
+
+<div style="min-height: 100vh; background: #F4F5F8; color: #15172A; font-family: 'Proxima Nova', Figtree, system-ui, sans-serif; font-size: 15px; line-height: 1.45">
+  <header style="background: #FFFFFF; box-shadow: 0 1px 0 #E6E8EE, 0 4px 16px rgba(21,23,42,.04); position: relative; z-index: 2">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; height: 76px; box-sizing: border-box; display: flex; align-items: center; gap: 28px">
+      <a href="#" style="display: flex; align-items: center; gap: 10px">
+        <svg width="38" height="38" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#FF5B2E"/><path d="M9 11l6 4h6l6-4-1 9c-1 5-4 8-8 8s-7-3-8-8z" fill="#FFFFFF"/><path d="M14 22c2 2 6 2 8 0l-4 4z" fill="#15172A"/></svg>
+        <span style="font-weight: 900; font-size: 25px; letter-spacing: -.01em">zorro</span>
+      </a>
+      <nav class="z-nav" style="display: flex; gap: 4px">
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/1b5bde479db346d30da34869c1a46f71.svg" alt="" style="width: 18px; height: 18px">Inicio</a>
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/e4cfd83876cf8bd318b45670d13f9662.svg" alt="" style="width: 18px; height: 18px">Slots</a>
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/65987cdcf2c34c98048e4eb3f111b435.svg" alt="" style="width: 18px; height: 18px">Casino en vivo</a>
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/c91424bb2e63a699b00a32d8626cf31a.svg" alt="" style="width: 18px; height: 18px">Exclusivos</a>
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/97978e072f25505db2e202c54c98a739.svg" alt="" style="width: 18px; height: 18px">Misiones</a>
+        
+          
+          <a href="#" style="height: 44px; padding: 0 16px; border-radius: 22px; color: #3F4354; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/478635f04367a33621c5d846d27e5b01.svg" alt="" style="width: 18px; height: 18px">Promociones</a>
+        
+      </nav>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+        <button type="button" aria-label="Buscar" style="width: 46px; height: 46px; border-radius: 23px; border: 0; background: #F4F5F8; display: grid; place-items: center"><img src="a/d604923be0e886a64da3b730b1df4977.svg" alt="" style="width: 19px; height: 19px"></button>
+        <a href="#" class="z-soft" style="height: 46px; padding: 0 18px; border-radius: 23px; font-weight: 800; display: flex; align-items: center; gap: 8px; white-space: nowrap; font-variant-numeric: tabular-nums"><span style="color: #8B91A5; font-size: 13px; font-weight: 700">Saldo</span>$ 24.500</a>
+        <a href="#" class="z-pri" style="height: 46px; padding: 0 22px; border-radius: 23px; background: #FF5B2E; color: #FFFFFF; font-weight: 800; display: grid; place-items: center; white-space: nowrap; box-shadow: 0 6px 16px rgba(255,91,46,.32)">Cargar</a>
+        <a href="#" aria-label="Mi cuenta" style="width: 46px; height: 46px; border-radius: 23px; background: #15172A; color: #FFFFFF; font-weight: 800; display: grid; place-items: center">LR</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 28px 32px 72px; display: flex; flex-direction: column; gap: 24px">
+    <section style="display: flex; align-items: center; gap: 14px">
+      <div style="display: flex; align-items: baseline; gap: 14px; min-width: 0">
+        <h1 style="margin: 0; font-size: 40px; font-weight: 900; letter-spacing: -.01em; line-height: 1.1; white-space: nowrap">Billetera</h1>
+        <span style="color: #5D6378; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Cargá y retirá sin vueltas, las 24 horas</span>
+      </div>
+      <span style="margin-left: auto; height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: #22B566"></span>Cuenta verificada</span>
+    </section>
+
+    <section class="z-tres">
+      
+        <div style="height: 104px; box-sizing: border-box; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 18px 22px; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0">
+          <span style="color: #5D6378; font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Saldo total</span>
+          <b style="font-size: 28px; font-weight: 900; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap">$ 24.500</b>
+          <span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Actualizado hace instantes</span>
+        </div>
+      
+        <div style="height: 104px; box-sizing: border-box; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 18px 22px; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0">
+          <span style="color: #5D6378; font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Bono activo</span>
+          <b style="font-size: 28px; font-weight: 900; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap">$ 8.000</b>
+          <span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Rollover cumplido al 62%</span>
+        </div>
+      
+        <div style="height: 104px; box-sizing: border-box; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 18px 22px; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-width: 0">
+          <span style="color: #5D6378; font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Disponible para retirar</span>
+          <b style="font-size: 28px; font-weight: 900; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap">$ 16.500</b>
+          <span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Llega en menos de 15 min</span>
+        </div>
+      
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 20px">
+      <div role="tablist" style="align-self: flex-start; display: flex; padding: 4px; border-radius: 26px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06)">
+        <a href="#" role="tab" style="height: 44px; padding: 0 26px; border-radius: 22px; background: #15172A; color: #FFFFFF; font-weight: 800; display: grid; place-items: center; white-space: nowrap">Cargar</a>
+        <a href="#" role="tab" style="height: 44px; padding: 0 26px; border-radius: 22px; color: #3F4354; font-weight: 700; display: grid; place-items: center; white-space: nowrap">Retirar</a>
+        <a href="#" role="tab" style="height: 44px; padding: 0 26px; border-radius: 22px; color: #3F4354; font-weight: 700; display: grid; place-items: center; white-space: nowrap">Historial</a>
+      </div>
+
+      <div class="z-wall">
+        <div style="border-radius: 24px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 28px; display: flex; flex-direction: column; gap: 32px; min-width: 0">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; align-items: baseline; gap: 12px"><h2 style="margin: 0; font-size: 20px; font-weight: 800; white-space: nowrap">Método de carga</h2><span style="margin-left: auto; color: #8B91A5; font-size: 14px; font-weight: 600; white-space: nowrap">Todos sin comisión</span></div>
+            <div class="z-met">
+              
+                <a href="#" style="position: relative; border-radius: 18px; padding: 16px; background: #FFF7F3; box-shadow: inset 0 0 0 2px #FF5B2E; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+                  <span style="width: 44px; height: 44px; border-radius: 12px; background: #E6F3FC; color: #0A7CC2; font-size: 13px; font-weight: 900; display: grid; place-items: center">MP</span>
+                  <span style="display: flex; flex-direction: column; line-height: 1.3; min-width: 0"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Mercado Pago</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Al instante</span></span>
+                  <span style="position: absolute; top: 14px; right: 14px; width: 22px; height: 22px; border-radius: 11px; background: #FF5B2E; display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>
+                </a>
+              
+                <a href="#" style="position: relative; border-radius: 18px; padding: 16px; background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #E6E8EE; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+                  <span style="width: 44px; height: 44px; border-radius: 12px; background: #EEF0F6; color: #15172A; font-size: 13px; font-weight: 900; display: grid; place-items: center">CBU</span>
+                  <span style="display: flex; flex-direction: column; line-height: 1.3; min-width: 0"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Transferencia</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">CBU o CVU · 5 min</span></span>
+                  
+                </a>
+              
+                <a href="#" style="position: relative; border-radius: 18px; padding: 16px; background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #E6E8EE; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+                  <span style="width: 44px; height: 44px; border-radius: 12px; background: #E7F6EE; color: #179A55; font-size: 13px; font-weight: 900; display: grid; place-items: center">DNI</span>
+                  <span style="display: flex; flex-direction: column; line-height: 1.3; min-width: 0"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Cuenta DNI</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Al instante</span></span>
+                  
+                </a>
+              
+                <a href="#" style="position: relative; border-radius: 18px; padding: 16px; background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #E6E8EE; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+                  <span style="width: 44px; height: 44px; border-radius: 12px; background: #E6F5F1; color: #14866A; font-size: 13px; font-weight: 900; display: grid; place-items: center">USDT</span>
+                  <span style="display: flex; flex-direction: column; line-height: 1.3; min-width: 0"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">USDT</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Red TRC20 · 10 min</span></span>
+                  
+                </a>
+              
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; align-items: baseline; gap: 12px"><h2 style="margin: 0; font-size: 20px; font-weight: 800; white-space: nowrap">Monto</h2><span style="margin-left: auto; color: #8B91A5; font-size: 14px; font-weight: 600; white-space: nowrap">Saldo actual <b style="color: #15172A">$ 24.500</b></span></div>
+            <label style="height: 66px; box-sizing: border-box; border-radius: 18px; background: #FFFFFF; box-shadow: inset 0 0 0 2px #15172A; display: flex; align-items: center; gap: 10px; padding: 0 22px">
+              <span style="color: #8B91A5; font-size: 26px; font-weight: 800">$</span>
+              <input type="text" value="20.000" aria-label="Monto a cargar" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 28px; font-weight: 900; color: #15172A; font-variant-numeric: tabular-nums">
+              <span style="color: #8B91A5; font-size: 14px; font-weight: 700">ARS</span>
+            </label>
+            <div class="z-montos">
+              
+                
+                <a href="#" class="z-soft" style="height: 42px; border-radius: 21px; color: #15172A; font-weight: 700; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">$ 5.000</a>
+              
+                
+                <a href="#" class="z-soft" style="height: 42px; border-radius: 21px; color: #15172A; font-weight: 700; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">$ 10.000</a>
+              
+                <a href="#" style="height: 42px; border-radius: 21px; background: #15172A; color: #FFFFFF; font-weight: 800; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">$ 20.000</a>
+                
+              
+                
+                <a href="#" class="z-soft" style="height: 42px; border-radius: 21px; color: #15172A; font-weight: 700; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">$ 50.000</a>
+              
+                
+                <a href="#" class="z-soft" style="height: 42px; border-radius: 21px; color: #15172A; font-weight: 700; display: grid; place-items: center; white-space: nowrap; font-variant-numeric: tabular-nums">$ 100.000</a>
+              
+            </div>
+            <span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Mínimo $ 2.000 · Te quedan $ 130.000 de tu límite diario</span>
+          </div>
+
+          <div style="border-radius: 18px; background: #FFF7F3; box-shadow: inset 0 0 0 1.5px #FFE1D6; padding: 16px 18px; display: flex; align-items: center; gap: 14px">
+            <span style="width: 46px; height: 46px; flex: none; border-radius: 14px; background: #FFFFFF; display: grid; place-items: center"><img src="a/478635f04367a33621c5d846d27e5b01.svg" alt="" style="width: 22px; height: 22px"></span>
+            <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.35"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sumar bono de bienvenida</b><span style="color: #5D6378; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">+100% hasta $ 100.000 · rollover x30 · vence en 7 días</span></span>
+            <span role="switch" aria-checked="true" style="position: relative; width: 50px; height: 30px; flex: none; border-radius: 15px; background: #FF5B2E"><span style="position: absolute; top: 3px; right: 3px; width: 24px; height: 24px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(21,23,42,.25)"></span></span>
+          </div>
+        </div>
+
+        <aside style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+          <div style="border-radius: 24px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 24px; display: flex; flex-direction: column; gap: 6px">
+            <h2 style="margin: 0 0 8px; font-size: 20px; font-weight: 800; white-space: nowrap">Resumen</h2>
+            <div style="display: flex; align-items: center; gap: 12px; height: 40px"><span style="color: #5D6378; font-weight: 600; white-space: nowrap">Método</span><b style="margin-left: auto; color: #15172A; white-space: nowrap; font-variant-numeric: tabular-nums">Mercado Pago</b></div><div style="display: flex; align-items: center; gap: 12px; height: 40px"><span style="color: #5D6378; font-weight: 600; white-space: nowrap">Carga</span><b style="margin-left: auto; color: #15172A; white-space: nowrap; font-variant-numeric: tabular-nums">$ 20.000</b></div><div style="display: flex; align-items: center; gap: 12px; height: 40px"><span style="color: #5D6378; font-weight: 600; white-space: nowrap">Bono de bienvenida</span><b style="margin-left: auto; color: #179A55; white-space: nowrap; font-variant-numeric: tabular-nums">+ $ 20.000</b></div><div style="display: flex; align-items: center; gap: 12px; height: 40px"><span style="color: #5D6378; font-weight: 600; white-space: nowrap">Comisión</span><b style="margin-left: auto; color: #15172A; white-space: nowrap; font-variant-numeric: tabular-nums">Sin cargo</b></div>
+            <div style="margin: 8px 0 4px; padding-top: 16px; box-shadow: inset 0 1px 0 #EEF0F4; display: flex; align-items: baseline; gap: 12px"><span style="font-weight: 700; white-space: nowrap">Vas a jugar con</span><b style="margin-left: auto; font-size: 30px; font-weight: 900; font-variant-numeric: tabular-nums; white-space: nowrap">$ 40.000</b></div>
+            <a href="#" class="z-pri" style="margin-top: 12px; height: 54px; border-radius: 27px; background: #FF5B2E; color: #FFFFFF; font-size: 16px; font-weight: 800; display: grid; place-items: center; white-space: nowrap; box-shadow: 0 8px 20px rgba(255,91,46,.32)">Cargar $ 20.000</a>
+            <span style="margin-top: 8px; color: #8B91A5; font-size: 13px; font-weight: 600; text-align: center; line-height: 1.45">Te llevamos a Mercado Pago para confirmar.<br>Se acredita al instante.</span>
+          </div>
+
+          <div style="border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 22px 24px; display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; align-items: baseline; gap: 12px"><b style="font-size: 17px; font-weight: 800; white-space: nowrap">Tus límites</b><a href="#" style="margin-left: auto; color: #E2401B; font-size: 14px; font-weight: 800; white-space: nowrap">Editar</a></div>
+            
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <div style="display: flex; align-items: baseline; gap: 10px"><span style="font-weight: 700; white-space: nowrap">Carga diaria</span><span style="margin-left: auto; color: #5D6378; font-size: 13px; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums">$ 20.000 de $ 150.000</span></div>
+                <span style="height: 6px; border-radius: 3px; background: #ECEEF3"><span style="display: block; width: 13%; height: 6px; border-radius: 3px; background: #15172A"></span></span>
+              </div>
+            
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <div style="display: flex; align-items: baseline; gap: 10px"><span style="font-weight: 700; white-space: nowrap">Carga semanal</span><span style="margin-left: auto; color: #5D6378; font-size: 13px; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums">$ 85.000 de $ 400.000</span></div>
+                <span style="height: 6px; border-radius: 3px; background: #ECEEF3"><span style="display: block; width: 21%; height: 6px; border-radius: 3px; background: #15172A"></span></span>
+              </div>
+            
+            <span style="color: #8B91A5; font-size: 13px; font-weight: 600; line-height: 1.45">Bajarlos es inmediato; subirlos tarda 24 h. Juego responsable.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section style="border-radius: 24px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); padding: 24px 28px 12px; display: flex; flex-direction: column">
+      <div style="display: flex; align-items: baseline; gap: 12px; padding-bottom: 12px"><h2 style="margin: 0; font-size: 20px; font-weight: 800; white-space: nowrap">Últimos movimientos</h2><a href="#" style="margin-left: auto; color: #E2401B; font-weight: 800; white-space: nowrap">Ver historial</a></div>
+      <div class="z-mov" style="height: 36px; color: #8B91A5; font-size: 13px; font-weight: 700; white-space: nowrap"><span>Movimiento</span><span>Fecha</span><span>Estado</span><span style="text-align: right">Monto</span></div>
+      
+        <div class="z-mov" style="height: 64px; box-shadow: inset 0 1px 0 #EEF0F4">
+          <span style="display: flex; align-items: center; gap: 12px; min-width: 0"><span style="width: 38px; height: 38px; flex: none; border-radius: 12px; background: #E6F3FC; color: #0A7CC2; font-size: 12px; font-weight: 900; display: grid; place-items: center">MP</span><span style="min-width: 0; display: flex; flex-direction: column; line-height: 1.3"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Carga</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Mercado Pago</span></span></span>
+          <span style="color: #5D6378; font-weight: 600; white-space: nowrap">Hoy, 14:32</span>
+          <span><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: 14px; background: #E7F6EE; color: #179A55; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: #179A55"></span>Acreditada</span></span>
+          <b style="text-align: right; color: #179A55; font-size: 16px; white-space: nowrap; font-variant-numeric: tabular-nums">+ $ 15.000</b>
+        </div>
+      
+        <div class="z-mov" style="height: 64px; box-shadow: inset 0 1px 0 #EEF0F4">
+          <span style="display: flex; align-items: center; gap: 12px; min-width: 0"><span style="width: 38px; height: 38px; flex: none; border-radius: 12px; background: #EEF0F6; color: #15172A; font-size: 12px; font-weight: 900; display: grid; place-items: center">CBU</span><span style="min-width: 0; display: flex; flex-direction: column; line-height: 1.3"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Retiro</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Transferencia a CVU ***4821</span></span></span>
+          <span style="color: #5D6378; font-weight: 600; white-space: nowrap">Ayer, 22:10</span>
+          <span><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: 14px; background: #FFF4E0; color: #B7700B; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: #B7700B"></span>En proceso</span></span>
+          <b style="text-align: right; color: #15172A; font-size: 16px; white-space: nowrap; font-variant-numeric: tabular-nums">− $ 30.000</b>
+        </div>
+      
+        <div class="z-mov" style="height: 64px; box-shadow: inset 0 1px 0 #EEF0F4">
+          <span style="display: flex; align-items: center; gap: 12px; min-width: 0"><span style="width: 38px; height: 38px; flex: none; border-radius: 12px; background: #FFF0EA; color: #E2401B; font-size: 12px; font-weight: 900; display: grid; place-items: center">+</span><span style="min-width: 0; display: flex; flex-direction: column; line-height: 1.3"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Premio de misión</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Misión diaria completada</span></span></span>
+          <span style="color: #5D6378; font-weight: 600; white-space: nowrap">Ayer, 18:45</span>
+          <span><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: 14px; background: #E7F6EE; color: #179A55; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: #179A55"></span>Acreditado</span></span>
+          <b style="text-align: right; color: #179A55; font-size: 16px; white-space: nowrap; font-variant-numeric: tabular-nums">+ $ 2.000</b>
+        </div>
+      
+        <div class="z-mov" style="height: 64px; box-shadow: inset 0 1px 0 #EEF0F4">
+          <span style="display: flex; align-items: center; gap: 12px; min-width: 0"><span style="width: 38px; height: 38px; flex: none; border-radius: 12px; background: #E7F6EE; color: #179A55; font-size: 12px; font-weight: 900; display: grid; place-items: center">DNI</span><span style="min-width: 0; display: flex; flex-direction: column; line-height: 1.3"><b style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Carga</b><span style="color: #8B91A5; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Cuenta DNI</span></span></span>
+          <span style="color: #5D6378; font-weight: 600; white-space: nowrap">03/11, 21:04</span>
+          <span><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: 14px; background: #E7F6EE; color: #179A55; font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: #179A55"></span>Acreditada</span></span>
+          <b style="text-align: right; color: #179A55; font-size: 16px; white-space: nowrap; font-variant-numeric: tabular-nums">+ $ 10.000</b>
+        </div>
+      
+    </section>
+
+    <footer style="margin-top: 16px; padding-top: 40px; box-shadow: 0 -1px 0 #E6E8EE; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 15px">
+        <div style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 900; font-size: 22px">zorro</span><span style="color: #5D6378; max-width: 280px">El casino online más astuto, con soporte humano las 24 horas.</span></div>
+        <div style="display: flex; flex-direction: column; gap: 12px"><b>Juegos</b><a href="#" style="color: #5D6378">Slots</a><a href="#" style="color: #5D6378">Casino en vivo</a><a href="#" style="color: #5D6378">Exclusivos</a></div>
+        <div style="display: flex; flex-direction: column; gap: 12px"><b>Zorro</b><a href="#" style="color: #5D6378">Misiones</a><a href="#" style="color: #5D6378">Promociones</a><a href="#" style="color: #5D6378">Club VIP</a></div>
+        <div style="display: flex; flex-direction: column; gap: 12px"><b>Ayuda</b><a href="#" style="color: #5D6378">Soporte 24/7</a><a href="#" style="color: #5D6378">Cómo cargar</a><a href="#" style="color: #5D6378">Juego responsable</a></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding-top: 24px; box-shadow: 0 -1px 0 #E6E8EE">
+        <span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Mercado Pago</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Transferencia</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">Cuenta DNI</span><span style="height: 36px; padding: 0 14px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(21,23,42,.06); color: #3F4354; font-size: 13px; font-weight: 700; display: grid; place-items: center">USDT</span>
+        <span style="margin-left: auto; display: flex; align-items: center; gap: 12px; color: #8B91A5; font-size: 13px"><span style="width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #8B91A5; color: #3F4354; font-weight: 700; display: grid; place-items: center">+18</span>© 2026 Zorro · Jugá con responsabilidad</span>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>window.PV={plat:"zorro",screen:"billetera",view:"d"}</script><script src="proto.js"></script>
+</body></html>

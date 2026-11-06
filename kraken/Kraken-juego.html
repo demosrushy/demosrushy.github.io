@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KRAKEN · Wanted Dead or a Wild</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0C0A1C}
+a{color:inherit;text-decoration:none}
+h1,h2{letter-spacing:-.02em}
+.k-nav,.k-sec,.k-pri,button,.k-one{white-space:nowrap}
+.k-nav{overflow:hidden;text-overflow:ellipsis}
+.k-sec{background:#2A2550;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);color:#F5F3FF}
+.k-sec:hover{background:#332D5C}
+.k-cover{position:relative;display:block;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:#1F1B3D}
+.k-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.k-name{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k-app{display:flex;flex-wrap:wrap;min-height:100vh}
+.k-nav:hover{background:#1C1838}
+.k-tile{transition:transform .2s ease}
+.k-tile:hover{transform:translateY(-4px)}
+.k-pri:hover{background:#6AD8FF}
+.k-pri{white-space:nowrap;color:#04121F!important}
+.k-pri img{filter:brightness(0)!important;opacity:.8}
+.k-one{overflow:hidden;text-overflow:ellipsis}
+.k-ghost{background:transparent;color:#C9C3E3}
+.k-ghost:hover{background:#1F1B3D;color:#F5F3FF}
+.k-chip:hover{background:#1F1B3D}
+.k-play{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+.k-rel{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px 16px}
+.k-wins{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr) minmax(0,.8fr);gap:12px;align-items:center}
+@media (max-width:1240px){.k-play{grid-template-columns:1fr}.k-rel{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:820px){.k-rail{display:none!important}.k-rel{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<link rel="stylesheet" href="proto.css">
+</head><body>
+
+
+<div class="k-app" style="background: #0C0A1C; color: #F5F3FF; font-family: Onest, system-ui, sans-serif; font-size: 15px; line-height: 1.45; -webkit-font-smoothing: antialiased">
+
+  <nav class="k-rail" style="flex: 0 0 240px; box-sizing: border-box; background: #08061A; display: flex; flex-direction: column; padding: 0 16px 24px; position: sticky; top: 0; align-self: flex-start; min-height: 100vh">
+    <div style="height: 76px; display: flex; align-items: center; gap: 10px; padding: 0 8px">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c-5 0-8 4-8 8 0 3 1 5 3 6l-4 6c-.5 1 .5 2 1.5 1.3L12 22l1 6c.2 1 1.6 1 1.8 0L16 22l1.2 6c.2 1 1.6 1 1.8 0l1-6 3.5 3.3c1 .7 2-.3 1.5-1.3l-4-6c2-1 3-3 3-6 0-4-3-8-8-8z" fill="#3CCBFF"></path></svg>
+      <span style="font-weight: 800; font-size: 19px; letter-spacing: .08em">KRAKEN</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div style="background: #141130; border-radius: 12px; padding: 6px; display: flex; flex-direction: column; gap: 2px">
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/0b7f1278d843412c54e93c2428ffc937.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Pulso de la sala</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/970db7456b91c65f63c9594294c84583.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Para vos</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/bc97b9e319eaa7c1d53f13e963915dcd.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Temporada</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/a3a0b7356b655e88a6f2477cc427a569.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Tripulación</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/1e12c4b0a344a222c92c65b26cb69e95.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Promociones</a>
+      </div>
+      <div style="background: #141130; border-radius: 12px; padding: 6px; display: flex; flex-direction: column; gap: 2px">
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; background: #1F1B3D; color: #F5F3FF"><img src="a/a4015fb0cc1ca2343c02b55fa594156d.svg" alt="" style="width: 18px; height: 18px; opacity: 1">Slots</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/6a4a0cbb4c7b3e970801b97ecc67b631.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Casino en vivo</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/4c4fd0ccb29a1926831af4e3e14e5d26.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Originales</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #B7B0D6"><img src="a/d8905445f0e29ce4036135837b75007c.svg" alt="" style="width: 18px; height: 18px; opacity: 0.85">Explorar todo</a>
+      </div>
+      <div style="background: #141130; border-radius: 12px; padding: 6px; display: flex; flex-direction: column; gap: 2px">
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #B7B0D6">Soporte 24/7</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #B7B0D6">Juego responsable</a>
+        <a href="#" class="k-nav" style="height: 40px; padding: 0 12px; border-radius: 8px; display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #B7B0D6">Español<span style="margin-left: auto; color: #6A6390; font-size: 13px">ARS</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="flex: 999 1 560px; min-width: 0">
+    <header style="height: 76px; box-shadow: 0 1px 0 #1C1838">
+      <div style="max-width: 1240px; height: 100%; margin: 0 auto; padding: 0 32px; box-sizing: border-box; display: flex; align-items: center; gap: 16px">
+        <label style="flex: 0 1 360px; height: 46px; border-radius: 12px; background: #15122C; display: flex; align-items: center; gap: 10px; padding: 0 16px; color: #948DB5"><img src="a/c3b4a2f40ddaf3e117ca6bd5e6c6305b.svg" alt="" style="width: 18px; height: 18px"><input placeholder="Buscá un juego o un amigo" aria-label="Buscar" style="border: 0; outline: 0; background: none; color: #F5F3FF; font: inherit; width: 100%"></label>
+        <div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+          <span style="display: flex; align-items: center"><span style="width: 34px; height: 34px; border-radius: 50%; background: #7C5CFF; box-shadow: 0 0 0 3px #0C0A1C; display: grid; place-items: center; font-size: 12px; font-weight: 800">LU</span><span style="width: 34px; height: 34px; border-radius: 50%; background: #B794FF; color: #1A0B3D; box-shadow: 0 0 0 3px #0C0A1C; margin-left: -10px; display: grid; place-items: center; font-size: 12px; font-weight: 800">MA</span><span style="width: 34px; height: 34px; border-radius: 50%; background: #8A5CFF; box-shadow: 0 0 0 3px #0C0A1C; margin-left: -10px; display: grid; place-items: center; font-size: 12px; font-weight: 800">FE</span><span class="k-one" style="margin-left: 10px; font-size: 13px; color: #948DB5; font-weight: 600"><b style="color: #F5F3FF">3 amigos</b> jugando</span></span>
+          <div style="height: 46px; border-radius: 12px; background: #15122C; display: flex; align-items: center; padding: 0 4px 0 16px; gap: 14px; margin-left: 12px"><b style="font-variant-numeric: tabular-nums">$ 24.500</b><a href="#" class="k-pri" style="height: 38px; padding: 0 18px; border-radius: 9px; background: #3CCBFF; font-weight: 800; display: grid; place-items: center">Cargar</a></div>
+          <button type="button" aria-label="Notificaciones" style="width: 46px; height: 46px; border-radius: 12px; border: 0; background: #15122C; display: grid; place-items: center"><img src="a/e7ac0509d5427abcdcc1b6cc16efe46c.svg" alt="" style="width: 19px; height: 19px"></button>
+        </div>
+      </div>
+    </header>
+
+    <main style="max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding: 28px 32px 72px; display: flex; flex-direction: column; gap: 36px">
+      <section style="display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #6A6390"><a href="#" style="color: #948DB5">Slots</a><span>/</span><a href="#" style="color: #948DB5">Hacksaw Gaming</a><span>/</span><span style="color: #C9C3E3">Wanted Dead or a Wild</span></div>
+        <div style="display: flex; align-items: center; gap: 20px; min-width: 0">
+          <div style="margin-right: auto; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+            <h1 class="k-one" style="margin: 0; font-size: 32px; font-weight: 800; line-height: 1.1">Wanted Dead or a Wild</h1>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap">
+              <span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #15122C; font-size: 13px; font-weight: 600; color: #C9C3E3; display: flex; align-items: center; gap: 6px; white-space: nowrap"><span style="color: #948DB5">Proveedor</span>Hacksaw Gaming</span><span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #15122C; font-size: 13px; font-weight: 600; color: #C9C3E3; display: flex; align-items: center; gap: 6px; white-space: nowrap"><span style="color: #948DB5">RTP</span>96,38%</span><span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #15122C; font-size: 13px; font-weight: 600; color: #C9C3E3; display: flex; align-items: center; gap: 6px; white-space: nowrap"><span style="color: #948DB5">Volatilidad</span>Muy alta</span><span style="height: 30px; padding: 0 12px; border-radius: 8px; background: #15122C; font-size: 13px; font-weight: 600; color: #C9C3E3; display: flex; align-items: center; gap: 6px; white-space: nowrap"><span style="color: #948DB5">Máximo</span>x12.500</span>
+            </div>
+          </div>
+          <span style="flex: none; display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border-radius: 8px; background: rgba(94,231,255,.12); color: #5EE7FF; font-size: 13px; font-weight: 800"><span style="width: 8px; height: 8px; border-radius: 50%; background: #5EE7FF"></span>Muy caliente · puesto 1 del pulso</span>
+        </div>
+      </section>
+
+      <section class="k-play">
+        <div style="display: flex; flex-direction: column; gap: 20px; min-width: 0">
+          <div style="background: #15122C; border-radius: 20px; overflow: hidden">
+            <div style="position: relative; aspect-ratio: 16/9; background: #08061A; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px">
+              <span class="k-cover" style="width: 150px; border-radius: 14px; box-shadow: 0 0 0 1px rgba(255,255,255,.06)"><img src="a/35c2aac1f1c18e129b631d7fad3b173c.webp" alt="Wanted Dead or a Wild"></span>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <span style="width: 220px; height: 4px; border-radius: 2px; background: #1F1B3D"><span style="display: block; width: 64%; height: 4px; border-radius: 2px; background: #3CCBFF"></span></span>
+                <span style="color: #948DB5; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums">Cargando juego · 64%</span>
+              </div>
+              <div style="display: flex; background: #15122C; border-radius: 11px; padding: 4px">
+                <button type="button" style="height: 38px; padding: 0 18px; border-radius: 8px; border: 0; background: #2A2550; color: #F5F3FF; font-weight: 700; font-family: inherit; font-size: 14px">Dinero real</button>
+                <button type="button" style="height: 38px; padding: 0 18px; border-radius: 8px; border: 0; background: transparent; color: #948DB5; font-weight: 700; font-family: inherit; font-size: 14px">Demo</button>
+              </div>
+              <span style="position: absolute; left: 16px; top: 16px; height: 28px; padding: 0 10px; border-radius: 8px; background: rgba(21,18,44,.9); color: #C9C3E3; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; white-space: nowrap">Jugás con <b style="color: #F5F3FF; font-variant-numeric: tabular-nums">$ 24.500</b></span>
+            </div>
+            <div style="height: 64px; padding: 0 12px; box-sizing: border-box; display: flex; align-items: center; gap: 4px; box-shadow: inset 0 1px 0 #1F1B3D">
+              <a href="#" class="k-ghost" style="height: 40px; padding: 0 12px; border-radius: 9px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/11cf38dc1dad2513fe4c9974f5be0f2a.svg" alt="" style="width: 18px; height: 18px; opacity: .85">Favorito</a><a href="#" class="k-ghost" style="height: 40px; padding: 0 12px; border-radius: 9px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/08ca41f7e9eaf9c42e59edd352648938.svg" alt="" style="width: 18px; height: 18px; opacity: .85">Compartir</a><a href="#" class="k-ghost" style="height: 40px; padding: 0 12px; border-radius: 9px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; white-space: nowrap"><img src="a/9b24d5286aba952899d8cb275e5c96c0.svg" alt="" style="width: 18px; height: 18px; opacity: .85">Invitar</a>
+              <a href="#" class="k-ghost" style="margin-left: auto; height: 40px; padding: 0 12px; border-radius: 9px; font-size: 14px; font-weight: 600; display: flex; align-items: center; white-space: nowrap">Reglas del juego</a>
+              <a href="#" class="k-sec" style="height: 40px; padding: 0 16px; border-radius: 10px; font-size: 14px; font-weight: 700; display: grid; place-items: center">Pantalla completa</a>
+            </div>
+          </div>
+
+          <div style="background: #15122C; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; align-items: center; gap: 12px"><b style="font-size: 20px; font-weight: 800">Premios recientes acá</b><span style="margin-left: auto; display: flex; background: #0C0A1C; border-radius: 10px; padding: 4px"><button type="button" style="height: 32px; padding: 0 12px; border-radius: 7px; border: 0; background: #2A2550; color: #F5F3FF; font-weight: 700; font-family: inherit; font-size: 13px">Todos</button><button type="button" style="height: 32px; padding: 0 12px; border-radius: 7px; border: 0; background: transparent; color: #948DB5; font-weight: 700; font-family: inherit; font-size: 13px">Más grandes</button><button type="button" style="height: 32px; padding: 0 12px; border-radius: 7px; border: 0; background: transparent; color: #948DB5; font-weight: 700; font-family: inherit; font-size: 13px">Mi tripulación</button></span></div>
+            <div>
+              <div class="k-wins" style="height: 36px; color: #6A6390; font-size: 13px; font-weight: 700; box-shadow: inset 0 -1px 0 #1F1B3D"><span>Jugador</span><span>Apuesta</span><span>Multiplicador</span><span>Premio</span><span style="text-align: right">Cuándo</span></div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #3CCBFF; color: #04121F; display: grid; place-items: center; font-size: 11px; font-weight: 800">SA</span><b class="k-one">santi***</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 400</span>
+                  <b style="color: #B794FF; font-variant-numeric: tabular-nums">x3.100</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 1.240.000</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 2 min</span>
+                </div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #3DF5B0; color: #04261A; display: grid; place-items: center; font-size: 11px; font-weight: 800">JU</span><b class="k-one">Juli · tu tripulación</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 500</span>
+                  <b style="color: #B794FF; font-variant-numeric: tabular-nums">x412</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 206.000</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 5 min</span>
+                </div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #7C5CFF; color: #FFFFFF; display: grid; place-items: center; font-size: 11px; font-weight: 800">CA</span><b class="k-one">caro***21</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 1.000</span>
+                  <b style="color: #F5F3FF; font-variant-numeric: tabular-nums">x96</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 96.000</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 7 min</span>
+                </div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #8A5CFF; color: #FFFFFF; display: grid; place-items: center; font-size: 11px; font-weight: 800">NI</span><b class="k-one">nico***</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 200</span>
+                  <b style="color: #F5F3FF; font-variant-numeric: tabular-nums">x240</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 48.000</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 9 min</span>
+                </div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #B794FF; color: #1A0B3D; display: grid; place-items: center; font-size: 11px; font-weight: 800">RO</span><b class="k-one">ro***88</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 300</span>
+                  <b style="color: #F5F3FF; font-variant-numeric: tabular-nums">x88</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 26.400</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 11 min</span>
+                </div>
+              
+                <div class="k-wins" style="height: 52px; font-size: 14px; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: #B794FF; color: #1A0B3D; display: grid; place-items: center; font-size: 11px; font-weight: 800">MA</span><b class="k-one">Mati · tu tripulación</b></span>
+                  <span style="color: #C9C3E3; font-variant-numeric: tabular-nums">$ 500</span>
+                  <b style="color: #F5F3FF; font-variant-numeric: tabular-nums">x42</b>
+                  <b style="font-variant-numeric: tabular-nums">$ 21.000</b>
+                  <span style="color: #948DB5; text-align: right; white-space: nowrap">hace 14 min</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <aside style="display: flex; flex-direction: column; gap: 20px; min-width: 0">
+          <div style="background: #15122C; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; align-items: center; gap: 8px; color: #3CCBFF; font-weight: 800; font-size: 13px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #3CCBFF"></span>En vivo · últimos 15 min</div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div style="display: flex; align-items: baseline; gap: 10px"><b style="font-size: 26px; font-weight: 800; color: #5EE7FF; line-height: 1.1">Muy caliente</b><span style="margin-left: auto; color: #948DB5; font-size: 13px; font-weight: 600">hace 12 min era tibio</span></div>
+              <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px"><span style="height: 8px; border-radius: 4px; background: #5EE7FF"></span><span style="height: 8px; border-radius: 4px; background: #5EE7FF"></span><span style="height: 8px; border-radius: 4px; background: #5EE7FF"></span><span style="height: 8px; border-radius: 4px; background: #5EE7FF"></span></span>
+            </div>
+            <div style="background: #0C0A1C; border-radius: 14px; padding: 14px 14px 10px; display: flex; flex-direction: column; gap: 8px">
+              <div style="height: 64px; display: flex; align-items: flex-end; gap: 4px"><span style="flex: 1; height: 18px; border-radius: 3px; background: #4A4478"></span><span style="flex: 1; height: 22px; border-radius: 3px; background: #4A4478"></span><span style="flex: 1; height: 16px; border-radius: 3px; background: #4A4478"></span><span style="flex: 1; height: 26px; border-radius: 3px; background: #8B5CF6"></span><span style="flex: 1; height: 20px; border-radius: 3px; background: #4A4478"></span><span style="flex: 1; height: 30px; border-radius: 3px; background: #8B5CF6"></span><span style="flex: 1; height: 28px; border-radius: 3px; background: #8B5CF6"></span><span style="flex: 1; height: 38px; border-radius: 3px; background: #3CA8FF"></span><span style="flex: 1; height: 44px; border-radius: 3px; background: #3CA8FF"></span><span style="flex: 1; height: 52px; border-radius: 3px; background: #3CA8FF"></span><span style="flex: 1; height: 58px; border-radius: 3px; background: #5EE7FF"></span><span style="flex: 1; height: 64px; border-radius: 3px; background: #5EE7FF"></span></div>
+              <div style="display: flex; justify-content: space-between; color: #6A6390; font-size: 12px; font-weight: 600"><span>hace 1 hora</span><span>ahora</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+              <span style="background: #1F1B3D; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 20px; font-variant-numeric: tabular-nums">14</b><span class="k-one" style="color: #B3ACD6; font-size: 12px; font-weight: 600">premios en 20 min</span></span><span style="background: #1F1B3D; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 20px; font-variant-numeric: tabular-nums">x210</b><span class="k-one" style="color: #B3ACD6; font-size: 12px; font-weight: 600">multiplicador promedio</span></span><span style="background: #1F1B3D; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 20px; font-variant-numeric: tabular-nums">312</b><span class="k-one" style="color: #B3ACD6; font-size: 12px; font-weight: 600">jugando ahora</span></span><span style="background: #1F1B3D; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 20px; font-variant-numeric: tabular-nums">x3.100</b><span class="k-one" style="color: #B3ACD6; font-size: 12px; font-weight: 600">mejor premio de hoy</span></span>
+            </div>
+            <span style="color: #6A6390; font-size: 12px; font-weight: 600">Resultados recientes, no garantizan premios futuros.</span>
+          </div>
+
+          <div style="background: #15122C; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; align-items: center; gap: 12px; min-width: 0">
+              <img src="a/d3196a5c5f802e9aab822955441bc36e.webp" alt="" style="flex: none; width: 44px; height: 44px; object-fit: contain">
+              <div style="min-width: 0"><b class="k-one" style="display: block; font-size: 17px; font-weight: 800">Tu tripulación jugando acá</b><span class="k-one" style="display: block; color: #948DB5; font-size: 13px">4 de la Tripulación del Abismo</span></div>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              
+                <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 0; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="position: relative; width: 34px; height: 34px; border-radius: 50%; background: #3DF5B0; color: #04261A; display: grid; place-items: center; font-size: 11px; font-weight: 800">JU<span style="position: absolute; right: -1px; bottom: -1px; width: 10px; height: 10px; border-radius: 50%; background: #3DF5B0; box-shadow: 0 0 0 2px #15122C"></span></span>
+                  <span style="min-width: 0; display: flex; flex-direction: column"><b class="k-one" style="font-size: 14px">Juli · capitana</b><span class="k-one" style="color: #948DB5; font-size: 13px">Girando · $ 500 por giro</span></span>
+                  <b style="color: #B794FF; font-size: 14px; font-variant-numeric: tabular-nums">+2.060</b>
+                </div>
+              
+                <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 0; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="position: relative; width: 34px; height: 34px; border-radius: 50%; background: #B794FF; color: #1A0B3D; display: grid; place-items: center; font-size: 11px; font-weight: 800">MA<span style="position: absolute; right: -1px; bottom: -1px; width: 10px; height: 10px; border-radius: 50%; background: #3DF5B0; box-shadow: 0 0 0 2px #15122C"></span></span>
+                  <span style="min-width: 0; display: flex; flex-direction: column"><b class="k-one" style="font-size: 14px">Mati</b><span class="k-one" style="color: #948DB5; font-size: 13px">Girando · $ 500 por giro</span></span>
+                  <b style="color: #B794FF; font-size: 14px; font-variant-numeric: tabular-nums">+1.240</b>
+                </div>
+              
+                <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 0; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="position: relative; width: 34px; height: 34px; border-radius: 50%; background: #7C5CFF; color: #FFFFFF; display: grid; place-items: center; font-size: 11px; font-weight: 800">LU<span style="position: absolute; right: -1px; bottom: -1px; width: 10px; height: 10px; border-radius: 50%; background: #3DF5B0; box-shadow: 0 0 0 2px #15122C"></span></span>
+                  <span style="min-width: 0; display: flex; flex-direction: column"><b class="k-one" style="font-size: 14px">Lu</b><span class="k-one" style="color: #948DB5; font-size: 13px">En bonus · 7 giros gratis</span></span>
+                  <b style="color: #B794FF; font-size: 14px; font-variant-numeric: tabular-nums">+860</b>
+                </div>
+              
+                <div style="display: grid; grid-template-columns: 34px minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 0; box-shadow: inset 0 -1px 0 #1F1B3D">
+                  <span style="position: relative; width: 34px; height: 34px; border-radius: 50%; background: #8A5CFF; color: #FFFFFF; display: grid; place-items: center; font-size: 11px; font-weight: 800">FE<span style="position: absolute; right: -1px; bottom: -1px; width: 10px; height: 10px; border-radius: 50%; background: #3DF5B0; box-shadow: 0 0 0 2px #15122C"></span></span>
+                  <span style="min-width: 0; display: flex; flex-direction: column"><b class="k-one" style="font-size: 14px">Fer</b><span class="k-one" style="color: #948DB5; font-size: 13px">Girando · $ 200 por giro</span></span>
+                  <b style="color: #B794FF; font-size: 14px; font-variant-numeric: tabular-nums">+310</b>
+                </div>
+              
+            </div>
+            <div style="background: #0C0A1C; border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px"><img src="a/393633c112ef3a8b5fa5a1d0c9971e0d.webp" alt="" style="flex: none; width: 32px; height: 32px; object-fit: contain"><span style="font-size: 13px; color: #C9C3E3; line-height: 1.35">Cada giro acá suma para la guerra contra <b style="color: #F5F3FF">Los Tiburones</b>.</span></div>
+            <a href="#" class="k-sec" style="height: 46px; border-radius: 11px; font-weight: 700; display: grid; place-items: center">Abrir chat de la tripulación</a>
+          </div>
+        </aside>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; align-items: baseline; gap: 12px; min-width: 0"><h2 style="margin: 0; font-size: 26px; font-weight: 800; flex: none; white-space: nowrap">Si te gusta este, probá</h2><span style="color: #948DB5; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Misma volatilidad, ordenados por calor.</span><a href="#" style="margin-left: auto; flex: none; color: #7FDBFF; font-size: 14px; font-weight: 700; white-space: nowrap">Ver todos</a></div>
+        <div class="k-rel">
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: 0 0 0 2px #5EE7FF"><img src="a/afc2e5b98a0967b7293d65040947f61a.webp" alt="Le Outlaw"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Le Outlaw</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Hacksaw Gaming</span><b style="margin-left: auto; flex: none; color: #5EE7FF">Muy caliente</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #5EE7FF"></span><span style="height: 4px; border-radius: 2px; background: #5EE7FF"></span><span style="height: 4px; border-radius: 2px; background: #5EE7FF"></span><span style="height: 4px; border-radius: 2px; background: #5EE7FF"></span></span>
+              </span>
+            </a>
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: none"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Sweet Bonanza 1000</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Pragmatic Play</span><b style="margin-left: auto; flex: none; color: #3CA8FF">Caliente</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span></span>
+              </span>
+            </a>
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: none"><img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Gates of Olympus 1000</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Pragmatic Play</span><b style="margin-left: auto; flex: none; color: #3CA8FF">Caliente</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #3CA8FF"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span></span>
+              </span>
+            </a>
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: none"><img src="a/406666fb45f66b0fc1a6afc72652c713.webp" alt="Sugar Rush 1000"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Sugar Rush 1000</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Pragmatic Play</span><b style="margin-left: auto; flex: none; color: #8B5CF6">Tibio</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #8B5CF6"></span><span style="height: 4px; border-radius: 2px; background: #8B5CF6"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span></span>
+              </span>
+            </a>
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: none"><img src="a/42856d6d41b45bc49f248df7e39c657e.webp" alt="Big Bass Rock and Roll"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Big Bass Rock and Roll</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Pragmatic Play</span><b style="margin-left: auto; flex: none; color: #8B5CF6">Tibio</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #8B5CF6"></span><span style="height: 4px; border-radius: 2px; background: #8B5CF6"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span></span>
+              </span>
+            </a>
+          
+            <a href="#" class="k-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+              <span class="k-cover" style="box-shadow: none"><img src="a/bbf79f02c3ebbf3c64665fff053e13ba.webp" alt="Aviator"></span>
+              <span style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+                <span class="k-name">Aviator</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; min-width: 0"><span class="k-one" style="color: #948DB5; min-width: 0">Spribe</span><b style="margin-left: auto; flex: none; color: #948DB5">Frío</b></span>
+                <span style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px"><span style="height: 4px; border-radius: 2px; background: #4A4478"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span><span style="height: 4px; border-radius: 2px; background: #2A2550"></span></span>
+              </span>
+            </a>
+          
+        </div>
+      </section>
+
+      <footer style="margin-top: 8px; padding-top: 36px; box-shadow: 0 -1px 0 #1C1838; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; color: #948DB5; font-size: 14px">
+        <span style="font-weight: 800; font-size: 20px; letter-spacing: .04em; color: #F5F3FF">KRAKEN</span>
+        <a href="#">Términos</a><a href="#">Juego responsable</a><a href="#">Soporte 24/7</a><span>Mercado Pago · Transferencia · Cuenta DNI · USDT</span>
+        <span style="margin-left: auto; display: flex; align-items: center; gap: 12px"><span style="width: 34px; height: 34px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #948DB5; color: #F5F3FF; font-weight: 700; display: grid; place-items: center">+18</span>© 2026 Kraken</span>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>window.PV={plat:"kraken",screen:"juego",view:"d"}</script><script src="proto.js"></script>
+</body></html>

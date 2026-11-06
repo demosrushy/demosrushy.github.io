@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CARPINCHO · Juego abierto</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1C15}
+a{color:inherit;text-decoration:none}
+.c-one{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-num{font-variant-numeric:tabular-nums}
+.c-wrap{box-sizing:border-box;width:100%;max-width:1288px;margin:0 auto;padding:0 24px}
+.c-acc{background:var(--acc);color:var(--acc-t);font-weight:800;font-size:14px;white-space:nowrap;border-radius:8px}
+.c-acc:hover{background:var(--acc-h)}
+.c-sec{background:var(--raised);color:var(--txt);font-weight:700;font-size:14px;white-space:nowrap;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line)}
+.c-sec:hover{background:var(--line)}
+.c-ghost{background:rgba(10,20,15,.42);color:var(--txt);font-weight:700;font-size:13px;white-space:nowrap;border-radius:8px}
+.c-ghost:hover{background:rgba(10,20,15,.6)}
+.c-nav{height:72px;padding:0 11px;display:flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--mut);white-space:nowrap}
+.c-nav:hover{color:var(--txt)}
+.c-ib{width:40px;height:40px;border-radius:8px;border:0;background:transparent;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;position:relative;cursor:pointer}
+.c-ib:hover{background:var(--card)}
+.c-tile{transition:transform .18s ease}
+.c-tile:hover{transform:translateY(-3px)}
+.c-cover{position:relative;display:block;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:var(--card)}
+.c-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.c-h{display:flex;align-items:center;gap:12px;min-width:0}
+.c-h h2{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.c-h .c-sub{color:var(--dim);font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-more{margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--mut);font-size:14px;font-weight:700;white-space:nowrap}
+.c-more:hover{color:var(--txt)}
+.c-arrow{width:32px;height:32px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;color:var(--mut)}
+.c-arrow:hover{background:var(--card);color:var(--txt)}
+.c-chip{height:32px;padding:0 12px;border-radius:8px;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;white-space:nowrap;color:var(--mut);box-shadow:inset 0 0 0 1px var(--line)}
+.c-chip:hover{color:var(--txt)}
+.c-chip span{color:var(--dim);font-weight:600}
+.c-seg{display:flex;gap:4px;padding:4px;border-radius:8px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.c-seg span{height:32px;padding:0 14px;border-radius:6px;color:var(--mut);font-size:13px;font-weight:700;display:grid;place-items:center;white-space:nowrap}
+.c-seg span.on{background:var(--raised);color:var(--txt);font-weight:800}
+.c-crumb{display:flex;align-items:center;gap:8px;color:var(--dim);font-size:13px;font-weight:700;white-space:nowrap}
+.c-crumb a:hover{color:var(--txt)}
+.c-row7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:20px 14px}
+@media (max-width:1180px){.c-navs .c-nav span.c-lbl{display:none}.c-row7{grid-template-columns:repeat(4,minmax(0,1fr))}.c-row7>*:nth-child(n+5){display:none}}
+@media (max-width:760px){.c-navs{display:none!important}.c-row7{grid-template-columns:repeat(3,minmax(0,1fr))}.c-row7>*:nth-child(n+4){display:none}}
+.c-play{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.c-tb{height:36px;padding:0 14px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:700;white-space:nowrap;color:var(--mut);box-shadow:inset 0 0 0 1px var(--line)}
+.c-tb:hover{color:var(--txt);background:var(--raised)}
+@media (max-width:1100px){.c-play{grid-template-columns:1fr}}
+</style>
+
+<link rel="stylesheet" href="proto.css">
+</head><body>
+
+
+<div style="--acc: #E9B949; --acc-t: #1E1606; --acc-h: #F2C75E; --hot: #E2704B; --cel: #8CC8F0; --up: #7CC98F; --nav: #0A140F; --bg: #0F1C15; --card: #16271D; --raised: #1F3528; --line: #27402F; --txt: #F3EAD7; --mut: #9FB3A4; --dim: #6E8576; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--txt); font-family: Manrope, system-ui, sans-serif; font-size: 16px; line-height: 1.45; -webkit-font-smoothing: antialiased">
+
+  <header style="flex: none; height: 72px; background: var(--nav); box-shadow: 0 1px 0 var(--line); position: sticky; top: 0; z-index: 5">
+    <div class="c-wrap" style="height: 72px; display: flex; align-items: center; gap: 24px">
+      <a href="#" style="flex: none; display: flex; align-items: center; gap: 10px">
+        <span style="width: 40px; height: 40px; border-radius: 50%; background: var(--acc); overflow: hidden; display: block; flex: none"><img src="a/9c561b3cd627d923422e671ca724f4e4.webp" alt="" style="width: 100%; height: 125%; object-fit: cover; object-position: center top"></span>
+        <b style="font-size: 22px; font-weight: 800; letter-spacing: -.03em; text-transform: lowercase">carpincho</b>
+      </a>
+      <nav class="c-navs" style="display: flex; align-items: center; min-width: 0">
+        
+          <a href="#" class="c-nav" style="color: #9FB3A4; box-shadow: none"><img src="a/9ec4f708010dd6fdc05a2047c44faa05.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">Inicio</span></a>
+        
+          <a href="#" class="c-nav" style="color: #F3EAD7; box-shadow: inset 0 -2px 0 #E9B949"><img src="a/1297961eaf92cec1c56d09f5705f31e8.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">Slots</span></a>
+        
+          <a href="#" class="c-nav" style="color: #9FB3A4; box-shadow: none"><img src="a/e8797e4ac49827ab8bdc2024ada87c32.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">En vivo</span></a>
+        
+          <a href="#" class="c-nav" style="color: #9FB3A4; box-shadow: none"><img src="a/fabb2d9be1cc44316d6e1d08512543d5.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">Crash</span></a>
+        
+          <a href="#" class="c-nav" style="color: #9FB3A4; box-shadow: none"><img src="a/43168e404af29490f62b118143516f5a.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">Promos</span></a>
+        
+          <a href="#" class="c-nav" style="color: #9FB3A4; box-shadow: none"><img src="a/2faf52b3f6b7f1927064afca2e0bedc7.svg" alt="" style="width: 20px; height: 20px"><span class="c-lbl">VIP</span></a>
+        
+      </nav>
+      <div style="margin-left: auto; flex: none; display: flex; align-items: center; gap: 10px">
+        <button type="button" class="c-ib" aria-label="Buscar"><img src="a/b9e8061a1846a670c0866a86aae0fb4a.svg" alt="" style="width: 18px; height: 18px"></button>
+        <div style="height: 44px; box-sizing: border-box; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; align-items: center; gap: 12px; padding: 0 4px 0 14px">
+          <span style="display: flex; align-items: center; gap: 6px"><img src="a/b4e59bb6927dfbbb912465b09d34fb3f.svg" alt="" style="width: 16px; height: 16px"><b class="c-num" style="font-size: 15px; font-weight: 800">$ 24.500</b><img src="a/d5362527082f4e7980a3c8fbb34f90a6.svg" alt="" style="width: 12px; height: 12px"></span>
+          <a href="#" class="c-acc" style="height: 36px; padding: 0 18px; display: grid; place-items: center">Cargar</a>
+        </div>
+        <button type="button" class="c-ib" aria-label="Notificaciones"><img src="a/f0db265aecc2a8063207e994ad2224b3.svg" alt="" style="width: 18px; height: 18px"><span style="position: absolute; top: 9px; right: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 0 2px var(--nav)"></span></button>
+        <a href="#" aria-label="Mi cuenta" style="display: block; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 2px var(--line)"><img src="a/7760573870e7fe3bf1f1ec6ea2100067.webp" alt="" style="width: 100%; height: 100%; object-fit: cover"></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="c-wrap" style="padding-top: 24px; padding-bottom: 56px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; align-items: flex-end; gap: 16px">
+      <div style="min-width: 0; display: flex; flex-direction: column; gap: 10px">
+        <div class="c-crumb"><a href="#">Inicio</a><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><a href="#">Slots</a><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><a href="#">Pragmatic Play</a><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="color: var(--mut)">Gates of Olympus Super Scatter</span></div>
+        <div style="display: flex; align-items: baseline; gap: 12px; min-width: 0"><h1 class="c-one" style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.03em">Gates of Olympus Super Scatter</h1><span style="color: var(--dim); font-size: 15px; font-weight: 600; white-space: nowrap">Pragmatic Play</span></div>
+      </div>
+      <span class="c-num" style="margin-left: auto; display: flex; align-items: center; gap: 8px; color: var(--mut); font-size: 13px; font-weight: 700; white-space: nowrap"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--hot)"></span>1.284 jugando ahora</span>
+    </div>
+
+    <div class="c-play">
+      <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0">
+        <div style="position: relative; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #050B08; box-shadow: inset 0 0 0 1px var(--line)">
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px">
+            <span style="display: block; width: 132px; aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 0 0 1px var(--line)"><img src="a/3985b730855405b10de1cdf4a5761735.webp" alt="Gates of Olympus Super Scatter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></span>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><b style="font-size: 17px; font-weight: 800; white-space: nowrap">Gates of Olympus Super Scatter</b><span style="color: var(--dim); font-size: 13px; font-weight: 700; white-space: nowrap">Cargando el juego de Pragmatic Play</span></div>
+            <span style="width: 240px; height: 4px; border-radius: 2px; background: var(--raised); overflow: hidden"><span style="display: block; width: 64%; height: 4px; border-radius: 2px; background: var(--acc)"></span></span>
+            <span class="c-num" style="color: var(--mut); font-size: 13px; font-weight: 700">64%</span>
+          </div>
+          <span style="position: absolute; left: 16px; bottom: 14px; color: var(--dim); font-size: 12px; font-weight: 700; white-space: nowrap">Sesión segura · ID 8F2-41C</span>
+        </div>
+        <div style="height: 56px; box-sizing: border-box; padding: 0 10px; border-radius: 10px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); display: flex; align-items: center; gap: 10px">
+          <div class="c-seg" style="background: var(--bg); box-shadow: none"><span class="on" style="background: var(--acc); color: var(--acc-t)">Dinero real</span><span>Demo</span></div>
+          <span class="c-num" style="color: var(--mut); font-size: 13px; font-weight: 700; white-space: nowrap">Saldo <b style="color: var(--txt)">$ 24.500</b></span>
+          <span style="margin-left: auto; display: flex; gap: 6px"><a href="#" class="c-tb">Favorito</a><a href="#" class="c-tb">Modo cine</a><a href="#" class="c-tb">Pantalla completa</a><a href="#" class="c-tb">Reglas</a></span>
+        </div>
+      </div>
+
+      <aside style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+        <div style="border-radius: 10px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); padding: 20px; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; align-items: center; gap: 10px"><b style="font-size: 17px; font-weight: 800; white-space: nowrap">Sobre el juego</b><span style="margin-left: auto; height: 24px; padding: 0 8px; border-radius: 6px; background: var(--raised); color: var(--acc); font-size: 11px; font-weight: 800; display: grid; place-items: center; white-space: nowrap">Drops &amp; Wins</span></div>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+            
+              <span style="height: 58px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--bg); display: flex; flex-direction: column; justify-content: center; min-width: 0"><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 700">RTP</span><b class="c-one c-num" style="font-size: 15px; font-weight: 800">96,50%</b></span>
+            
+              <span style="height: 58px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--bg); display: flex; flex-direction: column; justify-content: center; min-width: 0"><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 700">Volatilidad</span><b class="c-one c-num" style="font-size: 15px; font-weight: 800">Muy alta</b></span>
+            
+              <span style="height: 58px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--bg); display: flex; flex-direction: column; justify-content: center; min-width: 0"><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 700">Apuesta</span><b class="c-one c-num" style="font-size: 15px; font-weight: 800">$ 40 a $ 100.000</b></span>
+            
+              <span style="height: 58px; box-sizing: border-box; padding: 0 12px; border-radius: 8px; background: var(--bg); display: flex; flex-direction: column; justify-content: center; min-width: 0"><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 700">Premio máximo</span><b class="c-one c-num" style="font-size: 15px; font-weight: 800">x50.000</b></span>
+            
+          </div>
+          <span style="color: var(--mut); font-size: 14px; font-weight: 500; line-height: 1.5">Multiplicadores de hasta x500 que caen en cualquier giro. Con 4 scatters entrás a 15 giros gratis.</span>
+        </div>
+        <div style="border-radius: 10px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); padding: 20px; display: flex; flex-direction: column; gap: 6px">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px"><b style="font-size: 17px; font-weight: 800; white-space: nowrap">Últimos premios</b><a href="#" class="c-more" style="font-size: 13px">Ver todos<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          
+            <div style="height: 48px; display: flex; align-items: center; gap: 12px; box-shadow: inset 0 -1px 0 var(--line)">
+              <img src="a/a30753e0f5f6b5757117cbd6216bc2e6.webp" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none">
+              <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 14px">tomi***</b><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 600">hace 3 min</span></span>
+              <span style="flex: none; display: flex; flex-direction: column; align-items: flex-end"><b class="c-num" style="color: var(--acc); font-size: 15px; font-weight: 800; white-space: nowrap">$ 186.400</b><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x233</span></span>
+            </div>
+          
+            <div style="height: 48px; display: flex; align-items: center; gap: 12px; box-shadow: inset 0 -1px 0 var(--line)">
+              <img src="a/ffd6659eacef3e529ce2b33e881fb7a2.webp" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none">
+              <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 14px">flor***</b><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 600">hace 9 min</span></span>
+              <span style="flex: none; display: flex; flex-direction: column; align-items: flex-end"><b class="c-num" style="color: var(--acc); font-size: 15px; font-weight: 800; white-space: nowrap">$ 52.800</b><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x132</span></span>
+            </div>
+          
+            <div style="height: 48px; display: flex; align-items: center; gap: 12px; box-shadow: inset 0 -1px 0 var(--line)">
+              <img src="a/bf5c0c0147aa07b37bb2f8af622ad9ed.webp" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none">
+              <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 14px">gonza***</b><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 600">hace 14 min</span></span>
+              <span style="flex: none; display: flex; flex-direction: column; align-items: flex-end"><b class="c-num" style="color: var(--acc); font-size: 15px; font-weight: 800; white-space: nowrap">$ 31.200</b><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x78</span></span>
+            </div>
+          
+            <div style="height: 48px; display: flex; align-items: center; gap: 12px; box-shadow: inset 0 -1px 0 var(--line)">
+              <img src="a/74dfeb9d64afd3dd1a9a401fde51b9af.webp" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex: none">
+              <span style="flex: 1; min-width: 0; display: flex; flex-direction: column"><b class="c-one" style="font-size: 14px">meli***</b><span class="c-one" style="color: var(--dim); font-size: 12px; font-weight: 600">hace 21 min</span></span>
+              <span style="flex: none; display: flex; flex-direction: column; align-items: flex-end"><b class="c-num" style="color: var(--acc); font-size: 15px; font-weight: 800; white-space: nowrap">$ 18.000</b><span class="c-num" style="color: var(--dim); font-size: 12px; font-weight: 700">x45</span></span>
+            </div>
+          
+        </div>
+      </aside>
+    </div>
+
+    <section style="margin-top: 28px; display: flex; flex-direction: column; gap: 18px">
+      <div class="c-h"><h2>Más de Pragmatic Play</h2><span class="c-sub">1.240 juegos</span><a href="#" class="c-more">Ver todos<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="c-row7">
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/c269002698211d4e5987a13e30351c5c.webp" alt="Sweet Bonanza 1000"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Sweet Bonanza 1000</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/2c14a3405742d98039a6988eb2f00d11.webp" alt="Gates of Olympus 1000"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Gates of Olympus 1000</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/406666fb45f66b0fc1a6afc72652c713.webp" alt="Sugar Rush 1000"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Sugar Rush 1000</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/42856d6d41b45bc49f248df7e39c657e.webp" alt="Big Bass Rock and Roll"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Big Bass Rock and Roll</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/3ebb9c4d240204b7939ffac44fe16e48.webp" alt="5 Lions Megaways"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">5 Lions Megaways</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/ffe889031b48e03d62c5bf830f0ad314.webp" alt="Joker's Jewels"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Joker's Jewels</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+          <a href="#" class="c-tile" style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+            <span class="c-cover"><img src="a/dc03f37fd030a46825432702ad49688a.webp" alt="Pompeii Megareels"></span>
+            <span style="display: flex; flex-direction: column; min-width: 0"><span class="c-one" style="font-size: 15px; font-weight: 700">Pompeii Megareels</span><span class="c-one" style="font-size: 13px; font-weight: 600; color: var(--dim)">Pragmatic Play</span></span>
+          </a>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer style="flex: none; background: var(--nav); box-shadow: 0 -1px 0 var(--line)">
+    <div class="c-wrap" style="padding-top: 32px; padding-bottom: 32px; display: flex; flex-direction: column; gap: 22px">
+      <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+        <a href="#" style="display: flex; align-items: center; gap: 10px"><span style="width: 34px; height: 34px; border-radius: 50%; background: var(--acc); overflow: hidden; display: block"><img src="a/9c561b3cd627d923422e671ca724f4e4.webp" alt="" style="width: 100%; height: 125%; object-fit: cover; object-position: center top"></span><b style="font-size: 19px; font-weight: 800; letter-spacing: -.03em; text-transform: lowercase">carpincho</b></a>
+        <nav style="display: flex; gap: 24px; color: var(--mut); font-size: 14px; font-weight: 600; white-space: nowrap"><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Juego responsable</a><a href="#">Soporte 24/7</a><a href="#">Club VIP</a></nav>
+        <span style="margin-left: auto; display: flex; gap: 8px">
+          <span style="height: 32px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); color: var(--txt); font-size: 13px; font-weight: 700; display: grid; place-items: center; white-space: nowrap">Mercado Pago</span><span style="height: 32px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); color: var(--txt); font-size: 13px; font-weight: 700; display: grid; place-items: center; white-space: nowrap">Transferencia</span><span style="height: 32px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); color: var(--txt); font-size: 13px; font-weight: 700; display: grid; place-items: center; white-space: nowrap">Cuenta DNI</span><span style="height: 32px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); color: var(--txt); font-size: 13px; font-weight: 700; display: grid; place-items: center; white-space: nowrap">USDT</span>
+        </span>
+      </div>
+      <div style="padding-top: 18px; box-shadow: inset 0 1px 0 var(--line); display: flex; align-items: center; gap: 12px; color: var(--dim); font-size: 13px; font-weight: 600">
+        <span style="width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--mut); color: var(--txt); font-size: 12px; font-weight: 800; display: grid; place-items: center; flex: none">+18</span>
+        <span class="c-one">Jugá con responsabilidad. Poné límites de carga y tiempo desde tu cuenta.</span>
+        <span style="margin-left: auto; white-space: nowrap">© 2026 carpincho · el club más argentino</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>window.PV={plat:"carpincho",screen:"juego",view:"d"}</script><script src="proto.js"></script>
+</body></html>
