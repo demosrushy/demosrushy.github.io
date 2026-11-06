@@ -1,7 +1,4 @@
 html{scroll-behavior:smooth}
-html{animation:pv-page .45s ease both}
-html.pv-leave body{opacity:0;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease}
-@keyframes pv-page{from{opacity:0}to{opacity:1}}
 .pv-rv{transition:opacity .6s ease var(--pv-d,0ms),transform .6s cubic-bezier(.2,.7,.2,1) var(--pv-d,0ms)}
 .pv-rv:not(.pv-in){opacity:0;transform:translateY(18px)}
 a,button{transition:transform .15s ease,filter .15s ease}
@@ -32,3 +29,14 @@ html.pv-phone,html.pv-phone body{margin:0;padding:0;overflow-x:hidden;background
 .pv-strip select{margin-left:auto;appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.08);color:#fff;border:0;border-radius:8px;height:26px;padding:0 26px 0 10px;font:600 13px system-ui,-apple-system,sans-serif;background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 13px) 11px,calc(100% - 9px) 11px;background-size:4px 4px;background-repeat:no-repeat}
 .pv-scroll{scrollbar-width:none;-webkit-overflow-scrolling:touch}.pv-scroll::-webkit-scrollbar{display:none}
 html.pv-phone .pv-toast{bottom:96px}
+
+/* pantalla de carga entre pantallas */
+html{background:var(--pv-bg,#0c0c0f)}
+html::before{content:"";position:fixed;inset:0;z-index:2147483646;background:var(--pv-bg,#0c0c0f);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility 0s linear .28s;pointer-events:none}
+html::after{content:attr(data-pv-name);position:fixed;left:50%;top:50%;z-index:2147483647;transform:translate(-50%,-50%);font:800 20px/1 system-ui,-apple-system,sans-serif;letter-spacing:.2em;padding:0 0 18px .2em;color:var(--pv-acc,#fff);background:linear-gradient(var(--pv-acc,#fff),var(--pv-acc,#fff)) 0 100%/36% 3px no-repeat,linear-gradient(rgba(127,127,127,.25),rgba(127,127,127,.25)) 0 100%/100% 3px no-repeat;animation:pv-load .9s ease-in-out infinite;opacity:0;visibility:hidden;transition:opacity .2s ease,visibility 0s linear .2s;pointer-events:none;white-space:nowrap}
+@keyframes pv-load{0%{background-position:-70% 100%,0 100%}100%{background-position:170% 100%,0 100%}}
+html.pv-loading::before,html.pv-loading::after,html.pv-leave::before,html.pv-leave::after{opacity:1;visibility:visible;transition:opacity .18s ease,visibility 0s}
+html.pv-leave::before{transition:opacity .18s ease,visibility 0s}
+html.pv-loading::before{animation:pv-safety .01s linear 4s forwards}
+html.pv-loading::after{animation:pv-load .9s ease-in-out infinite,pv-safety .01s linear 4s forwards}
+@keyframes pv-safety{to{opacity:0;visibility:hidden}}
