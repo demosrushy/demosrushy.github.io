@@ -105,3 +105,26 @@ html.pv-done::before,html.pv-done::after{content:none}
 .pv-total b{font-size:32px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
 .pv-total span{font-size:13px;color:var(--m)}
 @media (max-width:760px){.pv-modal{align-items:flex-end;padding:0}.pv-sheet{max-width:none;border-radius:18px 18px 0 0;padding:26px 20px calc(20px + env(safe-area-inset-bottom,0px));transform:translateY(100%);max-height:92vh}}
+
+/* banners por pantalla */
+.pv-ban{position:relative;flex:none;box-sizing:border-box;overflow:hidden;border-radius:12px;height:260px;margin-bottom:28px;background:#0b0b0d;isolation:isolate}
+.pv-ban img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 45%;z-index:-2}
+.pv-ban::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 62%)}
+.pv-ban-t{height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:0 44px;max-width:52%;color:#fff}
+.pv-ban-t small{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pv-acc,#fff)}
+.pv-ban-t b{font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+.pv-ban-t span{font-size:15px;line-height:1.4;color:rgba(255,255,255,.82)}
+.pv-ban-c{margin-top:8px;height:44px;padding:0 20px;border-radius:10px;display:inline-flex;align-items:center;background:var(--pv-acc,#fff);color:#0b0b0d;font-size:15px;font-weight:800;text-decoration:none;white-space:nowrap}
+.pv-ban-c:hover{filter:brightness(1.07)}
+html[data-pv-name="ZORRO"] .pv-ban-c,html[data-pv-name="MÁSCARA"] .pv-ban-c,html[data-pv-name="KRAKEN"] .pv-ban-c{color:#fff}
+html[data-pv-name="KRAKEN"] .pv-ban-c{color:#0b0b0d}
+html[data-pv-name="ZORRO"] .pv-ban-t small{color:#fff}
+html[data-pv-name="ZORRO"] .pv-ban-c{background:#fff;color:#E64A1E}
+html[data-pv-view="m"] .pv-ban{height:178px;margin-bottom:18px;border-radius:12px}
+html[data-pv-view="m"] .pv-ban img{object-position:78% 45%}
+html[data-pv-view="m"] .pv-ban::after{background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,0) 75%)}
+html[data-pv-view="m"] .pv-ban-t{padding:0 16px;max-width:66%;gap:5px}
+html[data-pv-view="m"] .pv-ban-t small{font-size:10px}
+html[data-pv-view="m"] .pv-ban-t b{font-size:20px}
+html[data-pv-view="m"] .pv-ban-t span{font-size:12px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+html[data-pv-view="m"] .pv-ban-c{margin-top:4px;height:34px;padding:0 14px;font-size:13px;border-radius:9px}
