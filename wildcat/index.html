@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wildcat · Casino online</title>
+<link rel="icon" href="a/mark.png">
+<script>try{document.documentElement.className=localStorage.getItem("wc-session")?"is-logged":"is-guest"}catch(e){document.documentElement.className="is-guest"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="wc.css?v=57">
+</head>
+<body>
+
+<aside class="side" aria-label="Menú">
+  <div class="side__scroll">
+    <button class="side__login only-guest" type="button" data-open="login">
+      <span class="side__avatar"><i class="ph-fill ph-user"></i></span>
+      <span>Iniciar sesión</span>
+      <i class="ph-bold ph-caret-right side__chev"></i>
+    </button>
+    <a class="side__login side__user only-logged" href="#perfil">
+      <span class="side__avatar side__avatar--me">US</span>
+      <span class="side__me"><b data-user>usuario***07</b><small data-rank-name>Plata</small></span>
+      <i class="ph-bold ph-caret-right side__chev"></i>
+    </a>
+
+    <a class="side__lvl" href="#rango">
+      <img class="side__lvl-coin" data-lvl-coin src="a/rango/plata-192.webp" alt="">
+      <span class="side__lvl-t">
+        <small data-lvl-k>Tu nivel</small>
+        <b data-lvl-name>Plata</b>
+        <span class="side__lvl-bar"><i data-lvl-bar style="width:62%"></i></span>
+        <small data-lvl-left>3.800 pts para Oro</small>
+      </span>
+      <i class="ph-bold ph-caret-right side__chev"></i>
+    </a>
+
+    <nav class="side__list" data-sidenav>
+      <div class="side__grp">
+        <div class="side__row2"><a href="#casino" data-nav="casino"><i class="ph-fill ph-spade"></i>Casino</a><button class="side__tg" type="button" data-tg aria-expanded="false" aria-label="Ver opciones de Casino"><i class="ph-bold ph-caret-down"></i></button></div>
+        <div class="side__sub"><a href="#casino"><i class="ph-fill ph-squares-four"></i>Lobby</a><a href="#casino/populares"><i class="ph-fill ph-sparkle"></i>Populares</a><a href="#casino/nuevos"><i class="ph-fill ph-seal-check"></i>Nuevos</a><a href="#casino/rapidos"><i class="ph-fill ph-lightning"></i>Juegos rápidos</a><a href="#casino/slots"><i class="ph-fill ph-cherries"></i>Slots</a></div>
+      </div>
+      <div class="side__grp">
+        <div class="side__row2"><a href="#vivo" data-nav="vivo"><i class="ph-fill ph-broadcast"></i>Casino en vivo</a><button class="side__tg" type="button" data-tg aria-expanded="false" aria-label="Ver opciones de Casino en vivo"><i class="ph-bold ph-caret-down"></i></button></div>
+        <div class="side__sub"><a href="#vivo"><i class="ph-fill ph-broadcast"></i>Todas las mesas</a><a href="#vivo/ruleta"><i class="ph-fill ph-poker-chip"></i>Ruleta</a><a href="#vivo/blackjack"><i class="ph-fill ph-club"></i>Blackjack</a><a href="#vivo/shows"><i class="ph-fill ph-television-simple"></i>Shows</a></div>
+      </div>
+      <div class="side__grp">
+        <div class="side__row2"><a href="#casino/originales" data-nav="originales"><i class="ph-fill ph-lightning"></i>Wildcat Games</a><button class="side__tg" type="button" data-tg aria-expanded="false" aria-label="Ver opciones de Wildcat Games"><i class="ph-bold ph-caret-down"></i></button></div>
+        <div class="side__sub"><a href="#casino/originales"><img class="side__subimg" src="a/mark.png" alt="">Todos los juegos</a><a href="#casino/originales"><i class="ph-fill ph-bomb"></i>Mines</a><a href="#casino/originales"><i class="ph-fill ph-airplane-tilt"></i>Wild Jet</a><a href="#casino/originales"><i class="ph-fill ph-triangle"></i>Plinko</a><a href="#casino/originales"><i class="ph-fill ph-dice-five"></i>Dice</a></div>
+      </div>
+      <a href="#rango" data-nav="rango"><i class="ph-fill ph-medal"></i>Rangos Wildcat<span class="side__badge side__badge--new">Nuevo</span></a>
+      <a href="#promos" data-nav="promos"><i class="ph-fill ph-gift"></i>Bonos<span class="side__badge">1</span></a>
+    </nav>
+    <nav class="side__list">
+      <a href="#ayuda"><i class="ph-fill ph-question"></i>Centro de ayuda</a>
+      <a href="#perfil" class="only-logged" data-nav="perfil"><i class="ph-fill ph-user-circle"></i>Mi cuenta</a>
+      <a href="#" class="only-logged" data-logout><i class="ph-fill ph-sign-out"></i>Cerrar sesión</a>
+    </nav>
+  </div>
+
+  <div class="side__foot">
+    <a class="side__app" href="#app">
+      <span class="side__appic"><img src="a/mark.png" alt=""></span>
+      <span><b>Wildcat para celular</b><small>Aplicación con acceso rápido a la plataforma</small></span>
+      <i class="ph-bold ph-caret-right side__chev"></i>
+    </a>
+    <div class="side__row">
+      <a class="side__sq" href="#ayuda" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+      <a class="side__sq" href="#ayuda" aria-label="Telegram"><i class="ph-fill ph-telegram-logo"></i></a>
+      <a class="side__sq" href="#ayuda" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+      <a class="side__sq" href="#ayuda" aria-label="Más"><i class="ph-bold ph-dots-three-vertical"></i></a>
+      <button class="side__lang" type="button"><span class="flag">🇦🇷</span>ES<i class="ph-bold ph-caret-down"></i></button>
+    </div>
+  </div>
+  <a class="side__support" href="#" data-chat><i class="ph-fill ph-chat-circle-dots"></i>Soporte<span>24/7</span></a>
+</aside>
+
+<div class="main">
+  <header class="top">
+    <a class="brand" href="#inicio" aria-label="Wildcat, inicio"><img src="a/mark.png" alt=""><span>Wildcat</span></a>
+    <nav class="tabs" aria-label="Secciones">
+      <a href="#inicio" data-nav="inicio"><i class="ph-fill ph-house"></i>Inicio</a>
+      <a href="#casino" data-nav="casino"><i class="ph-fill ph-poker-chip"></i>Casino</a>
+      <a href="#vivo" data-nav="vivo"><i class="ph-fill ph-broadcast"></i>En vivo</a>
+      <a href="#promos" data-nav="promos"><i class="ph-fill ph-gift"></i>Bonos</a>
+    </nav>
+    <div class="top__acts only-guest">
+      <button class="btn btn--sec" type="button" data-open="login">Iniciar sesión</button>
+      <button class="btn btn--pri" type="button" data-open="registro">Registro</button>
+    </div>
+    <div class="top__acts only-logged">
+      <div class="bal">
+        <button class="bal__amt" type="button" data-cur-btn aria-haspopup="true"><span data-balance>$35.000</span><span class="bal__cur" data-cur>ARS</span><i class="ph-bold ph-caret-down"></i></button>
+        <div class="menu menu--cur" data-cur-menu hidden></div>
+        <button class="btn btn--pri bal__cta" type="button" data-wallet="cargar"><i class="ph-bold ph-plus"></i><span>Cargar</span></button>
+      </div>
+      <div class="um">
+        <button class="um__btn" type="button" data-um-btn aria-haspopup="true" aria-label="Mi cuenta">US</button>
+        <div class="menu menu--user" data-um-menu hidden>
+          <div class="menu__head"><b data-user>usuario***07</b><small>Rango <span data-rank-name>Plata</span></small></div>
+          <a href="#perfil"><i class="ph-fill ph-user-circle"></i>Mi cuenta</a>
+          <a href="#rango"><i class="ph-fill ph-medal"></i>Rangos Wildcat</a>
+          <a href="#perfil/movimientos"><i class="ph-fill ph-receipt"></i>Movimientos</a>
+          <button type="button" data-wallet="cargar"><i class="ph-fill ph-arrow-circle-down"></i>Cargar fichas</button>
+          <button type="button" data-wallet="retirar"><i class="ph-fill ph-arrow-circle-up"></i>Retirar</button>
+          <button type="button" data-chat><i class="ph-fill ph-chat-circle-dots"></i>Soporte</button>
+          <button type="button" data-logout class="menu__out"><i class="ph-fill ph-sign-out"></i>Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <footer class="foot">
+    <div class="foot__head">
+      <a class="brand brand--lg" href="#inicio"><img src="a/mark.png" alt=""><span>Wildcat</span></a>
+      <span class="foot__line"></span>
+      <button class="side__lang side__lang--lg" type="button"><span class="flag">🇦🇷</span>ES<i class="ph-bold ph-caret-down"></i></button>
+      <button class="side__sq side__sq--lg" type="button" data-top aria-label="Volver arriba"><i class="ph-bold ph-arrow-line-up"></i></button>
+    </div>
+    <div class="foot__acc">
+      <button type="button" data-acc>Información<i class="ph-bold ph-caret-down"></i></button>
+      <div class="foot__links"><a href="#ayuda">Sobre nosotros</a><a href="#ayuda">Términos y condiciones</a><a href="#ayuda">Juego responsable</a><a href="#ayuda">Política de privacidad</a></div>
+      <button type="button" data-acc>Categorías<i class="ph-bold ph-caret-down"></i></button>
+      <div class="foot__links"><a href="#casino">Casino</a><a href="#vivo">Casino en vivo</a><a href="#casino/originales">Wildcat Games</a><a href="#promos">Bonos</a></div>
+    </div>
+    <div class="foot__cards">
+      <a class="fcard" href="#app"><span><b>Bono por instalar la app<i class="ph-bold ph-caret-right"></i></b><small>Disponible para Android e iOS</small></span><span class="fcard__ic"><img src="a/mark.png" alt=""></span></a>
+      <a class="fcard" href="#app"><span><b>Aplicación para PC<i class="ph-bold ph-caret-right"></i></b><small>Acceso rápido desde el escritorio</small></span><span class="fcard__ic"><i class="ph-fill ph-desktop"></i></span></a>
+      <a class="fcard" href="#" data-chat><span><b>Soporte <em>24/7</em><i class="ph-bold ph-caret-right"></i></b><small>Contactanos si tenés preguntas</small></span><span class="fcard__ic"><i class="ph-fill ph-chat-circle-dots"></i></span></a>
+    </div>
+    <p class="foot__legal"><span class="b18">18+</span>Jugá con responsabilidad. Prototipo de diseño: no procesa cargas ni apuestas reales.</p>
+  </footer>
+</div>
+
+<nav class="tabbar" aria-label="Navegación">
+  <button type="button" data-open="menu"><i class="ph-bold ph-list"></i>Menú</button>
+  <a href="#inicio" data-nav="inicio"><i class="ph-fill ph-house"></i>Inicio</a>
+  <a href="#casino" data-nav="casino"><i class="ph-fill ph-poker-chip"></i>Casino</a>
+  <a href="#promos" data-nav="promos"><i class="ph-fill ph-gift"></i>Bonos</a>
+  <a href="#vivo" data-nav="vivo"><i class="ph-fill ph-broadcast"></i>En vivo</a>
+</nav>
+
+<button class="chat-fab" type="button" data-chat aria-label="Abrir chat de soporte"><i class="ph-fill ph-chat-circle-dots"></i></button>
+<section class="chat" id="chat" hidden aria-label="Chat de soporte">
+  <header class="chat__head"><span class="chat__av"><img src="a/mark.png" alt=""></span><span><b>Soporte Wildcat</b><small><i></i>En línea · responde en minutos</small></span><button class="side__sq" type="button" data-chat-close aria-label="Cerrar chat"><i class="ph-bold ph-x"></i></button></header>
+  <div class="chat__log" id="chat-log" aria-live="polite"></div>
+  <div class="chat__quick"><button type="button" data-q="Quiero cargar fichas">Cargar fichas</button><button type="button" data-q="Quiero retirar">Retirar</button><button type="button" data-q="¿Tienen algún bono?">Bonos</button></div>
+  <form class="chat__form" id="chat-form"><input id="chat-input" autocomplete="off" placeholder="Escribí tu mensaje"><button class="chat__send" type="submit" aria-label="Enviar"><i class="ph-fill ph-paper-plane-right"></i></button></form>
+</section>
+
+<div class="modal" id="modal" hidden><div class="modal__back" data-close></div><div class="modal__box" role="dialog" aria-modal="true"></div></div>
+
+<script src="wc.js?v=57"></script>
+</body>
+</html>
