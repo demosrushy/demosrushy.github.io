@@ -188,9 +188,10 @@
 
   // ---------- Vistas ----------
   var SLIDES = [
-    {img:'a/hb-3.webp', k:'Niveles<br>Wildcat', aw:[['Cashback','hasta 15%','Todos los lunes'],['Bono','semanal','Según tu nivel'],['Retiros','prioritarios','Desde Oro']], b:'Ir', href:'#rango'},
-    {img:'a/hb-4.webp', k:'Jugá con<br>Wildcat', aw:[['Más de','3.000','Juegos'],['Mesas','en vivo','En español'],['Pagos','en minutos','24/7']], b:'Registrarse', act:'registro'},
-    {img:'a/hb-5.webp', k:'Jugá con<br>Wildcat', aw:[['Más de','3.000','Juegos'],['Mesas','en vivo','En español'],['Pagos','en minutos','24/7']], b:'Registrarse', act:'registro'}
+    {img:'a/hb-3n.webp', k:'Niveles<br>Wildcat', aw:[['Cashback','hasta 15%','Todos los lunes'],['Bono','semanal','Según tu nivel'],['Retiros','prioritarios','Desde Oro']], b:'Ir', href:'#rango'},
+    {img:'a/hb-4n.webp', k:'Jugá con<br>Wildcat', aw:[['Más de','3.000','Juegos'],['Mesas','en vivo','En español'],['Pagos','en minutos','24/7']], b:'Registrarse', act:'registro'},
+    {img:'a/hb-5n.webp?2', k:'Jugá con<br>Wildcat', aw:[['Más de','3.000','Juegos'],['Mesas','en vivo','En español'],['Pagos','en minutos','24/7']], b:'Registrarse', act:'registro'},
+    {img:'a/hb-deporte.webp?2', k:'Deportes<br>en vivo', aw:[['Fútbol','y básquet','Todas las ligas'],['Apuestas','en vivo','Minuto a minuto'],['Pagos','en minutos','24/7']], b:'Apostá ahora', href:'#'}
   ];
   // laurel: hojas a lo largo de un arco (lado izquierdo; el derecho se espeja con CSS)
   var LAUREL = (function(){
@@ -220,8 +221,8 @@
       }).join('') +
       '<div class="sl-nav"><button type="button" data-sl="-1" aria-label="Anterior"><i class="ph-bold ph-caret-left"></i></button><button type="button" data-sl="1" aria-label="Siguiente"><i class="ph-bold ph-caret-right"></i></button></div>' + '<div class="dots">' + SLIDES.map(function(s, i){ return '<button type="button" aria-label="Banner ' + (i + 1) + '"' + (i ? '' : ' class="is-on"') + ' data-dot="' + i + '"></button>'; }).join('') + '</div></div>' +
       '<div class="hero__side">' +
-        '<a class="pcard pcard--lvl" href="#rango"><span class="pcard__t"><b>Niveles Wildcat</b><small data-lvl-left>3.800 pts para Oro</small></span><img class="pcard__coin" data-lvl-coin src="a/rango/plata-192.webp" alt=""><span class="pcard__chip"><i></i>Tu nivel: <b data-rank-name>Plata</b></span></a>' +
-        '<a class="pcard pcard--inv" href="#rango"><img src="a/card-inv-verde.webp" alt=""><span class="pcard__t"><b>Invitá y ganá</b><small>1.000 puntos por cada amigo</small></span><span class="pcard__chip"><i></i>Código WILD-US07</span></a>' +
+        '<a class="pcard pcard--lvl" href="#rango"><span class="pcard__t"><b>Niveles Wildcat</b><small data-lvl-left>3.800 pts para Oro</small></span><img class="pcard__art" src="a/card-niveles.webp" alt=""><span class="pcard__chip"><i></i>Tu nivel: <b data-rank-name>Plata</b></span></a>' +
+        '<a class="pcard pcard--inv" href="#rango"><img class="pcard__art pcard__art--inv" src="a/card-invita.webp" alt=""><span class="pcard__t"><b>Invitá y ganá</b><small>1.000 puntos por cada amigo</small></span><span class="pcard__chip"><i></i>Código WILD-US07</span></a>' +
       '</div></section>';
   }
   function seo(){

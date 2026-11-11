@@ -824,3 +824,16 @@ html.is-guest .only-logged,html.is-logged .only-guest{display:none!important}
   .aws{display:none}
 }
 .aw__l{width:12px;height:28px}
+
+/* tarjetas: arte completo, de frente, sin cortes */
+.pcard img.pcard__art{position:absolute;inset:auto;right:16px;top:50%;left:auto;bottom:auto;transform:translateY(-50%);width:136px;height:auto;max-width:none;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+.pcard img.pcard__art--inv{width:124px}
+.pcard:hover img.pcard__art{transform:translateY(-50%) scale(1.04)}
+.pcard--inv{background:#4E6A5B}
+@media (max-width:1180px){.pcard img.pcard__art{width:112px}.pcard img.pcard__art--inv{width:100px}}
+/* mobile: el botón también en el banner principal */
+@media (max-width:760px){
+  .slider:not(.slider--c) .slide__t--aw .btn{display:inline-flex;left:16px;bottom:14px;height:32px;padding:0 14px;font-size:13px;border-radius:10px}
+}
+@media (max-width:760px){.slider:not(.slider--c) .dots{left:auto;right:14px;bottom:20px}}
+@media (max-width:760px){.slider:not(.slider--c) .slide img{object-position:92% center}}
